@@ -1,0 +1,25 @@
+.header {
+  text-align: center;
+  margin: 20px;
+}
+.square {
+  border: solid 1px black;
+  height: 100px;
+  width: 100px;
+  font-size:70px;
+  cursor: pointer;
+  text-align:center;
+}
+.output {
+  background: #698599;
+  color: white;
+  margin-top:30px;
+  margin-bottom: 30px;
+  padding:20px;
+  font-family: Courier New;
+  text-align: center;
+}
+.tik-tak-toe {
+  width:300px;
+  margin:auto;
+}

@@ -1,0 +1,2 @@
+Vcpkg (Individual)
+Conan (Dependencies)
