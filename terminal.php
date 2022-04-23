@@ -11,6 +11,12 @@
 		clear_command();
 	}
 
+  if(! isset($_SESSION['pwd'])){
+
+    $_SESSION['pwd'] = trim(`pwd`);
+  }
+  chdir($_SESSION['pwd']);
+
 	if ( ! isset($_SESSION['persist_commands']) OR ! isset($_SESSION['commands'])) {
 		$_SESSION['persist_commands'] = array();
 		$_SESSION['commands'] = array();
@@ -42,19 +48,27 @@
 		}
 	}
 
-	if (isset($_POST['command'])) {
-		$command = $_POST['command'];
-		if ( ! isset($_SESSION['logged_in'])) {
-			if ($command == $password) {
-				$_SESSION['logged_in'] = TRUE;
-				$response = array('Welcome, ' . str_replace("\n", '', `whoami`) . '!!');
-			} else {
-				$response = array('Incorrect Password');
-			}
-			array_push($_SESSION['persist_commands'], FALSE);
-			array_push($_SESSION['commands'], 'Password: ');
-			array_push($_SESSION['command_responses'], $response);
-		} else {
+	// if (isset($_POST['command'])) {
+	// 	$command = $_POST['command'];
+	// 	if ( ! isset($_SESSION['logged_in'])) {
+	// 		if ($command == $password) {
+	// 			$_SESSION['logged_in'] = TRUE;
+	// 			$response = array('Welcome, ' . str_replace("\n", '', `whoami`) . '!!');
+	// 		} else {
+	// 			$response = array('Incorrect Password');
+	// 		}
+	// 		array_push($_SESSION['persist_commands'], FALSE);
+	// 		array_push($_SESSION['commands'], 'Password: ');
+	// 		array_push($_SESSION['command_responses'], $response);
+	// 	} else {
+
+      if(isset($_POST['command'])) {
+        $command = $_POST['command'];
+      }
+      else {
+        $command = null;
+      }
+
 			if ($command != '' AND ! $toggling_persist) {
 				if ($command == 'logout') {
 					session_unset();
@@ -66,11 +80,23 @@
 					if ($error_code > 0 AND $response == array()) {
 						$response = array('Error');
 					}
+          else{
+            if(str_starts_with($command, 'cd ')) {
+
+              $directory = realpath(trim(`pwd`) . '/' . trim(strstr($command," ")));
+
+              if(is_dir($directory)){
+
+                $_SESSION['pwd'] = $directory;
+              }
+            }
+          }
 				}
 			} else {
 				$response = array();
 			}
-			if ($command != 'logout' AND $command != 'clear') {
+
+			if ($command && $command != 'logout' AND $command != 'clear') {
 				if ($toggling_persist) {
 					if ($toggling_current_persist_command) {
 						array_push($_SESSION['persist_commands'], TRUE);
@@ -81,13 +107,14 @@
 						}
 					}
 				} else {
-					array_push($_SESSION['persist_commands'], FALSE);
+
+          array_push($_SESSION['persist_commands'], FALSE);
 					array_push($_SESSION['commands'], $command);
 					array_push($_SESSION['command_responses'], $response);
 				}
 			}
-		}
-	}
+	// 	}
+	// }
 
 	function clear_command()
 	{
@@ -109,16 +136,17 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>PHP Terminal Emulator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style type="text/css">
 		* {
 			margin: 0;
 			padding: 0;
 		}
 		body {
-			background-color: #000000;
-			color: #00FF00;
+			background-color: #516b86;
+			color: #FFFFFF;
 			font-family: monospace;
-			font-weight: bold;
+			font-weight: 0.2;
 			font-size: 12px;
 			text-align: center;
 		}
@@ -131,27 +159,33 @@
 			border: inherit;
 		}
 		.content {
-			width: 80%;
+			width: 100%;
 			min-width: 400px;
-			margin: 40px auto;
+			margin: 0;
 			text-align: left;
 			overflow: auto;
 		}
 		.terminal {
-			border: 1px solid #00FF00;
-			height: 500px;
+			/* border: 1px solid #00FF00; */
+			/* height: 500px; */
 			position: relative;
 			overflow: auto;
 			padding-bottom: 20px;
+      padding-top:20px;
 		}
 		.terminal .bar {
-			border-bottom: 1px solid #00FF00;
+			/* border-bottom: 1px solid #00FF00; */
 			padding: 2px;
 			white-space: nowrap;
 			overflow: hidden;
+      position:fixed;
+      top:0;
+      width:100%;
+      background: #FFFFFF;
+      color: #000000;
 		}
 		.terminal .commands {
-			padding: 2px;
+			/* padding: 2px; */
 			padding-right: 0;
 		}
 		.terminal #command {
@@ -167,37 +201,50 @@
 			border-color: #00FF00;
 			clear: both;
 		}
+    #command:focus{
+        outline: none;
+    }
 	</style>
 </head>
 <body>
 	<div class="content">
 		<div class="terminal" onclick="document.getElementById('command').focus();" id="terminal">
 			<div class="bar">
-				<?php echo `whoami`, ' - ', exec($previous_commands . 'pwd'); ?>
+				&nbsp;<i class="fa fa-user"></i> <?php echo `whoami`, ' - ', $_SESSION['pwd'] ?>
 			</div>
 			<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="commands" id="commands">
 				<input type="hidden" name="persist_command_id" id="persist_command_id" />
 				<?php if ( ! empty($_SESSION['commands'])) { ?>
 				<div>
 					<?php foreach ($_SESSION['commands'] as $index => $command) { ?>
-					<input type="button" value="<?php if ($_SESSION['persist_commands'][$index]) { ?>Un-Persist<?php } else { ?>Persist<?php } ?>" onfocus="this.style.color='#0000FF';" onblur="this.style.color='';" onclick="toggle_persist_command(<?php echo $index; ?>);" class="persist_button" />
-					<pre><?php echo '$ ', $command, "\n"; ?></pre>
+					<!-- <input type="button" value="<?php if ($_SESSION['persist_commands'][$index]) { ?>Un-Persist<?php } else { ?>Persist<?php } ?>" onfocus="this.style.color='#0000FF';" onblur="this.style.color='';" onclick="toggle_persist_command(<?php echo $index; ?>);" class="persist_button" /> -->
+					<pre style="background:#3a536c;margin-bottom:7px;padding:3px;" ><?php echo '$ ', $command, "\n"; ?></pre>
 					<?php foreach ($_SESSION['command_responses'][$index] as $value) { ?>
-					<pre><?php echo htmlentities($value), "\n"; ?></pre>
+					<pre style="padding-left:20px"><?php echo htmlentities($value), "\n"; ?></pre>
 					<?php } ?>
 					<?php } ?>
 				</div>
-				<?php } ?>
-				$ <?php if ( ! isset($_SESSION['logged_in'])) { ?>Password:
-				<input type="password" name="command" id="command" />
-				<?php } else { ?>
-				<input type="text" name="command" id="command" autocomplete="off" onkeydown="return command_keyed_down(event);" />
-				<input type="button" value="Persist" onfocus="this.style.color='#0000FF';" onblur="this.style.color='';" onclick="toggle_persist_command(<?php if (isset($_SESSION['commands'])) { echo count($_SESSION['commands']); } else { echo 0; } ?>);" class="persist_button" />
-				<?php } ?>
+        <div style="position:fixed;bottom:0;width:100%;background:#3a536c;padding:3px">
+  				<?php } ?>
+  				$ <?php if ( false ) { ?>Password:
+  				<input type="password" name="command" id="command" />
+  				<?php } else { ?>
+			        <input type="text" name="command" id="command" autocomplete="off" onkeydown="return command_keyed_down(event);" />
+			        <!-- <input type="button" value="Persist" onfocus="this.style.color='#0000FF';" onblur="this.style.color='';" onclick="toggle_persist_command(<?php if (isset($_SESSION['commands'])) { echo count($_SESSION['commands']); } else { echo 0; } ?>);" class="persist_button" /> -->
+  				<?php } ?>
+        </div>
+        <div id="spacer"></div>
 			</form>
 		</div>
 	</div>
 	<script type="text/javascript">
+
+    // document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
+    setTimeout(function(){
+      console.log("ayy")
+      window.scrollTo(0, document.body.scrollHeight);
+    }
+    , 10);
 
 		<?php
 			$single_quote_cancelled_commands = array();
@@ -215,8 +262,6 @@
 		var current_command_index = previous_commands.length - 1;
 
 		document.getElementById('command').select();
-
-		document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
 
 		function toggle_persist_command(command_id)
 		{
@@ -275,9 +320,10 @@
 		}
 
 	</script>
-	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+	<form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" style="position:fixed;bottom:0;right:12px;">
 		<input type="hidden" name="clear" value="clear" />
-		<input type="submit" value="Clear" onfocus="this.style.color='#0000FF';" onblur="this.style.color='';" />
+		<input type="submit" value="Reset Terminal" onfocus="this.style.color='#0000FF';" onblur="this.style.color='';" />
 	</form>
+
 </body>
 </html>

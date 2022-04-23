@@ -4,32 +4,34 @@ A regular expression is a sequence of characters that is used to search pattern.
 Patterns in the POSIX Library
 
 
-Expression	Description
-[]	Used to find any of the characters or numbers specified between the brackets.
-[:number:]	Used to find any digit.
-[:lower:]	Used to find lowercase alphabets.
-[:word:]	Used to find letters numbers and underscores.
-Creation of Regular Expression
+|Expression	|Description
+|-----|-----
+|[]	|Used to find any of the characters or numbers specified between the brackets.
+|[:number:]	|Used to find any digit.
+|[:lower:]	|Used to find lowercase alphabets.
+|[:word:]	|Used to find letters numbers and underscores.
+
+## Creation of Regular Expression
 For compiling or creating the regular expression regcomp() function is used. It takes three arguments:
 Syntax:
 
-
+```
 regcomp(&regex, expression, flag)
+```
 where,
 
+- `regex` is a pointer to a memory location where expression is matched and stored.
+- `expression` is a string type
+- `flag` to specify the type of compilation
 
-regex is a pointer to a memory location where expression is matched and stored.
-expression is a string type
-flag to specify the type of compilation
 Return Value: This returns the value as shown below:
 
+- `0`: when successful compilation is done.
+- `Error_code`: When there is unsuccessful complilation of the expression.
 
-0: when successful compilation is done.
-Error_code: When there is unsuccessful complilation of the expression.
-Below is the illustration of the regcomp() function:
+Below is the illustration of the `regcomp()` function:
 
-
-
+```
 // C program for illustration of regcomp()
 #include <regex.h>
 #include <stdio.h>
@@ -46,7 +48,7 @@ int main()
     int value;
 
     // Function call to create regex
-    value = regcomp( ®ex, "[:word:]", 0);
+    value = regcomp( regex, "[:word:]", 0);
 
     // If compilation is successful
     if (value == 0) {
@@ -59,33 +61,38 @@ int main()
     }
     return 0;
 }
+```
 Output
+```
 RegEx compiled successfully.
-Matching of Pattern using Regular Expression
-The regexec() function is used to match a string against a pattern. It takes in five arguments:
+```
 
+## Matching of Pattern using Regular Expression
+The `regexec()` function is used to match a string against a pattern. It takes in five arguments:
 
-A precompiled pattern
-A string in which the pattern needs to be searched for.
-Information regarding the location of matches.
-Flags to specify a change in the matching behavior.
+- A precompiled pattern
+- A string in which the pattern needs to be searched for.
+- Information regarding the location of matches.
+- Flags to specify a change in the matching behavior.
+
 Syntax:
-
-
+```
 regexec(&regex, expression, 0, NULL, 0);
-where, regex = precomplied pattern,
-expression = pattern to be match in regex,
-NULL = Information regarding location of the matches.
-flag = to specify the change in matching behaviour
+```
+where,
+
+- `regex` = precomplied pattern,
+- `expression` = pattern to be match in regex,
+- `NULL` = Information regarding location of the matches.
+- `flag` = to specify the change in matching behaviour
+
 Return Value: This returns the value as shown below:
 
+- `0`: If there is a match.
+- `REG_NOMATCH`: If there is no match.
 
-0: If there is a match.
-REG_NOMATCH: If there is no match.
-Below is the illustration of the regexec() function:
-
-
-
+Below is the illustration of the `regexec()` function:
+```
 // C program to illustrate the regexec() function
 #include <regex.h>
 #include <stdio.h>
@@ -122,20 +129,20 @@ int main()
     int value;
     int value2;
 
-    // Creation of regEx
-    value = regcomp( ®ex, "Welcome to GfG", 0);
+    // Creation of regular expression
+    value = regcomp( regex, "Welcome to GfG", 0);
 
-    // Comparing pattern "GeeksforGeeks" with
+    // Comparing pattern "HelloWorld" with
     // string in reg
-    value = regexec( ®ex, "GeeksforGeeks",
+    value = regexec( regex, "HelloWorld",
                     0, NULL, 0);
 
-    // Creation of regEx
-    value2 = regcomp( ®ex, "GeeksforGeeks", 0);
+    // Creation of regular expression
+    value2 = regcomp( regex, "HelloWorld", 0);
 
-    // Comparing pattern "Geeks"
+    // Comparing pattern "HelloWorld"
     // with string in reg
-    value2 = regexec( ®ex, "GeeksforGeeks",
+    value2 = regexec( regex, "HelloWorld",
                      0, NULL, 0);
 
     // Print the results
@@ -143,9 +150,12 @@ int main()
     print_result(value2);
     return 0;
 }
+```
 Output
+```
 Pattern not found.
 Pattern found.
+```
 
 # References
-https://www.geeksforgeeks.org/regular-expressions-in-c/
+https://www.HelloWorld.org/regular-expressions-in-c/
