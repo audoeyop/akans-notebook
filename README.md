@@ -3,7 +3,7 @@
 
   # Akan's Notebook
 
-  <img src="assets/akan.png" alt="drawing" height="300"/>
+  <img src="assets/akan.png" alt="drawing" height="250"/>
 
   My name is Akan Udoeyop.
 
@@ -41,12 +41,22 @@
 
   ## Command Line Interface (CLI)
 
+  [DOS](modules/cli/dos_cheatcheet.md) &nbsp;
+  [LSOF](modules/cli/lsof.md) &nbsp;
+  [Network Interfaces/Routing](modules/cli/nmap.md) &nbsp;
+  [NMAP](modules/cli/nmap.md) &nbsp;
+  [Openssl](modules/cli/openssl.md) &nbsp;
+  [Packet Capturing/Filtering](modules/cli/packet_capture_filtering.md) &nbsp;
+  [Scapy](modules/cli/scapy.md) &nbsp;
+  [Search Files](modules/cli/search_files.md) &nbsp;
+  [SSH](modules/cli/ssh.md) &nbsp;
+  [Telnet](modules/cli/telnet.md) &nbsp;
   [Unix Network Commands](modules/cli/unix_network_commands.md) &nbsp;
   [Unix CLI Cheatsheet](modules/cli/unix_cli_cheatsheet.md) &nbsp;
 
   ## Debugging (CLI)
 
-  [gdb](modules/debugging/gdb.md) &nbsp;
+  [GDB](modules/debugging/gdb.md) &nbsp;
   [strace/dtrace](modules/debugging/debugging.md) &nbsp;
   [File Dumps](modules/debugging/file_dumps.md) &nbsp;
 </div>
