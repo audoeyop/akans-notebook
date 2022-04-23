@@ -2,7 +2,6 @@
 //Default Configuration
 $CONFIG = '{"lang":"en","error_reporting":false,"show_hidden":false,"hide_Cols":false,"calc_folder":false,"theme":"light"}';
 
-
 /**
  * H3K | Tiny File Manager V2.4.7
  * CCP Programmers | ccpprogrammers@gmail.com
@@ -378,6 +377,7 @@ if ($use_auth && isset($_SESSION[FM_SESSION_ID]['logged'])) {
 // clean and check $root_path
 $root_path = rtrim($root_path, '\\/');
 $root_path = str_replace('\\', '/', $root_path);
+
 if (!@is_dir($root_path)) {
     echo "<h1>".lng('Root path')." \"{$root_path}\" ".lng('not found!')." </h1>";
     exit;
@@ -3709,6 +3709,15 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
         .c-preview-img {
             max-width: 300px;
         }
+        .terminal-button {
+          border: solid 1px #cccccc;
+          display: inline-block;
+          padding: 0px 13px;
+        }
+        .terminal-button:hover {
+          cursor: pointer;
+          background-color: #cccccc;
+        }
     </style>
     <?php
     if (FM_THEME == "dark"): ?>
@@ -4058,6 +4067,61 @@ $isStickyNavBar = $sticky_navbar ? 'navbar-fixed' : 'navbar-normal';
     </script>
 <?php endif; ?>
 <div id="snackbar"></div>
+<div id="terminal" style="background:#000000;position:fixed;bottom:0px;width:100%;border-top:solid 1px #cccccc">
+  <div class="bg-white" style="padding:2px 12px">
+
+    <div id='toggle_button' onclick="openTerminalSize(terminal_toggle)" class="terminal-button pull-right"><i class="fa fa-power-off" aria-hidden="true"></i></div>
+    <div id='toggle_button' onclick="toggleTerminalSize(terminal_toggle)" class="terminal-toggle terminal-button pull-right"><i class="fa fa-arrows-v" aria-hidden="true"></i></div>
+    <i class="fa fa-terminal"></i> Terminal
+  </div>
+  <iframe src="terminal.php" style="width:100%;border:none;margin:0;padding:0" frameBorder="0" title="CSE Terminal"></iframe>
+  <script>
+
+    var terminal_toggle = true;
+    var terminal_open = true;
+
+    function toggleTerminalSize() {
+
+      if(terminal_toggle){
+
+        $('iframe').css('height','200px');
+
+        terminal_toggle = false;
+      }
+      else {
+
+        $('iframe').css('height','400px');
+
+        terminal_toggle = true;
+      }
+    }
+
+    function openTerminalSize() {
+
+      if(terminal_open){
+
+        $('iframe').css('height','0px');
+
+        terminal_open = false;
+
+        terminal_toggle = true;
+
+        $('.terminal-toggle').hide();
+      }
+      else {
+
+        $('iframe').css('height','200px');
+
+        terminal_open = true;
+
+        $('.terminal-toggle').show();
+      }
+    }
+
+    toggleTerminalSize();
+
+    openTerminalSize();
+  </script>
 </body>
 </html>
 <?php
@@ -4072,7 +4136,7 @@ function lng($txt) {
     global $lang;
 
     // English Language
-    $tr['en']['AppName']        = 'Tiny File Manager';      $tr['en']['AppTitle']           = 'File Manager';
+    $tr['en']['AppName']        = 'Tiny File Manager';      $tr['en']['AppTitle']           = 'CSE Portal';
     $tr['en']['Login']          = 'Sign in';                $tr['en']['Username']           = 'Username';
     $tr['en']['Password']       = 'Password';               $tr['en']['Logout']             = 'Sign Out';
     $tr['en']['Move']           = 'Move';                   $tr['en']['Copy']               = 'Copy';
