@@ -2,12 +2,15 @@
 
 The standard library comes with a number of modules that can be used both as modules and as command-line utilities.
 
-The dis Module
-The dis module is the Python disassembler. It converts byte codes to a format that is slightly more appropriate for human consumption.
+## The dis Module
 
-You can run the disassembler from the command line. It compiles the given script and prints the disassembled byte codes to the STDOUT. You can also use dis as a module. The dis function takes a class, method, function or code object as its single argument.
+The `dis` module is the Python disassembler. It converts byte codes to a format that is slightly more appropriate for human consumption.
 
-Example
+You can run the disassembler from the command line. It compiles the given script and prints the disassembled byte codes to the STDOUT. You can also use `dis` as a module. The `dis` function takes a class, method, function or code object as its single argument.
+
+**Example**
+
+```
 #!/usr/bin/python
 import dis
 
@@ -41,14 +44,17 @@ This would produce the following result −
              30 PRINT_NEWLINE
              31 LOAD_CONST               0 (None)
              34 RETURN_VALUE
-The pdb Module
-The pdb module is the standard Python debugger. It is based on the bdb debugger framework.
+```
+
+## The pdb Module
+
+The `pdb` module is the standard Python debugger. It is based on the `bdb` debugger framework.
 
 You can run the debugger from the command line (type n [or next] to go to the next line and help to get a list of available commands) −
 
 Example
-Before you try to run pdb.py, set your path properly to Python lib directory. So let us try with above example sum.py −
-
+Before you try to run `pdb.py`, set your path properly to Python lib directory. So let us try with above example sum.py −
+```
 $pdb.py sum.py
 > /test/sum.py(3)<module>()
 -> import dis
@@ -86,10 +92,12 @@ $pdb.py sum.py
 (Pdb)
 The profile Module
 The profile module is the standard Python profiler. You can run the profiler from the command line −
+```
 
-Example
+**Example**
+
 Let us try to profile the following program −
-
+```
 #!/usr/bin/python
 
 vara = 10
@@ -110,10 +118,14 @@ ncalls  tottime  percall  cumtime  percall filename:lineno
    1    0.000    0.000    0.000    0.000 sum.py:3(<module>)
    1    0.000    0.000    0.000    0.000 {execfile}
    1    0.000    0.000    0.000    0.000 {method ......}
-The tabnanny Module
-The tabnanny module checks Python source files for ambiguous indentation. If a file mixes tabs and spaces in a way that throws off indentation, no matter what tab size you're using, the nanny complains −
+```
 
-Example
+## The tabnanny Module
+
+The `tabnanny` module checks Python source files for ambiguous indentation. If a file mixes tabs and spaces in a way that throws off indentation, no matter what tab size you're using, the nanny complains −
+
+**Example**
+```
 Let us try to profile the following program −
 
 #!/usr/bin/python
@@ -127,6 +139,7 @@ If you would try a correct file with tabnanny.py, then it won't complain as foll
 
 $tabnanny.py -v sum.py
 'sum.py': Clean bill of health.
+```
 
 # References
 https://www.tutorialspoint.com/python/python_tools_utilities.htm
