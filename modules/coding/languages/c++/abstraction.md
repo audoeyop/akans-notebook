@@ -14,10 +14,15 @@ For example, your program can make a call to the sort() function without knowi
 
 In C++, we use classes to define our own abstract data types (ADT). You can use the cout object of class ostream to stream data to standard output like this -
 
-[Live Demo](http://tpcg.io/iaAqF8)
+```
+#include <iostream>
+using namespace std;
 
-#include  <iostream>  using  namespace std;  int main()  { cout <<  "Hello C++"  <<endl;  return  0;  }
-
+int main() {
+   cout << "Hello C++" <<endl;
+   return 0;
+}
+```
 Here, you don't need to understand how cout displays the text on the user's screen. You need to only know the public interface and the underlying implementation of 'cout' is free to change.
 
 Access Labels Enforce Abstraction
@@ -47,14 +52,48 @@ Data Abstraction Example
 
 Any C++ program where you implement a class with public and private members is an example of data abstraction. Consider the following example -
 
-[Live Demo](http://tpcg.io/Dm4Yt3)
+```
+#include <iostream>
+using namespace std;
 
-#include  <iostream>  using  namespace std;  class  Adder  {  public:  // constructor  Adder(int i =  0)  { total = i;  }  // interface to outside world  void addNum(int number)  { total += number;  }  // interface to outside world  int getTotal()  {  return total;  };  private:  // hidden data from outside world  int total;  };  int main()  {  Adder a; a.addNum(10); a.addNum(20); a.addNum(30); cout <<  "Total "  << a.getTotal()  <<endl;  return  0;  }
+class Adder {
+   public:
+      // constructor
+      Adder(int i = 0) {
+         total = i;
+      }
+
+      // interface to outside world
+      void addNum(int number) {
+         total += number;
+      }
+
+      // interface to outside world
+      int getTotal() {
+         return total;
+      };
+
+   private:
+      // hidden data from outside world
+      int total;
+};
+
+int main() {
+   Adder a;
+
+   a.addNum(10);
+   a.addNum(20);
+   a.addNum(30);
+
+   cout << "Total " << a.getTotal() <<endl;
+   return 0;
+}
+```
 
 When the above code is compiled and executed, it produces the following result -
-
+```
 Total 60
-
+```
 Above class adds numbers together, and returns the sum. The public members - addNum and getTotal are the interfaces to the outside world and a user needs to know them to use the class. The private member total is something that the user doesn't need to know about, but is needed for the class to operate properly.
 
 Designing Strategy

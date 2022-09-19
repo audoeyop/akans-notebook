@@ -7,7 +7,7 @@ We will use the globalShortcut module to define shortcuts in our app. Note that 
 Let us consider an example and create a shortcut. For this, we will follow the dialog boxes example where we used the open dialog box for opening files. We will register a CommandOrControl+O shortcut to bring up the dialog box.
 
 Our main.js code will remain the same as before. So create a new main.js file and enter the following code in it −
-
+```
 const {app, BrowserWindow} = require('electron')
 const url = require('url')
 const path = require('path')
@@ -50,10 +50,11 @@ ipcMain.on('openFile', (event, path) => {
 })
 
 app.on('ready', createWindow)
+```
 This code will pop open the open dialog box whenever our main process receives a 'openFile' message from a renderer process. Earlier this dialog box popped up whenever the app was run. Let us now limit it to open only when we press CommandOrControl+O.
 
 Now create a new index.html file with the following content −
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -78,12 +79,10 @@ Now create a new index.html file with the following content −
       </script>
    </body>
 </html>
+```
 We registered a new shortcut and passed a callback that will be executed whenever we press this shortcut. We can deregister shortcuts as and when we do not require them.
 
 Now once the app is opened, we will get the message to open the file using the shortcut we just defined.
-
-Open dialog
-These shortcuts can be made customizable by allowing the user to choose his own shortcuts for defined actions.
 
 # References
 https://www.tutorialspoint.com/electron/electron_defining_shortcuts.htm

@@ -18,9 +18,8 @@ There are following arithmetic operators supported by C++ language -
 
 Assume variable A holds 10 and variable B holds 20, then -
 
-[Show Examples](https://www.tutorialspoint.com/cplusplus/cpp_arithmatic_operators.htm "Arithmetic Operators in C++")
-
 | Operator | Description | Example |
+|---|---|---
 | + | Adds two operands | A + B will give 30 |
 | - | Subtracts second operand from the first | A - B will give -10 |
 | * | Multiplies both operands | A * B will give 200 |
@@ -36,9 +35,8 @@ There are following relational operators supported by C++ language
 
 Assume variable A holds 10 and variable B holds 20, then -
 
-[Show Examples](https://www.tutorialspoint.com/cplusplus/cpp_relational_operators.htm "Relational Operators in C++")
-
 | Operator | Description | Example |
+|---|---|---
 | == | Checks if the values of two operands are equal or not, if yes then condition becomes true. | (A == B) is not true. |
 | != | Checks if the values of two operands are equal or not, if values are not equal then condition becomes true. | (A != B) is true. |
 | > | Checks if the value of left operand is greater than the value of right operand, if yes then condition becomes true. | (A > B) is not true. |
@@ -53,11 +51,10 @@ There are following logical operators supported by C++ language.
 
 Assume variable A holds 1 and variable B holds 0, then -
 
-[Show Examples](https://www.tutorialspoint.com/cplusplus/cpp_logical_operators.htm "Logical Operators in C++")
-
 | Operator | Description | Example |
+|---|---|---
 | && | Called Logical AND operator. If both the operands are non-zero, then condition becomes true. | (A && B) is false. |
-| || | Called Logical OR Operator. If any of the two operands is non-zero, then condition becomes true. | (A || B) is true. |
+| \|\| | Called Logical OR Operator. If any of the two operands is non-zero, then condition becomes true. | (A \|\| B) is true. |
 | ! | Called Logical NOT Operator. Use to reverses the logical state of its operand. If a condition is true, then Logical NOT operator will make false. | !(A && B) is true. |
 
 Bitwise Operators
@@ -65,19 +62,18 @@ Bitwise Operators
 
 Bitwise operator works on bits and perform bit-by-bit operation. The truth tables for &, |, and ^ are as follows -
 
-| p | q | p & q | p | q | p ^ q |
+| p | q | p & q | p \| q | p ^ q |
+|---|---|---|---|---
 | 0 | 0 | 0 | 0 | 0 |
 | 0 | 1 | 0 | 1 | 1 |
 | 1 | 1 | 1 | 1 | 0 |
 | 1 | 0 | 0 | 1 | 1 |
 
 Assume if A = 60; and B = 13; now in binary format they will be as follows -
-
+```
 A = 0011 1100
 
 B = 0000 1101
-
------------------
 
 A&B = 0000 1100
 
@@ -86,14 +82,13 @@ A|B = 0011 1101
 A^B = 0011 0001
 
 ~A  = 1100 0011
-
+```
 The Bitwise operators supported by C++ language are listed in the following table. Assume variable A holds 60 and variable B holds 13, then -
 
-[Show Examples](https://www.tutorialspoint.com/cplusplus/cpp_bitwise_operators.htm "Bitwise Operators in C++")
-
 | Operator | Description | Example |
+|---|---|---
 | & | Binary AND Operator copies a bit to the result if it exists in both operands. | (A & B) will give 12 which is 0000 1100 |
-| | | Binary OR Operator copies a bit if it exists in either operand. | (A | B) will give 61 which is 0011 1101 |
+| \| | Binary OR Operator copies a bit if it exists in either operand. | (A \| B) will give 61 which is 0011 1101 |
 | ^ | Binary XOR Operator copies the bit if it is set in one operand but not both. | (A ^ B) will give 49 which is 0011 0001 |
 | ~ | Binary Ones Complement Operator is unary and has the effect of 'flipping' bits. | (~A ) will give -61 which is 1100 0011 in 2's complement form due to a signed binary number. |
 | << | Binary Left Shift Operator. The left operands value is moved left by the number of bits specified by the right operand. | A << 2 will give 240 which is 1111 0000 |
@@ -107,6 +102,7 @@ There are following assignment operators supported by C++ language -
 [Show Examples](https://www.tutorialspoint.com/cplusplus/cpp_assignment_operators.htm "Assignment Operators in C++")
 
 | Operator | Description | Example |
+|---|---|---
 | = | Simple assignment operator, Assigns values from right side operands to left side operand. | C = A + B will assign value of A + B into C |
 | += | Add AND assignment operator, It adds right operand to the left operand and assign the result to left operand. | C += A is equivalent to C = C + A |
 | -= | Subtract AND assignment operator, It subtracts right operand from the left operand and assign the result to left operand. | C -= A is equivalent to C = C - A |
@@ -117,63 +113,50 @@ There are following assignment operators supported by C++ language -
 | >>= | Right shift AND assignment operator. | C >>= 2 is same as C = C >> 2 |
 | &= | Bitwise AND assignment operator. | C &= 2 is same as C = C & 2 |
 | ^= | Bitwise exclusive OR and assignment operator. | C ^= 2 is same as C = C ^ 2 |
-| |= | Bitwise inclusive OR and assignment operator. | C |= 2 is same as C = C | 2 |
+| \|= | Bitwise inclusive OR and assignment operator. | C \|= 2 is same as C = C | 2 |
 
 Misc Operators
 --------------
 
 The following table lists some other operators that C++ supports.
-
-| Sr.No | Operator & Description |
-| 1 |
-
+```
 sizeof
+```
 
-[sizeof operator](https://www.tutorialspoint.com/cplusplus/cpp_sizeof_operator.htm) returns the size of a variable. For example, sizeof(a), where 'a' is integer, and will return 4.
+sizeof operator: returns the size of a variable. For example, sizeof(a), where 'a' is integer, and will return 4.
 
- |
-| 2 |
-
+```
 Condition ? X : Y
+```
 
-[Conditional operator (?)](https://www.tutorialspoint.com/cplusplus/cpp_conditional_operator.htm). If Condition is true then it returns value of X otherwise returns value of Y.
+Conditional operator: If Condition is true then it returns value of X otherwise returns value of Y.
 
- |
-| 3 |
-
+```
 ,
+```
+Comma operator: causes a sequence of operations to be performed. The value of the entire comma expression is the value of the last expression of the comma-separated list.
 
-[Comma operator](https://www.tutorialspoint.com/cplusplus/cpp_comma_operator.htm) causes a sequence of operations to be performed. The value of the entire comma expression is the value of the last expression of the comma-separated list.
-
- |
-| 4 |
-
+```
 . (dot) and -> (arrow)
+```
 
-[Member operators](https://www.tutorialspoint.com/cplusplus/cpp_member_operators.htm) are used to reference individual members of classes, structures, and unions.
+Member operators: are used to reference individual members of classes, structures, and unions.
 
- |
-| 5 |
-
+```
 Cast
+```
+Casting operators: convert one data type to another. For example, int(2.2000) would return 2.
 
-[Casting operators](https://www.tutorialspoint.com/cplusplus/cpp_casting_operators.htm) convert one data type to another. For example, int(2.2000) would return 2.
-
- |
-| 6 |
-
+```
 &
+```
 
-[Pointer operator &](https://www.tutorialspoint.com/cplusplus/cpp_pointer_operators.htm) returns the address of a variable. For example &a; will give actual address of the variable.
+Pointer operator &: returns the address of a variable. For example &a; will give actual address of the variable.
 
- |
-| 7 |
-
+```
 *
-
-[Pointer operator *](https://www.tutorialspoint.com/cplusplus/cpp_pointer_operators.htm) is pointer to a variable. For example *var; will pointer to a variable var.
-
- |
+```
+Pointer operator *: is pointer to a variable. For example *var; will pointer to a variable var.
 
 Operators Precedence in C++
 ---------------------------
@@ -184,9 +167,8 @@ For example x = 7 + 3 * 2; here, x is assigned 13, not 20 because operator * has
 
 Here, operators with the highest precedence appear at the top of the table, those with the lowest appear at the bottom. Within an expression, higher precedence operators will be evaluated first.
 
-[Show Examples](https://www.tutorialspoint.com/cplusplus/cpp_operators_precedence.htm "Operators Precedence in C++")
-
 | Category  | Operator  | Associativity  |
+|---|---|---
 | Postfix  | () [] -> . ++ - -   | Left to right  |
 | Unary  | + - ! ~ ++ - - (type)* & sizeof  | Right to left  |
 | Multiplicative   | * / %  | Left to right  |
@@ -196,9 +178,9 @@ Here, operators with the highest precedence appear at the top of the table, thos
 | Equality   | == !=  | Left to right  |
 | Bitwise AND  | &  | Left to right  |
 | Bitwise XOR  | ^  | Left to right  |
-| Bitwise OR  | |  | Left to right  |
+| Bitwise OR  | \|  | Left to right  |
 | Logical AND  | &&  | Left to right  |
-| Logical OR  | ||  | Left to right  |
+| Logical OR  | \|\|  | Left to right  |
 | Conditional  | ?:  | Right to left  |
 | Assignment  | = += -= *= /= %=>>= <<= &= ^= |=  | Right to left  |
 | Comma  | ,  | Left to right  |

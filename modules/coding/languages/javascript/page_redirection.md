@@ -1,6 +1,6 @@
 # Javascript Page redirection
 
-What is Page Redirection ?
+## What is Page Redirection ?
 You might have encountered a situation where you clicked a URL to reach a page X but internally you were directed to another page Y. It happens due to page redirection. This concept is different from JavaScript Page Refresh.
 
 There could be various reasons why you would like to redirect a user from the original page. We are listing down a few of the reasons −
@@ -11,13 +11,14 @@ You have built-up various pages based on browser versions or their names or may 
 
 The Search Engines may have already indexed your pages. But while moving to another domain, you would not like to lose your visitors coming through search engines. So you can use client-side page redirection. But keep in mind this should not be done to fool the search engine, it could lead your site to get banned.
 
-How Page Re-direction Works ?
+## How Page Re-direction Works ?
 The implementations of Page-Redirection are as follows.
 
-Example 1
+**Example 1**
+
 It is quite simple to do a page redirect using JavaScript at client side. To redirect your site visitors to a new page, you just need to add a line in your head section as follows.
 
-Live Demo
+```
 <html>
    <head>
       <script type = "text/javascript">
@@ -38,12 +39,13 @@ Live Demo
 
    </body>
 </html>
+```
 Output
 
-Example 2
-You can show an appropriate message to your site visitors before redirecting them to a new page. This would need a bit time delay to load a new page. The following example shows how to implement the same. Here setTimeout() is a built-in JavaScript function which can be used to execute another function after a given time interval.
+**Example 2**
 
-Live Demo
+You can show an appropriate message to your site visitors before redirecting them to a new page. This would need a bit time delay to load a new page. The following example shows how to implement the same. Here setTimeout() is a built-in JavaScript function which can be used to execute another function after a given time interval.
+```
 <html>
    <head>
       <script type = "text/javascript">
@@ -60,12 +62,15 @@ Live Demo
    <body>
    </body>
 </html>
+```
 Output
-
+```
 You will be redirected to tutorialspoint.com main page in 10 seconds!
-Example 3
-The following example shows how to redirect your site visitors onto a different page based on their browsers.
+```
+**Example 3**
 
+The following example shows how to redirect your site visitors onto a different page based on their browsers.
+```
 <html>
    <head>     
       <script type = "text/javascript">
@@ -85,6 +90,7 @@ The following example shows how to redirect your site visitors onto a different 
    <body>
    </body>
 </html>
+```
 
 # References
 https://www.tutorialspoint.com/javascript/javascript_page_redirect.htm

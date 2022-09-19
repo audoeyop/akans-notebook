@@ -1,6 +1,6 @@
 # PHP Ajax
 
-What is AJAX ?
+## What is AJAX ?
 AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS and Java Script.
 
 Conventional web application transmit information to and from the sever using synchronous requests. This means you fill out a form, hit submit, and get directed to a new page with new information from the server.
@@ -9,11 +9,11 @@ With AJAX when submit is pressed, JavaScript will make a request to the server, 
 
 For complete learning on AJAX, please refer to AJAX Tutorial.
 
-PHP and AJAX Example
+## PHP and AJAX Example
 To clearly illustrate how easy it is to access information from a database using Ajax and PHP, we are going to build MySQL queries on the fly and display the results on "ajax.html". But before we proceed, lets do ground work. Create a table using the following command.
 
 NOTE − We are assuming you have sufficient privilege to perform following MySQL operations.
-
+```
 CREATE TABLE `ajax_example` (
    `name` varchar(50) NOT NULL,
    `age` int(11) NOT NULL,
@@ -21,17 +21,20 @@ CREATE TABLE `ajax_example` (
    `wpm` int(11) NOT NULL,
    PRIMARY KEY  (`name`)
 )
+```
 Now dump the following data into this table using the following SQL statements.
-
+```
 INSERT INTO `ajax_example` VALUES ('Jerry', 120, 'm', 20);
 INSERT INTO `ajax_example` VALUES ('Regis', 75, 'm', 44);
 INSERT INTO `ajax_example` VALUES ('Frank', 45, 'm', 87);
 INSERT INTO `ajax_example` VALUES ('Jill', 22, 'f', 72);
 INSERT INTO `ajax_example` VALUES ('Tracy', 27, 'f', 0);
 INSERT INTO `ajax_example` VALUES ('Julie', 35, 'f', 90);
-Client Side HTML file
-Now lets have our client side HTML file which is ajax.html and it will have following code
+```
 
+## Client Side HTML file
+Now lets have our client side HTML file which is ajax.html and it will have following code
+```
 <html>
    <body>
 
@@ -102,25 +105,15 @@ Now lets have our client side HTML file which is ajax.html and it will have foll
       <div id = 'ajaxDiv'>Your result will display here</div>
    </body>
 </html>
+```
 NOTE − The way of passing variables in the Query is according to HTTP standard and the have formA.
-
+```
 URL?variable1=value1;&variable2=value2;
-Now the above code will give you a screen as given below
+```
 
-NOTE − This is dummy screen and would not work.
-
-Max Age:  
-
-
-Max WPM:
-
-Sex:
-m
-
-Your result will display here
-Server Side PHP file
+## Server Side PHP file
 So now your client side script is ready. Now we have to write our server side script which will fetch age, wpm and sex from the database and will send it back to the client. Put the following code into "ajax-example.php" file.
-
+```
 <?php
 
    $dbhost = "localhost";
@@ -179,17 +172,8 @@ So now your client side script is ready. Now we have to write our server side sc
    $display_string .= "</table>";
    echo $display_string;
 ?>
-Now try by entering a valid value in "Max Age" or any other box and then click Query MySQL button.
+```
 
-Max Age:  
-
-
-Max WPM:
-
-Sex:
-m
-
-Your result will display here
 If you have successfully completed this lesson then you know how to use MySQL, PHP, HTML, and Javascript in tandem to write Ajax applications.
 
 

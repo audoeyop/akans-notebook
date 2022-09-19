@@ -2,7 +2,7 @@
 
 This session demonstrates how PHP can provide dynamic content according to browser type, randomly generated numbers or User Input. It also demonstrated how the client browser can be redirected.
 
-Identifying Browser & Platform
+## Identifying Browser & Platform
 PHP creates some useful environment variables that can be seen in the phpinfo.php page that was used to setup the PHP environment.
 
 One of the environment variables set by PHP is HTTP_USER_AGENT which identifies the user's browser and operating system.
@@ -12,7 +12,7 @@ PHP provides a function getenv() to access the value of all the environment vari
 Following example demonstrates how you can identify a client browser and operating system.
 
 NOTE − The function preg_match()is discussed in PHP Regular expression session.
-
+```
 <html>
    <body>
 
@@ -98,19 +98,21 @@ NOTE − The function preg_match()is discussed in PHP Regular expression session
 
    </body>
 </html>
+```
 This is producing following result on my machine. This result may be different for your computer depending on what you are using.
 
 It will produce the following result −
-
+```
 Your browser: Google Chrome 54.0.2840.99 on windows reports:
 Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko)
    Chrome/54.0.2840.99 Safari/537.36
-Display Images Randomly
+```
+
+## Display Images Randomly
 The PHP rand() function is used to generate a random number.i This function can generate numbers with-in a given range. The random number generator should be seeded to prevent a regular pattern of numbers being generated. This is achieved using the srand() function that specifies the seed number as its argument.
 
 Following example demonstrates how you can display different image each time out of four images −
-
-Live Demo
+```
 <html>
    <body>
 
@@ -136,14 +138,13 @@ Live Demo
 
    </body>
 </html>
-It will produce the following result −
+```
 
-Display Image Randomly
-Using HTML Forms
+## Using HTML Forms
 The most important thing to notice when dealing with HTML forms and PHP is that any form element in an HTML page will automatically be available to your PHP scripts.
 
 Try out following example by putting the source code in test.php script.
-
+```
 <?php
    if( $_POST["name"] || $_POST["age"] ) {
       if (preg_match("/[^A-Za-z'-]/",$_POST['name'] )) {
@@ -167,20 +168,20 @@ Try out following example by putting the source code in test.php script.
 
    </body>
 </html>
-It will produce the following result −
+```
 
-Forms
+## Forms
 The PHP default variable $_PHP_SELF is used for the PHP script name and when you click "submit" button then same PHP script will be called and will produce following result −
 
 The method = "POST" is used to post user data to the server script. There are two methods of posting data to the server script which are discussed in PHP GET & POST chapter.
 
-Browser Redirection
+## Browser Redirection
 The PHP header() function supplies raw HTTP headers to the browser and can be used to redirect it to another location. The redirection script should be at the very top of the page to prevent any other part of the page from loading.
 
 The target is specified by the Location: header as the argument to the header() function. After calling this function the exit() function can be used to halt parsing of rest of the code.
 
 Following example demonstrates how you can redirect a browser request to another web page. Try out this example by putting the source code in test.php script.
-
+```
 <?php
    if( $_POST["location"] ) {
       $location = $_POST["location"];
@@ -211,7 +212,7 @@ Following example demonstrates how you can redirect a browser request to another
 
    </body>
 </html>
-It will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/php/php_web_concepts.htm

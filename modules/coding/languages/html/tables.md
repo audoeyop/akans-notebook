@@ -2,10 +2,11 @@
 
 The HTML tables allow web authors to arrange data like text, images, links, other tables, etc. into rows and columns of cells.
 
-The HTML tables are created using the <table> tag in which the <tr> tag is used to create table rows and <td> tag is used to create data cells. The elements under <td> are regular and left aligned by default
+The HTML tables are created using the \<table> tag in which the \<tr> tag is used to create table rows and \<td> tag is used to create data cells. The elements under \<td> are regular and left aligned by default
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -28,16 +29,17 @@ Live Demo
 
    </body>
 </html>
-This will produce the following result −
+```
 
 
-Here, the border is an attribute of <table> tag and it is used to put a border across all the cells. If you do not need a border, then you can use border = "0".
+Here, the border is an attribute of \<table> tag and it is used to put a border across all the cells. If you do not need a border, then you can use border = "0".
 
 Table Heading
-Table heading can be defined using <th> tag. This tag will be put to replace <td> tag, which is used to represent actual data cell. Normally you will put your top row as table heading as shown below, otherwise you can use <th> element in any row. Headings, which are defined in <th> tag are centered and bold by default.
+Table heading can be defined using \<th> tag. This tag will be put to replace \<td> tag, which is used to represent actual data cell. Normally you will put your top row as table heading as shown below, otherwise you can use \<th> element in any row. Headings, which are defined in \<th> tag are centered and bold by default.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -64,14 +66,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
-
-Cellpadding and Cellspacing Attributes
+## Cellpadding and Cellspacing Attributes
 There are two attributes called cellpadding and cellspacing which you will use to adjust the white space in your table cells. The cellspacing attribute defines space between table cells, while cellpadding represents the distance between cell borders and the content within a cell.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -97,14 +99,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Colspan and Rowspan Attributes
 You will use colspan attribute if you want to merge two or more columns into a single column. Similar way you will use rowspan if you want to merge two or more rows.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -135,22 +138,23 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Tables Backgrounds
+## Tables Backgrounds
 You can set table background using one of the following two ways −
 
-bgcolor attribute − You can set background color for whole table or just for one cell.
+- bgcolor attribute − You can set background color for whole table or just for one cell.
 
-background attribute − You can set background image for whole table or just for one cell.
+- background attribute − You can set background image for whole table or just for one cell.
 
 You can also set border color also using bordercolor attribute.
 
 Note − The bgcolor, background, and bordercolor attributes deprecated in HTML5. Do not use these attributes.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -181,12 +185,12 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Here is an example of using background attribute. Here we will use an image available in /images directory.
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -216,14 +220,16 @@ Live Demo
    </body>
 
 </html>
+```
 This will produce the following result. Here background image did not apply to table's header.
 
 
-Table Height and Width
+## Table Height and Width
 You can set a table width and height using width and height attributes. You can specify table width or height in terms of pixels or in terms of percentage of available screen area.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -246,14 +252,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Table Caption
+## Table Caption
 The caption tag will serve as a title or explanation for the table and it shows up at the top of the table. This tag is deprecated in newer version of HTML/XHTML.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -276,24 +283,25 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Table Header, Body, and Footer
+## Table Header, Body, and Footer
 Tables can be divided into three portions − a header, a body, and a foot. The head and foot are rather similar to headers and footers in a word-processed document that remain the same for every page, while the body is the main content holder of the table.
 
 The three elements for separating the head, body, and foot of a table are −
 
-<thead> − to create a separate table header.
+- `<thead>` − to create a separate table header.
 
-<tbody> − to indicate the main body of the table.
+- `<tbody>` − to indicate the main body of the table.
 
-<tfoot> − to create a separate table footer.
+- `<tfoot>` − to create a separate table footer.
 
-A table may contain several <tbody> elements to indicate different pages or groups of data. But it is notable that <thead> and <tfoot> tags should appear before <tbody>
+A table may contain several \<tbody> elements to indicate different pages or groups of data. But it is notable that \<thead> and \<tfoot> tags should appear before \<tbody>
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -328,16 +336,17 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Nested Tables
-You can use one table inside another table. Not only tables you can use almost all the tags inside table data tag <td>.
+## Nested Tables
+You can use one table inside another table. Not only tables you can use almost all the tags inside table data tag \<td>.
 
-Example
+**Example**
+
 Following is the example of using another table and other tags inside a table cell.
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -371,7 +380,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/html/html_tables.htm

@@ -3,82 +3,98 @@
 ## Number Methods
 The Number object contains only the default methods that are part of every object's definition.
 
-Sr.No.	Method & Description
-1	constructor()
+**constructor()**
+
 Returns the function that created this object's instance. By default this is the Number object.
 
-2	toExponential()
+**toExponential()**
+
 Forces a number to display in exponential notation, even if the number is in the range in which JavaScript normally uses standard notation.
 
-3	toFixed()
+**toFixed()**
+
 Formats a number with a specific number of digits to the right of the decimal.
 
-4	toLocaleString()
+**toLocaleString()**
+
 Returns a string value version of the current number in a format that may vary according to a browser's locale settings.
 
-5	toPrecision()
+**toPrecision()**
+
 Defines how many total digits (including digits to the left and right of the decimal) to display of a number.
 
-6	toString()
+**toString()**
+
 Returns the string representation of the number's value.
 
-7	valueOf()
+**valueOf()**
+
 Returns the number's value.
 
-Boolean Methods
+## Boolean Methods
 Here is a list of each method and its description.
 
-Sr.No.	Method & Description
-1	toSource()
-Returns a string containing the source of the Boolean object; you can use this string to create an equivalent object.
+**toString()**
 
-2	toString()
 Returns a string of either "true" or "false" depending upon the value of the object.
 
-3	valueOf()
+**valueOf()**
+
 Returns the primitive value of the Boolean object.
 
-String Methods
+## String Methods
 Here is a list of each method and its description.
 
-Sr.No.	Method & Description
-1	charAt()
+**charAt()**
+
 Returns the character at the specified index.
 
-2	charCodeAt()
+**charCodeAt()**
+
 Returns a number indicating the Unicode value of the character at the given index.
 
-3	concat()
+**concat()**
+
 Combines the text of two strings and returns a new string.
 
-4	indexOf()
+**indexOf()**
+
 Returns the index within the calling String object of the first occurrence of the specified value, or -1 if not found.
 
-5	lastIndexOf()
+**lastIndexOf()**
+
 Returns the index within the calling String object of the last occurrence of the specified value, or -1 if not found.
 
-6	localeCompare()
+**localeCompare()**
+
 Returns a number indicating whether a reference string comes before or after or is the same as the given string in sort order.
 
-7	length()
+**length()**
+
 Returns the length of the string.
 
-8	match()
+**match()**
+
 Used to match a regular expression against a string.
 
-9	replace()
+**replace()**
+
 Used to find a match between a regular expression and a string, and to replace the matched substring with a new substring.
 
-10	search()
+**search()**
+
 Executes the search for a match between a regular expression and a specified string.
 
-11	slice()
+**slice()**
+
 Extracts a section of a string and returns a new string.
 
-12	split()
+**split()**
+
 Splits a String object into an array of strings by separating the string into substrings.
 
-13	substr()
+**substr()**
+
 Returns the characters in a string beginning at the specified location through the specified number of characters.
 
 14	substring()

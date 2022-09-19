@@ -12,12 +12,12 @@ In fact you hardly need to create your own PHP function because there are alread
 
 Please refer to PHP Function Reference for a complete set of useful functions.
 
-Creating PHP Function
+## Creating PHP Function
 Its very easy to create your own PHP function. Suppose you want to create a PHP function which will simply write a simple message on your browser when you will call it. Following example creates a function called writeMessage() and then calls it just after creating it.
 
 Note that while creating a function its name should start with keyword function and all the PHP code should be put inside { and } braces as shown in the following example below −
 
-Live Demo
+```
 <html>
 
    <head>
@@ -38,13 +38,16 @@ Live Demo
 
    </body>
 </html>
+```
 This will display following result −
-
+```
 You are really a nice person, Have a nice time!
-PHP Functions with Parameters
+```
+
+## PHP Functions with Parameters
 PHP gives you option to pass your parameters inside a function. You can pass as many as parameters your like. These parameters work like variables inside your function. Following example takes two integer parameters and add them together and then print them.
 
-Live Demo
+```
 <html>
 
    <head>
@@ -64,17 +67,20 @@ Live Demo
 
    </body>
 </html>
+```
 This will display following result −
-
+```
 Sum of the two numbers is : 30
-Passing Arguments by Reference
+```
+
+## Passing Arguments by Reference
 It is possible to pass arguments to functions by reference. This means that a reference to the variable is manipulated by the function rather than a copy of the variable's value.
 
 Any changes made to an argument in these cases will change the value of the original variable. You can pass an argument by reference by adding an ampersand to the variable name in either the function call or the function definition.
 
 Following example depicts both the cases.
 
-Live Demo
+```
 <html>
 
    <head>
@@ -103,18 +109,21 @@ Live Demo
 
    </body>
 </html>
+```
 This will display following result −
-
+```
 Original Value is 10
 Original Value is 16
-PHP Functions returning value
+```
+
+## PHP Functions returning value
 A function can return a value using the return statement in conjunction with a value or object. return stops the execution of the function and sends the value back to the calling code.
 
 You can return more than one value from a function using return array(1,2,3,4).
 
 Following example takes two integer parameters and add them together and then returns their sum to the calling program. Note that return keyword is used to return a value from a function.
 
-Live Demo
+```
 <html>
 
    <head>
@@ -135,15 +144,17 @@ Live Demo
 
    </body>
 </html>
+```
 This will display following result −
-
+```
 Returned value from the function : 30
+```
 Setting Default Values for Function Parameters
 You can set a parameter to have a default value if the function's caller doesn't pass it.
 
 Following function prints NULL in case use does not pass any value to this function.
 
-Live Demo
+```
 <html>
 
    <head>
@@ -163,13 +174,16 @@ Live Demo
 
    </body>
 </html>
+```
 This will produce following result −
-
+```
 This is test
-Dynamic Function Calls
+```
+
+## Dynamic Function Calls
 It is possible to assign function names as strings to variables and then treat these variables exactly as you would the function name itself. Following example depicts this behaviour.
 
-Live Demo
+```
 <html>
 
    <head>
@@ -189,9 +203,11 @@ Live Demo
 
    </body>
 </html>
+```
 This will display following result −
-
+```
 Hello
+```
 
 # References
 https://www.tutorialspoint.com/php/php_functions.htm

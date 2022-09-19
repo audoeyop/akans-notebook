@@ -6,18 +6,20 @@ Same situation can arise in your C++ applications. For example, you might be wri
 
 A namespace is designed to overcome this difficulty and is used as additional information to differentiate similar functions, classes, variables etc. with the same name available in different libraries. Using namespace, you can define the context in which names are defined. In essence, a namespace defines a scope.
 
-Defining a Namespace
+## Defining a Namespace
 A namespace definition begins with the keyword namespace followed by the namespace name as follows −
-
+```
 namespace namespace_name {
    // code declarations
 }
+```
 To call the namespace-enabled version of either function or variable, prepend (::) the namespace name as follows −
-
+```
 name::code;  // code could be variable or function.
+```
 Let us see how namespace scope the entities including variable and functions −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -44,14 +46,16 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 Inside first_space
 Inside second_space
-The using directive
-You can also avoid prepending of namespaces with the using namespace directive. This directive tells the compiler that the subsequent code is making use of names in the specified namespace. The namespace is thus implied for the following code −
+```
 
-Live Demo
+## The using directive
+You can also avoid prepending of namespaces with the using namespace directive. This directive tells the compiler that the subsequent code is making use of names in the specified namespace. The namespace is thus implied for the following code −
+```
 #include <iostream>
 using namespace std;
 
@@ -76,15 +80,17 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
 
-Inside first_space
+## Inside first_space
 The ‘using’ directive can also be used to refer to a particular item within a namespace. For example, if the only part of the std namespace that you intend to use is cout, you can refer to it as follows −
-
+```
 using std::cout;
+```
 Subsequent code can refer to cout without prepending the namespace, but other items in the std namespace will still need to be explicit as follows −
 
-Live Demo
+```
 #include <iostream>
 using std::cout;
 
@@ -93,38 +99,43 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 std::endl is used with std!
+```
 Names introduced in a using directive obey normal scope rules. The name is visible from the point of the using directive to the end of the scope in which the directive is found. Entities with the same name defined in an outer scope are hidden.
 
-Discontiguous Namespaces
+## Discontiguous Namespaces
 A namespace can be defined in several parts and so a namespace is made up of the sum of its separately defined parts. The separate parts of a namespace can be spread over multiple files.
 
 So, if one part of the namespace requires a name defined in another file, that name must still be declared. Writing a following namespace definition either defines a new namespace or adds new elements to an existing one −
-
+```
 namespace namespace_name {
    // code declarations
 }
+```
 Nested Namespaces
 Namespaces can be nested where you can define one namespace inside another name space as follows −
-
+```
 namespace namespace_name1 {
    // code declarations
    namespace namespace_name2 {
       // code declarations
    }
 }
+```
 You can access members of nested namespace by using resolution operators as follows −
-
+```
 // to access members of namespace_name2
 using namespace namespace_name1::namespace_name2;
 
 // to access members of namespace:name1
 using namespace namespace_name1;
+```
 In the above statements if you are using namespace_name1, then it will make elements of namespace_name2 available in the scope as follows −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -149,9 +160,10 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 Inside second_space
-
+```
 # References
 https://www.tutorialspoint.com/cplusplus/cpp_namespaces.htm

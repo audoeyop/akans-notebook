@@ -8,24 +8,24 @@ A simple example, check our Contact Us Form. We take user feedback using this fo
 
 Note − You will learn about HTML Forms in HTML Forms and you will learn about CGI in our another tutorial Perl CGI Programming.
 
-HTML Email Tag
-HTML <a> tag provides you option to specify an email address to send an email. While using <a> tag as an email tag, you will use mailto: email address along with href attribute. Following is the syntax of using mailto instead of using http.
-
+## HTML Email Tag
+HTML `<a>` tag provides you option to specify an email address to send an email. While using `<a>` tag as an email tag, you will use mailto: email address along with href attribute. Following is the syntax of using mailto instead of using http.
+```
 <a href = "mailto: abc@example.com">Send Email</a>
+```
 This code will generate the following link which you can use to send email.
 
-Send Email
+## Send Email
 Now, if a user clicks this link, it launches one Email Client (like Lotus Notes, Outlook Express etc. ) installed on your user's computer. There is another risk to use this option to send email because if user do not have email client installed on their computer then it would not be possible to send email.
 
-Default Settings
+## Default Settings
 You can specify a default email subject and email body along with your email address. Following is the example to use default subject and body.
-
-<a href = "mailto:abc@example.com?subject = Feedback&body = Message">
+```
+<a href = "mailto:abc@example.com?subject=Feedback&body=Message">
 Send Feedback
 </a>
-This code will generate the following link which you can use to send email.
-
-Send Feedback
+```
+This code will generate a link to send email.
 
 # References
 https://www.tutorialspoint.com/html/html_email_links.htm

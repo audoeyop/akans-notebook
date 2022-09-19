@@ -4,17 +4,17 @@ Colors are very important to give a good look and feel to your website. You can 
 
 The <body> tag has following attributes which can be used to set different colors −
 
-bgcolor − sets a color for the background of the page.
+- **bgcolor** − sets a color for the background of the page.
 
-text − sets a color for the body text.
+- **text** − sets a color for the body text.
 
-alink − sets a color for active links or selected links.
+- **alink** − sets a color for active links or selected links.
 
-link − sets a color for linked text.
+- **link** − sets a color for linked text.
 
-vlink − sets a color for visited links − that is, for linked text that you have already clicked on.
+- **vlink** − sets a color for visited links − that is, for linked text that you have already clicked on.
 
-HTML Color Coding Methods
+## HTML Color Coding Methods
 There are following three different methods to set colors in your web page −
 
 Color names − You can specify color names directly like green, blue or red.
@@ -25,22 +25,24 @@ Color decimal or percentage values − This value is specified using the rgb( ) 
 
 Now we will see these coloring schemes one by one.
 
-HTML Colors - Color Names
+## HTML Colors - Color Names
 You can specify direct a color name to set text or background color. W3C has listed 16 basic color names that will validate with an HTML validator but there are over 200 different color names supported by major browsers.
 
 Note − Check a complete list of HTML Color Name.
 
-W3C Standard 16 Colors
-Here is the list of W3C Standard 16 Colors names and it is recommended to use them.
+**W3C Standard 16 Colors**
 
+Here is the list of W3C Standard 16 Colors names and it is recommended to use them.
+```
 Black		Gray		Silver		White
 Yellow		Lime		Aqua		Fuchsia
 Red		Green		Blue		Purple
 Maroon		Olive		Navy		Teal
+```
 Example
 Here are the examples to set background of an HTML tag by color name −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -61,14 +63,17 @@ Live Demo
    </body>
 
 </html>
-HTML Colors - Hex Codes
+```
+
+## HTML Colors - Hex Codes
 A hexadecimal is a 6 digit representation of a color. The first two digits(RR) represent a red value, the next two are a green value(GG), and the last are the blue value(BB).
 
 A hexadecimal value can be taken from any graphics software like Adobe Photoshop, Paintshop Pro or MS Paint.
 
 Each hexadecimal code will be preceded by a pound or hash sign #. Following is a list of few colors using hexadecimal notation.
 
-Color	Color HEX
+**Examples**
+```
  	#000000
  	#FF0000
  	#00FF00
@@ -78,10 +83,11 @@ Color	Color HEX
  	#FF00FF
  	#C0C0C0
  	#FFFFFF
-Example
+```
+
 Here are the examples to set background of an HTML tag by color code in hexadecimal −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -102,14 +108,17 @@ Live Demo
    </body>
 
 </html>
-HTML Colors - RGB Values
+```
+
+## HTML Colors - RGB Values
 This color value is specified using the rgb( ) property. This property takes three values, one each for red, green, and blue. The value can be an integer between 0 and 255 or a percentage.
 
 Note − All the browsers does not support rgb() property of color so it is recommended not to use it.
 
 Following is a list to show few colors using RGB values.
 
-Color	Color RGB
+**Examples**
+```
  	rgb(0,0,0)
  	rgb(255,0,0)
  	rgb(0,255,0)
@@ -119,10 +128,11 @@ Color	Color RGB
  	rgb(255,0,255)
  	rgb(192,192,192)
  	rgb(255,255,255)
-Example
+```
+
 Here are the examples to set background of an HTML tag by color code using rgb() values −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -143,9 +153,11 @@ Live Demo
    </body>
 
 </html>
-Browser Safe Colors
-Here is the list of 216 colors which are supposed to be safest and computer independent colors. These colors very from hexa code 000000 to FFFFFF and they will be supported by all the computers having 256 color palette.
+```
 
+## Browser Safe Colors
+Here is the list of 216 colors which are supposed to be safest and computer independent colors. These colors very from hexa code 000000 to FFFFFF and they will be supported by all the computers having 256 color palette.
+```
 <table class="table table-bordered" style='color:#000000'>
 <tbody><tr>
 <td style="color: white;" bgcolor="#000000">000000</td>
@@ -436,6 +448,7 @@ Here is the list of 216 colors which are supposed to be safest and computer inde
 <td bgcolor="#ffffff">FFFFFF</td>
 </tr>
 </tbody></table>
+```
 
 # References
 https://www.tutorialspoint.com/html/html_colors.htm

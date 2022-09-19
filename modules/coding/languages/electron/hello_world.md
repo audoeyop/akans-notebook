@@ -3,7 +3,7 @@
 We have created a package.json file for our project. Now we will create our first desktop app using Electron.
 
 Create a new file called main.js. Enter the following code in it −
-
+```
 const {app, BrowserWindow} = require('electron')
 const url = require('url')
 const path = require('path')  
@@ -20,8 +20,9 @@ function createWindow() {
 }  
 
 app.on('ready', createWindow)
+```
 Create another file, this time an HTML file called index.html. Enter the following code in it.
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -36,13 +37,17 @@ Create another file, this time an HTML file called index.html. Enter the followi
       and Electron <script>document.write(process.versions.electron)</script>.
    </body>
 </html>
+```
 Run this app using the following command −
-
+```
 $ electron ./main.js
+```
 A new window will open up. It will look like the following −
-
+```
 Electron Hello World
-How Does This App Work?
+```
+
+## How Does This App Work?
 We created a main file and an HTML file. The main file uses two modules – app and BrowserWindow. The app module is used to control your application’s event lifecycle while the BrowserWindow module is used to create and control browser windows.
 
 We defined a createWindow function, where we are creating a new BrowserWindow and attaching a URL to this BrowserWindow. This is the HTML file that is rendered and shown to us when we run the app.

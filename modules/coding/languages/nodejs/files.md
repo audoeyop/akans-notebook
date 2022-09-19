@@ -1,18 +1,21 @@
 # Node.js File Input/Output (I/O)
 
 Node implements File I/O using simple wrappers around standard POSIX functions. The Node File System (fs) module can be imported using the following syntax −
-
+```
 var fs = require("fs")
-Synchronous vs Asynchronous
+```
+
+## Synchronous vs Asynchronous
 Every method in the fs module has synchronous as well as asynchronous forms. Asynchronous methods take the last parameter as the completion function callback and the first parameter of the callback function as error. It is better to use an asynchronous method instead of a synchronous method, as the former never blocks a program during its execution, whereas the second one does.
 
-Example
+**Example**
+
 Create a text file named input.txt with the following content −
 
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
 Let us create a js file named main.js with the following code −
-
+```
 var fs = require("fs");
 
 // Asynchronous read
@@ -28,102 +31,93 @@ var data = fs.readFileSync('input.txt');
 console.log("Synchronous read: " + data.toString());
 
 console.log("Program Ended");
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Synchronous read: Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
 
 Program Ended
 Asynchronous read: Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
+```
 The following sections in this chapter provide a set of good examples on major File I/O methods.
 
-Open a File
-Syntax
+## Open a File
+**Syntax**
 Following is the syntax of the method to open a file in asynchronous mode −
-
+```
 fs.open(path, flags[, mode], callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-path − This is the string having file name including path.
+- path − This is the string having file name including path.
 
-flags − Flags indicate the behavior of the file to be opened. All possible values have been mentioned below.
+- flags − Flags indicate the behavior of the file to be opened. All possible values have been mentioned below.
 
-mode − It sets the file mode (permission and sticky bits), but only if the file was created. It defaults to 0666, readable and writeable.
+- mode − It sets the file mode (permission and sticky bits), but only if the file was created. It defaults to 0666, readable and writeable.
 
-callback − This is the callback function which gets two arguments (err, fd).
+- callback − This is the callback function which gets two arguments (err, fd).
 
-Flags
+### Flags
 Flags for read/write operations are −
 
-Sr.No.	Flag & Description
-1
-r
+**r**
 
 Open file for reading. An exception occurs if the file does not exist.
 
-2
-r+
+**r+**
 
 Open file for reading and writing. An exception occurs if the file does not exist.
 
-3
-rs
+**rs**
 
 Open file for reading in synchronous mode.
 
-4
-rs+
+**rs+**
 
 Open file for reading and writing, asking the OS to open it synchronously. See notes for 'rs' about using this with caution.
 
-5
-w
+**w**
 
 Open file for writing. The file is created (if it does not exist) or truncated (if it exists).
 
-6
-wx
+**wx**
 
 Like 'w' but fails if the path exists.
 
-7
-w+
+**w+**
 
 Open file for reading and writing. The file is created (if it does not exist) or truncated (if it exists).
 
-8
-wx+
+**wx+**
 
 Like 'w+' but fails if path exists.
 
-9
-a
+**a**
 
 Open file for appending. The file is created if it does not exist.
 
-10
-ax
+**ax**
 
 Like 'a' but fails if the path exists.
 
-11
-a+
+**a+**
 
 Open file for reading and appending. The file is created if it does not exist.
 
-12
-ax+
+**ax+**
 
 Like 'a+' but fails if the the path exists.
 
-Example
 Let us create a js file named main.js having the following code to open a file input.txt for reading and writing.
-
+```
 var fs = require("fs");
 
 // Asynchronous - Opening File
@@ -134,66 +128,63 @@ fs.open('input.txt', 'r+', function(err, fd) {
    }
    console.log("File opened successfully!");     
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to open file!
 File opened successfully!
-Get File Information
-Syntax
-Following is the syntax of the method to get the information about a file −
+```
 
+## Get File Information
+
+Following is the syntax of the method to get the information about a file −
+```
 fs.stat(path, callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-path − This is the string having file name including path.
+- path − This is the string having file name including path.
 
-callback − This is the callback function which gets two arguments (err, stats) where stats is an object of fs.Stats type which is printed below in the example.
+- callback − This is the callback function which gets two arguments (err, stats) where stats is an object of fs.Stats type which is printed below in the example.
 
 Apart from the important attributes which are printed below in the example, there are several useful methods available in fs.Stats class which can be used to check file type. These methods are given in the following table.
 
-Sr.No.	Method & Description
-1
-stats.isFile()
+**stats.isFile()**
 
 Returns true if file type of a simple file.
 
-2
-stats.isDirectory()
+**stats.isDirectory()**
 
 Returns true if file type of a directory.
 
-3
-stats.isBlockDevice()
+**stats.isBlockDevice()**
 
 Returns true if file type of a block device.
 
-4
-stats.isCharacterDevice()
+**stats.isCharacterDevice()**
 
 Returns true if file type of a character device.
 
-5
-stats.isSymbolicLink()
+**stats.isSymbolicLink()**
 
 Returns true if file type of a symbolic link.
 
-6
-stats.isFIFO()
+**stats.isFIFO()**
 
 Returns true if file type of a FIFO.
 
-7
-stats.isSocket()
+**stats.isSocket()**
 
 Returns true if file type of asocket.
 
-Example
 Let us create a js file named main.js with the following code −
-
+```
 var fs = require("fs");
 
 console.log("Going to get file info!");
@@ -208,11 +199,13 @@ fs.stat('input.txt', function (err, stats) {
    console.log("isFile ? " + stats.isFile());
    console.log("isDirectory ? " + stats.isDirectory());    
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to get file info!
 {
    dev: 1792,
@@ -232,28 +225,31 @@ Going to get file info!
 Got file info successfully!
 isFile ? true
 isDirectory ? false
-Writing a File
-Syntax
-Following is the syntax of one of the methods to write into a file −
+```
 
+## Writing a File
+
+Following is the syntax of one of the methods to write into a file −
+```
 fs.writeFile(filename, data[, options], callback)
+```
 This method will over-write the file if the file already exists. If you want to write into an existing file then you should use another method available.
 
-Parameters
+### Parameters
 Here is the description of the parameters used −
 
-path − This is the string having the file name including path.
+- path − This is the string having the file name including path.
 
-data − This is the String or Buffer to be written into the file.
+- data − This is the String or Buffer to be written into the file.
 
-options − The third parameter is an object which will hold {encoding, mode, flag}. By default. encoding is utf8, mode is octal value 0666. and flag is 'w'
+- options − The third parameter is an object which will hold {encoding, mode, flag}. By default. encoding is utf8, mode is octal value 0666. and flag is 'w'
 
-callback − This is the callback function which gets a single parameter err that returns an error in case of any writing error.
+- callback − This is the callback function which gets a single parameter err that returns an error in case of any writing error.
 
-Example
+**Example**
+
 Let us create a js file named main.js having the following code −
-
-Live Demo
+```
 var fs = require("fs");
 
 console.log("Going to write into existing file");
@@ -272,40 +268,46 @@ fs.writeFile('input.txt', 'Simply Easy Learning!', function(err) {
       console.log("Asynchronous read: " + data.toString());
    });
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to write into existing file
 Data written successfully!
 Let's read newly written data
 Asynchronous read: Simply Easy Learning!
-Reading a File
-Syntax
-Following is the syntax of one of the methods to read from a file −
+```
 
+## Reading a File
+
+Following is the syntax of one of the methods to read from a file −
+```
 fs.read(fd, buffer, offset, length, position, callback)
+```
 This method will use file descriptor to read the file. If you want to read the file directly using the file name, then you should use another method available.
 
-Parameters
+### Parameters
+
 Here is the description of the parameters used −
 
-fd − This is the file descriptor returned by fs.open().
+- fd − This is the file descriptor returned by fs.open().
 
-buffer − This is the buffer that the data will be written to.
+- buffer − This is the buffer that the data will be written to.
 
-offset − This is the offset in the buffer to start writing at.
+- offset − This is the offset in the buffer to start writing at.
 
-length − This is an integer specifying the number of bytes to read.
+- length − This is an integer specifying the number of bytes to read.
 
-position − This is an integer specifying where to begin reading from in the file. If position is null, data will be read from the current file position.
+- position − This is an integer specifying where to begin reading from in the file. If position is null, data will be read from the current file position.
 
-callback − This is the callback function which gets the three arguments, (err, bytesRead, buffer).
+- callback − This is the callback function which gets the three arguments, (err, bytesRead, buffer).
 
-Example
+**Example**
 Let us create a js file named main.js with the following code −
-
+```
 var fs = require("fs");
 var buf = new Buffer(1024);
 
@@ -329,32 +331,38 @@ fs.open('input.txt', 'r+', function(err, fd) {
       }
    });
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to open an existing file
 File opened successfully!
 Going to read the file
 97 bytes read
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
-Closing a File
-Syntax
-Following is the syntax to close an opened file −
+```
 
+## Closing a File
+
+Following is the syntax to close an opened file −
+```
 fs.close(fd, callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-fd − This is the file descriptor returned by file fs.open() method.
+- fd − This is the file descriptor returned by file fs.open() method.
 
-callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
+- callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
 
-Example
+**Example**
 Let us create a js file named main.js having the following code −
-
+```
 var fs = require("fs");
 var buf = new Buffer(1024);
 
@@ -385,11 +393,13 @@ fs.open('input.txt', 'r+', function(err, fd) {
       });
    });
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to open an existing file
 File opened successfully!
 Going to read the file
@@ -397,23 +407,28 @@ Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
 
 File closed successfully.
-Truncate a File
-Syntax
-Following is the syntax of the method to truncate an opened file −
+```
 
+## Truncate a File
+
+Following is the syntax of the method to truncate an opened file −
+```
 fs.ftruncate(fd, len, callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-fd − This is the file descriptor returned by fs.open().
+- fd − This is the file descriptor returned by fs.open().
 
-len − This is the length of the file after which the file will be truncated.
+- len − This is the length of the file after which the file will be truncated.
 
-callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
+- callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
 
-Example
+**Example**
+
 Let us create a js file named main.js having the following code −
-
+```
 var fs = require("fs");
 var buf = new Buffer(1024);
 
@@ -453,11 +468,13 @@ fs.open('input.txt', 'r+', function(err, fd) {
       });
    });
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to open an existing file
 File opened successfully!
 Going to truncate the file after 10 bytes
@@ -465,21 +482,26 @@ File truncated successfully.
 Going to read the same file
 Tutorials
 File closed successfully.
-Delete a File
-Syntax
-Following is the syntax of the method to delete a file −
+```
 
+## Delete a File
+
+Following is the syntax of the method to delete a file −
+```
 fs.unlink(path, callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-path − This is the file name including path.
+- path − This is the file name including path.
 
-callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
+- callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
 
-Example
+**Example**
+
 Let us create a js file named main.js having the following code −
-
+```
 var fs = require("fs");
 
 console.log("Going to delete an existing file");
@@ -489,30 +511,37 @@ fs.unlink('input.txt', function(err) {
    }
    console.log("File deleted successfully!");
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to delete an existing file
 File deleted successfully!
-Create a Directory
-Syntax
-Following is the syntax of the method to create a directory −
+```
 
+## Create a Directory
+
+Following is the syntax of the method to create a directory −
+```
 fs.mkdir(path[, mode], callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-path − This is the directory name including path.
+- path − This is the directory name including path.
 
-mode − This is the directory permission to be set. Defaults to 0777.
+- mode − This is the directory permission to be set. Defaults to 0777.
 
-callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
+- callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
 
-Example
+**Example**
+
 Let us create a js file named main.js having the following code −
-
+```
 var fs = require("fs");
 
 console.log("Going to create directory /tmp/test");
@@ -522,28 +551,34 @@ fs.mkdir('/tmp/test',function(err) {
    }
    console.log("Directory created successfully!");
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to create directory /tmp/test
 Directory created successfully!
-Read a Directory
-Syntax
-Following is the syntax of the method to read a directory −
+```
 
+## Read a Directory
+
+Following is the syntax of the method to read a directory −
+```
 fs.readdir(path, callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-path − This is the directory name including path.
+- path − This is the directory name including path.
 
-callback − This is the callback function which gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.
+- callback − This is the callback function which gets two arguments (err, files) where files is an array of the names of the files in the directory excluding '.' and '..'.
 
-Example
+**Example**
 Let us create a js file named main.js having the following code −
-
+```
 var fs = require("fs");
 
 console.log("Going to read directory /tmp");
@@ -555,11 +590,13 @@ fs.readdir("/tmp/",function(err, files) {
       console.log( file );
    });
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to read directory /tmp
 ccmzx99o.out
 ccyCSbkF.out
@@ -567,21 +604,26 @@ employee.ser
 hsperfdata_apache
 test
 test.txt
-Remove a Directory
-Syntax
-Following is the syntax of the method to remove a directory −
+```
 
+## Remove a Directory
+
+Following is the syntax of the method to remove a directory −
+```
 fs.rmdir(path, callback)
-Parameters
+```
+
+### Parameters
 Here is the description of the parameters used −
 
-path − This is the directory name including path.
+- path − This is the directory name including path.
 
-callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
+- callback − This is the callback function No arguments other than a possible exception are given to the completion callback.
 
-Example
+**Example**
+
 Let us create a js file named main.js having the following code −
-
+```
 var fs = require("fs");
 
 console.log("Going to delete directory /tmp/test");
@@ -600,17 +642,20 @@ fs.rmdir("/tmp/test",function(err) {
       });
    });
 });
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Going to read directory /tmp
 ccmzx99o.out
 ccyCSbkF.out
 employee.ser
 hsperfdata_apache
-test.txt 
+test.txt
+```
 
 # References
 https://www.tutorialspoint.com/nodejs/nodejs_file_system.htm

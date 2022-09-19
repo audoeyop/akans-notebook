@@ -2,17 +2,18 @@
 
 HTML offers web authors three ways for specifying lists of information. All lists must contain one or more list elements. Lists may contain −
 
-<ul> − An unordered list. This will list items using plain bullets.
+- `<ul>` − An unordered list. This will list items using plain bullets.
 
-<ol> − An ordered list. This will use different schemes of numbers to list your items.
+- `<ol>` − An ordered list. This will use different schemes of numbers to list your items.
 
-<dl> − A definition list. This arranges your items in the same way as they are arranged in a dictionary.
+- `<dl>` − A definition list. This arranges your items in the same way as they are arranged in a dictionary.
 
-HTML Unordered Lists
-An unordered list is a collection of related items that have no special order or sequence. This list is created by using HTML <ul> tag. Each item in the list is marked with a bullet.
+## HTML Unordered Lists
+An unordered list is a collection of related items that have no special order or sequence. This list is created by using HTML `<ul>` tag. Each item in the list is marked with a bullet.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -30,19 +31,22 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-The type Attribute
-You can use type attribute for <ul> tag to specify the type of bullet you like. By default, it is a disc. Following are the possible options −
-
+## The type Attribute
+You can use type attribute for \<ul> tag to specify the type of bullet you like. By default, it is a disc. Following are the possible options −
+```
 <ul type = "square">
 <ul type = "disc">
 <ul type = "circle">
-Example
-Following is an example where we used <ul type = "square">
+```
 
-Live Demo
+**Example**
+
+Following is an example where we used \<ul type = "square">
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -60,13 +64,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Example
-Following is an example where we used <ul type = "disc"> −
+**Example**
 
-Live Demo
+Following is an example where we used \<ul type = "disc"> −
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -84,13 +89,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Example
-Following is an example where we used <ul type = "circle"> −
+**Example**
 
-Live Demo
+Following is an example where we used \<ul type = "circle"> −
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -108,14 +114,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-HTML Ordered Lists
-If you are required to put your items in a numbered list instead of bulleted, then HTML ordered list will be used. This list is created by using <ol> tag. The numbering starts at one and is incremented by one for each successive ordered list element tagged with <li>.
+## HTML Ordered Lists
+If you are required to put your items in a numbered list instead of bulleted, then HTML ordered list will be used. This list is created by using \<ol> tag. The numbering starts at one and is incremented by one for each successive ordered list element tagged with \<li>.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -133,21 +140,24 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-The type Attribute
-You can use type attribute for <ol> tag to specify the type of numbering you like. By default, it is a number. Following are the possible options −
-
+## The type Attribute
+You can use type attribute for \<ol> tag to specify the type of numbering you like. By default, it is a number. Following are the possible options −
+```
 <ol type = "1"> - Default-Case Numerals.
 <ol type = "I"> - Upper-Case Numerals.
 <ol type = "i"> - Lower-Case Numerals.
 <ol type = "A"> - Upper-Case Letters.
 <ol type = "a"> - Lower-Case Letters.
-Example
-Following is an example where we used <ol type = "1">
+```
 
-Live Demo
+**Example**
+
+Following is an example where we used \<ol type = "1">
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -165,13 +175,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Example
-Following is an example where we used <ol type = "I">
+**Example**
 
-Live Demo
+Following is an example where we used \<ol type = "I">
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -189,13 +200,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Example
-Following is an example where we used <ol type = "i">
+**Example**
 
-Live Demo
+Following is an example where we used \<ol type = "i">
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -213,13 +225,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Example
-Following is an example where we used <ol type = "A" >
+**Example**
 
-Live Demo
+Following is an example where we used \<ol type = "A" >
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -237,13 +250,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Example
-Following is an example where we used <ol type = "a">
+**Example**
 
-Live Demo
+Following is an example where we used \<ol type = "a">
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -261,21 +275,24 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-The start Attribute
-You can use start attribute for <ol> tag to specify the starting point of numbering you need. Following are the possible options −
-
+## The start Attribute
+You can use start attribute for \<ol> tag to specify the starting point of numbering you need. Following are the possible options −
+```
 <ol type = "1" start = "4">    - Numerals starts with 4.
 <ol type = "I" start = "4">    - Numerals starts with IV.
 <ol type = "i" start = "4">    - Numerals starts with iv.
 <ol type = "a" start = "4">    - Letters starts with d.
 <ol type = "A" start = "4">    - Letters starts with D.
-Example
-Following is an example where we used <ol type = "i" start = "4" >
+```
 
-Live Demo
+**Example**
+
+Following is an example where we used \<ol type = "i" start = "4" >
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -293,10 +310,10 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-HTML Definition Lists
+## HTML Definition Lists
 HTML and XHTML supports a list style which is called definition lists where entries are listed like in a dictionary or encyclopedia. The definition list is the ideal way to present a glossary, list of terms, or other name/value list.
 
 Definition List makes use of following three tags.
@@ -305,8 +322,9 @@ Definition List makes use of following three tags.
 <dt> − A term
 <dd> − Term definition
 </dl> − Defines the end of the list
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -324,7 +342,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/html/html_lists.htm

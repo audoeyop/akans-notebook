@@ -6,19 +6,21 @@ Nowadays, lot of server side application exposes its functionality through REST 
 
 React does not provide it’s own http programming api but it supports browser’s built-in fetch() api as well as third party client library like axios to do client side programming. Let us learn how to do http programming in React application in this chapter. Developer should have a basic knowledge in Http programming to understand this chapter.
 
-Expense Rest Api Server
+## Expense Rest Api Server
 The prerequisite to do Http programming is the basic knowledge of Http protocol and REST API technique. Http programming involves two part, server and client. React provides support to create client side application. Express a popular web framework provides support to create server side application.
 
 Let us first create a Expense Rest Api server using express framework and then access it from our ExpenseManager application using browser’s built-in fetch api.
 
 Open a command prompt and create a new folder, express-rest-api.
-
+```
 cd /go/to/workspace
 mkdir apiserver
 cd apiserver
+```
 Initialize a new node application using the below command −
-
+```
 npm init
+```
 The npm init will prompt and ask us to enter basic project details. Let us enter apiserver for project name and server.js for entry point. Leave other configuration with default option.
 
 This utility will walk you through creating a package.json file.
@@ -28,7 +30,7 @@ See `npm help json` for definitive documentation on these fields and exactly wha
 
 Use `npm install <pkg>` afterwards to install a package and
 save it as a dependency in the package.json file.
-
+```
 Press ^C at any time to quit.
 package name: (apiserver)
 version: (1.0.0)
@@ -52,17 +54,19 @@ About to write to \path\to\workspace\expense-rest-api\package.json:
    "license": "ISC"
 }
 Is this OK? (yes) yes
+```
 Next, install express, nedb & cors modules using below command −
-
+```
 npm install express nedb cors
-express is used to create server side application.
+```
+- express is used to create server side application.
 
-nedb is a datastore used to store the expense data.
+- nedb is a datastore used to store the expense data.
 
-cors is a middleware for express framework to configure the client access details.
+- cors is a middleware for express framework to configure the client access details.
 
 Next, let us create a file, data.csv and populate it with initial expense data for testing purposes. The structure of the file is that it contains one expense entry per line.
-
+```
 Pizza,80,2020-10-10,Food
 Grape Juice,30,2020-10-12,Food
 Cinema,210,2020-10-16,Entertainment
@@ -73,8 +77,9 @@ Tour,2555,2020-10-29,Entertainment
 Meals,300,2020-10-30,Food
 Mobile,3500,2020-11-02,Gadgets
 Exam Fees,1245,2020-11-04,Academic
+```
 Next, create a file expensedb.js and include code to load the initial expense data into the data store. The code checks the data store for initial data and load only if the data is not available in the store.
-
+```
 var store = require("nedb")
 var fs = require('fs');
 var expenses = new store({ filename: "expense.db", autoload: true })
@@ -111,8 +116,9 @@ function readCsv(file, callback) {
    });
 }
 module.exports = expenses
+```
 Next, create a file, server.js and include the actual code to list, add, update and delete the expense entries.
-
+```
 var express = require("express")
 var cors = require('cors')
 var expenseStore = require("./expensedb.js")
@@ -180,18 +186,21 @@ app.delete("/api/expense/:id", (req, res, next) => {
 app.use(function (req, res) {
    res.status(404);
 });
+```
 Now, it is time to run the application.
-
+```
 npm run start
+```
 Next, open a browser and enter http://localhost:8000/ in the address bar.
-
+```
 {
    "message": "Ok"
 }
+```
 It confirms that our application is working fine.
 
 Finally, change the url to http://localhost:8000/api/expense and press enter. The browser will show the initial expense entries in JSON format.
-
+```
 [
    ...
    {
@@ -203,9 +212,10 @@ Finally, change the url to http://localhost:8000/api/expense and press enter. Th
    },
    ...
 ]
+```
 Let us use our newly created expense server in our Expense manager application through fetch() api in the upcoming section.
 
-The fetch() api
+## The fetch() api
 Let us create a new application to showcase client side programming in React.
 
 First, create a new react application, react-http-app using Create React App or Rollup bundler by following instruction in Creating a React application chapter.
@@ -217,7 +227,7 @@ Next, create src folder under the root directory of the application.
 Next, create components folder under src folder.
 
 Next, create a file, ExpenseEntryItemList.css under src/components folder and include generic table styles.
-
+```
 html {
    font-family: sans-serif;
 }
@@ -249,10 +259,11 @@ caption {
 tr.highlight td {
     background-color: #a6a8bd;
 }
+```
 Next, create a file, ExpenseEntryItemList.js under src/components folder and start editing.
 
 Next, import React library.
-
+```
 import React from 'react';
 Next, create a class, ExpenseEntryItemList and call constructor with props.
 
@@ -261,14 +272,16 @@ class ExpenseEntryItemList extends React.Component {
       super(props);
    }
 }
+```
 Next, initialize the state with empty list in the constructor.
-
+```
 this.state = {
    isLoaded: false,
    items: []
 }
+```
 Next, create a method, setItems to format the items received from remote server and then set it into the state of the component.
-
+```
 setItems(remoteItems) {
    var items = [];
    remoteItems.forEach((item) => {
@@ -286,8 +299,9 @@ setItems(remoteItems) {
       items: items
    });
 }
+```
 Next, add a method, fetchRemoteItems to fetch the items from the server.
-
+```
 fetchRemoteItems() {
    fetch("http://localhost:8000/api/expenses")
       .then(res => res.json())
@@ -303,6 +317,7 @@ fetchRemoteItems() {
          }
       )
 }
+```
 Here,
 
 fetch api is used to fetch the item from the remote server.
@@ -310,7 +325,7 @@ fetch api is used to fetch the item from the remote server.
 setItems is used to format and store the items in the state.
 
 Next, add a method, deleteRemoteItem to delete the item from the remote server.
-
+```
 deleteRemoteItem(id) {
    fetch('http://localhost:8000/api/expense/' + id, { method: 'DELETE' })
       .then(res => res.json())
@@ -320,6 +335,7 @@ deleteRemoteItem(id) {
          }
       )
 }
+```
 Here,
 
 fetch api is used to delete and fetch the item from the remote server.
@@ -327,20 +343,22 @@ fetch api is used to delete and fetch the item from the remote server.
 setItems is again used to format and store the items in the state.
 
 Next, call the componentDidMount life cycle api to load the items into the component during its mounting phase.
-
+```
 componentDidMount() {
    this.fetchRemoteItems();
 }
+```
 Next, write an event handler to remove the item from the list.
-
+```
 handleDelete = (id, e) => {
    e.preventDefault();
    console.log(id);
 
    this.deleteRemoteItem(id);
 }
+```
 Next, write the render method.
-
+```
 render() {
    let lists = [];
    if (this.state.isLoaded) {
@@ -373,11 +391,13 @@ render() {
       </div>
    );
 }
+```
 Finally, export the component.
-
+```
 export default ExpenseEntryItemList;
+```
 Next, create a file, index.js under the src folder and use ExpenseEntryItemList component.
-
+```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExpenseEntryItemList from './components/ExpenseEntryItemList';
@@ -388,8 +408,9 @@ ReactDOM.render(
    </React.StrictMode>,
    document.getElementById('root')
 );
+```
 Finally, create a public folder under the root folder and create index.html file.
-
+```
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -401,17 +422,17 @@ Finally, create a public folder under the root folder and create index.html file
       <script type="text/JavaScript" src="./index.js"></script>
    </body>
 </html>
+```
 Next, open a new terminal window and start our server application.
-
+```
 cd /go/to/server/application
 npm start
+```
 Next, serve the client application using npm command.
-
+```
 npm start
+```
 Next, open the browser and enter http://localhost:3000 in the address bar and press enter.
-
-Material
-Try to remove the item by clicking the remove link.
 
 # References
 https://www.tutorialspoint.com/reactjs/reactjs_http_client.htm

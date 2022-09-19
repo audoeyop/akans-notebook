@@ -3,7 +3,7 @@
 System tray is a menu outside of your application window. On MacOS and Ubuntu, it is located on the top right corner of your screen. On Windows it is on the bottom right corner. We can create menus for our application in system trays using Electron.
 
 Create a new main.js file and add the following code to it. Have a png file ready to use for the system tray icon.
-
+```
 const {app, BrowserWindow} = require('electron')
 const url = require('url')
 const path = require('path')
@@ -20,8 +20,9 @@ function createWindow() {
 }
 
 app.on('ready', createWindow)
+```
 After having set up a basic browser window, we will create a new index.html file with the following content −
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -62,11 +63,13 @@ After having set up a basic browser window, we will create a new index.html file
       </script>
    </body>
 </html>
+```
 We created the tray using the Tray submodule. We then created a menu using a template and further attached the menu to our tray object.
 
 Run the application using the following command −
-
+```
 $ electron ./main.js
+```
 When you run the above command, check your system tray for the icon you used. I used a smiley face for my application. The above command will generate the following output −
 
 # References

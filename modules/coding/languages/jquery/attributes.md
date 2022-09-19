@@ -122,39 +122,51 @@ Following table lists down few useful methods which you can use to manipulate at
 
 
 `attr( properties )`
+
 Set a key/value object as properties to all matched elements.
 
 `attr(key, fn)`
+
 Set a single property to a computed value, on all matched elements.
 
 `removeAttr(name)`
+
 Remove an attribute from each of the matched elements.
 
 `hasClass(class)`
+
 Returns true if the specified class is present on at least one of the set of matched elements.
 
 `removeClass(class)`
+
 Removes all or the specified class(es) from the set of matched elements.
 
 `toggleClass(class)`
+
 Adds the specified class if it is not present, removes the specified class if it is present.
 
 `html()`
+
 Get the html contents (innerHTML) of the first matched element.
 
 `html(value)`
+
 Set the html contents of every matched element.
 
 `text( )`
+
 Get the combined text contents of all matched elements.
 
 `text(value)`
+
 Set the text contents of all matched elements.
 
 `val()`
+
 Get the input value of the first matched element.
 
 `val( value )`
+
 Set the value attribute of every matched element if it is called on <input> but if it is called on <select> with the passed <option> value then passed option would be selected, if it is called on check box or radio box then all the matching check box and radiobox would be checked.
 
 # References

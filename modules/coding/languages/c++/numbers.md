@@ -5,7 +5,7 @@ Normally, when we work with Numbers, we use primitive data types such as int, sh
 Defining Numbers in C++
 You have already defined numbers in various examples given in previous chapters. Here is another consolidated example to define various types of numbers in C++ −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -33,74 +33,75 @@ int main () {
 
    return 0;
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 short  s :10
 int    i :1000
 long   l :1000000
 float  f :230.47
 double d :30949.4
-Math Operations in C++
+```
+
+## Math Operations in C++
 In addition to the various functions you can create, C++ also includes some useful functions you can use. These functions are available in standard C and C++ libraries and called built-in functions. These are functions that can be included in your program and then use.
 
 C++ has a rich set of mathematical operations, which can be performed on various numbers. Following table lists down some useful built-in mathematical functions available in C++.
 
 To utilize these functions you need to include the math header file <cmath>.
-
-Sr.No	Function & Purpose
-1
+```
 double cos(double);
-
+```
 This function takes an angle (as a double) and returns the cosine.
 
-2
+```
 double sin(double);
-
+```
 This function takes an angle (as a double) and returns the sine.
 
-3
+```
 double tan(double);
-
+```
 This function takes an angle (as a double) and returns the tangent.
 
-4
+```
 double log(double);
-
+```
 This function takes a number and returns the natural log of that number.
 
-5
+```
 double pow(double, double);
-
+```
 The first is a number you wish to raise and the second is the power you wish to raise it t
 
-6
+```
 double hypot(double, double);
-
+```
 If you pass this function the length of two sides of a right triangle, it will return you the length of the hypotenuse.
 
-7
+```
 double sqrt(double);
-
+```
 You pass this function a number and it gives you the square root.
 
-8
+```
 int abs(int);
-
+```
 This function returns the absolute value of an integer that is passed to it.
 
-9
+```
 double fabs(double);
-
+```
 This function returns the absolute value of any decimal number passed to it.
 
-10
+```
 double floor(double);
-
+```
 Finds the integer which is less than or equal to the argument passed to it.
 
 Following is a simple example to show few of the mathematical operations −
 
-Live Demo
+```
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -122,19 +123,22 @@ int main () {
 
    return 0;
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 sign(d)     :-0.634939
 abs(i)      :1000
 floor(d)    :200
 sqrt(f)     :15.1812
 pow( d, 2 ) :40149.7
-Random Numbers in C++
+```
+
+## Random Numbers in C++
 There are many cases where you will wish to generate a random number. There are actually two functions you will need to know about random number generation. The first is rand(), this function will only return a pseudo random number. The way to fix this is to first call the srand() function.
 
 Following is a simple example to generate few random numbers. This example makes use of time() function to get the number of seconds on your system time, to randomly seed the rand() function −
 
-Live Demo
+```
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -156,8 +160,9 @@ int main () {
 
    return 0;
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 Random Number : 1748144778
 Random Number : 630873888
 Random Number : 2134540646
@@ -168,6 +173,7 @@ Random Number : 1319072661
 Random Number : 257938873
 Random Number : 1256201101
 Random Number : 580322989
+```
 
 # References
 https://www.tutorialspoint.com/cplusplus/cpp_numbers.htm

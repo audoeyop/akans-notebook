@@ -269,7 +269,7 @@ Well done
 Your grade is C
 ```
 
-The ? : Operator
+The ? : Ternary Operator
 ----------------
 
 We have covered conditional operator ? : in the previous chapter which can be used to replace if...else statements. It has the following general form -

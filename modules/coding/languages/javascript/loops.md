@@ -7,23 +7,24 @@ While writing a program, you may encounter a situation where you need to perform
 
 JavaScript supports all the necessary loops to ease down the pressure of programming.
 
-The while Loop
+## The while Loop
 The most basic loop in JavaScript is the while loop which would be discussed in this chapter. The purpose of a while loop is to execute a statement or code block repeatedly as long as an expression is true. Once the expression becomes false, the loop terminates.
 
-Flow Chart
 The flow chart of while loop looks as follows −
 
-While loop
-Syntax
-The syntax of while loop in JavaScript is as follows −
+![](assets/while_loop.jpeg)
 
+**Syntax**
+
+The syntax of while loop in JavaScript is as follows −
+```
 while (expression) {
    Statement(s) to be executed if expression is true
 }
-Example
-Try the following example to implement while loop.
+```
 
-Live Demo
+Try the following example to implement while loop.
+```
 <html>
    <body>
 
@@ -44,7 +45,9 @@ Live Demo
       <p>Set the variable to different value and then try...</p>
    </body>
 </html>
+```
 Output
+```
 Starting Loop
 Current Count : 0
 Current Count : 1
@@ -58,25 +61,30 @@ Current Count : 8
 Current Count : 9
 Loop stopped!
 Set the variable to different value and then try...
-The do...while Loop
+```
+
+## The do...while Loop
 The do...while loop is similar to the while loop except that the condition check happens at the end of the loop. This means that the loop will always be executed at least once, even if the condition is false.
 
-Flow Chart
 The flow chart of a do-while loop would be as follows −
 
-Do While Loop
-Syntax
-The syntax for do-while loop in JavaScript is as follows −
+![](assets/do_while_loop.jpeg)
 
+**Syntax**
+
+The syntax for do-while loop in JavaScript is as follows −
+```
 do {
    Statement(s) to be executed;
 } while (expression);
+```
+
 Note − Don’t miss the semicolon used at the end of the do...while loop.
 
-Example
-Try the following example to learn how to implement a do-while loop in JavaScript.
+**Example**
 
-Live Demo
+Try the following example to learn how to implement a do-while loop in JavaScript.
+```
 <html>
    <body>   
       <script type = "text/javascript">
@@ -96,7 +104,9 @@ Live Demo
       <p>Set the variable to different value and then try...</p>
    </body>
 </html>
+```
 Output
+```
 Starting Loop
 Current Count : 0
 Current Count : 1
@@ -104,6 +114,7 @@ Current Count : 2
 Current Count : 3
 Current Count : 4
 Loop Stopped!
+```
 Set the variable to different value and then try...
 
 # For Loops
@@ -118,20 +129,24 @@ The iteration statement where you can increase or decrease your counter.
 
 You can put all the three parts in a single line separated by semicolons.
 
-Flow Chart
 The flow chart of a for loop in JavaScript would be as follows −
 
-For Loop
-Syntax
-The syntax of for loop is JavaScript is as follows −
+![](assets/do_while_loop.jpeg)
 
+## For Loop
+
+**Syntax**
+
+The syntax of for loop is JavaScript is as follows −
+```
 for (initialization; test condition; iteration statement) {
    Statement(s) to be executed if test condition is true
 }
-Example
-Try the following example to learn how a for loop works in JavaScript.
+```
+**Example**
 
-Live Demo
+Try the following example to learn how a for loop works in JavaScript.
+```
 <html>
    <body>      
       <script type = "text/javascript">
@@ -149,7 +164,9 @@ Live Demo
       <p>Set the variable to different value and then try...</p>
    </body>
 </html>
+```
 Output
+```
 Starting Loop
 Current Count : 0
 Current Count : 1
@@ -162,23 +179,26 @@ Current Count : 7
 Current Count : 8
 Current Count : 9
 Loop stopped!
+```
 Set the variable to different value and then try...
 
 ## For..In Loops
 
 The for...in loop is used to loop through an object's properties. As we have not discussed Objects yet, you may not feel comfortable with this loop. But once you understand how objects behave in JavaScript, you will find this loop very useful.
 
-Syntax
+**Syntax**
 The syntax of ‘for..in’ loop is −
+```
 for (variablename in object) {
    statement or block to execute
 }
+```
 In each iteration, one property from object is assigned to variablename and this loop continues till all the properties of the object are exhausted.
 
-Example
-Try the following example to implement ‘for-in’ loop. It prints the web browser’s Navigator object.
+**Example**
 
-Live Demo
+Try the following example to implement ‘for-in’ loop. It prints the web browser’s Navigator object.
+```
 <html>
    <body>      
       <script type = "text/javascript">
@@ -195,7 +215,9 @@ Live Demo
       <p>Set the variable to different object and then try...</p>
    </body>
 </html>
+```
 Output
+```
 Navigator Object Properties
 serviceWorker
 webkitPersistentStorage
@@ -230,24 +252,25 @@ registerProtocolHandler
 unregisterProtocolHandler
 Exiting from the loop!
 Set the variable to different object and then try...
+```
 
-# Loop Control
+## Loop Control
 
 JavaScript provides full control to handle loops and switch statements. There may be a situation when you need to come out of a loop without reaching its bottom. There may also be a situation when you want to skip a part of your code block and start the next iteration of the loop.
 
 To handle all such situations, JavaScript provides break and continue statements. These statements are used to immediately come out of any loop or to start the next iteration of any loop respectively.
 
-The break Statement
+### The break Statement
 The break statement, which was briefly introduced with the switch statement, is used to exit a loop early, breaking out of the enclosing curly braces.
 
-Flow Chart
 The flow chart of a break statement would look as follows −
+
+![](assets/break_statement.jpeg)
 
 Break Statement
 Example
 The following example illustrates the use of a break statement with a while loop. Notice how the loop breaks out early once x reaches 5 and reaches to document.write (..) statement just below to the closing curly brace −
-
-Live Demo
+```
 <html>
    <body>     
       <script type = "text/javascript">
@@ -269,23 +292,27 @@ Live Demo
       <p>Set the variable to different value and then try...</p>
    </body>
 </html>
+```
 Output
+```
 Entering the loop
 2
 3
 4
 5
 Exiting the loop!
+```
 Set the variable to different value and then try...
 We already have seen the usage of break statement inside a switch statement.
 
-The continue Statement
+### The continue Statement
 The continue statement tells the interpreter to immediately start the next iteration of the loop and skip the remaining code block. When a continue statement is encountered, the program flow moves to the loop check expression immediately and if the condition remains true, then it starts the next iteration, otherwise the control comes out of the loop.
 
-Example
+**Example**
+
 This example illustrates the use of a continue statement with a while loop. Notice how the continue statement is used to skip printing when the index held in variable x reaches 5 −
 
-Live Demo
+```
 <html>
    <body>      
       <script type = "text/javascript">
@@ -307,7 +334,9 @@ Live Demo
       <p>Set the variable to different value and then try...</p>
    </body>
 </html>
+```
 Output
+```
 Entering the loop
 2
 3
@@ -319,17 +348,19 @@ Entering the loop
 10
 Exiting the loop!
 Set the variable to different value and then try...
-Using Labels to Control the Flow
+```
+
+### Using Labels to Control the Flow
 Starting from JavaScript 1.2, a label can be used with break and continue to control the flow more precisely. A label is simply an identifier followed by a colon (:) that is applied to a statement or a block of code. We will see two different examples to understand how to use labels with break and continue.
 
 Note − Line breaks are not allowed between the ‘continue’ or ‘break’ statement and its label name. Also, there should not be any other statement in between a label name and associated loop.
 
 Try the following two examples for a better understanding of Labels.
 
-Example 1
-The following example shows how to implement Label with a break statement.
+**Example 1**
 
-Live Demo
+The following example shows how to implement Label with a break statement.
+```
 <html>
    <body>      
       <script type = "text/javascript">
@@ -351,7 +382,9 @@ Live Demo
       </script>      
    </body>
 </html>
+```
 Output
+```
 Entering the loop!
 Outerloop: 0
 Innerloop: 0
@@ -371,8 +404,11 @@ Innerloop: 2
 Innerloop: 3
 Outerloop: 4
 Exiting the loop!
-Example 2
-Live Demo
+```
+
+**Example 2**
+
+```
 <html>
    <body>
 
@@ -397,7 +433,9 @@ Live Demo
 
    </body>
 </html>
+```
 Output
+```
 Entering the loop!
 Outerloop: 0
 Innerloop: 0
@@ -412,6 +450,7 @@ Innerloop: 0
 Innerloop: 1
 Innerloop: 2
 Exiting the loop!
+```
 
 # References
 https://www.tutorialspoint.com/javascript/javascript_while_loop.htm

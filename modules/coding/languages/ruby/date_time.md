@@ -7,7 +7,7 @@ This chapter makes you familiar with all the most wanted concepts of date and ti
 Getting Current Date and Time
 Following is the simple example to get current date and time −
 
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 time1 = Time.new
@@ -16,14 +16,17 @@ puts "Current Time : " + time1.inspect
 # Time.now is a synonym:
 time2 = Time.now
 puts "Current Time : " + time2.inspect
+```
 This will produce the following result −
+```
+Current Time : Mon Jun 02 12:02:39 -0700 2008
+Current Time : Mon Jun 02 12:02:39 -0700 2008
+```
 
-Current Time : Mon Jun 02 12:02:39 -0700 2008
-Current Time : Mon Jun 02 12:02:39 -0700 2008
-Getting Components of a Date & Time
+## Getting Components of a Date & Time
 We can use Time object to get various components of date and time. Following is the example showing the same −
 
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 time = Time.new
@@ -40,8 +43,9 @@ puts time.min     # => 59
 puts time.sec     # => 59
 puts time.usec    # => 999999: microseconds
 puts time.zone    # => "UTC": timezone name
+```
 This will produce the following result −
-
+```
 Current Time : Mon Jun 02 12:03:08 -0700 2008
 2008
 6
@@ -53,9 +57,11 @@ Current Time : Mon Jun 02 12:03:08 -0700 2008
 8
 247476
 UTC
-Time.utc, Time.gm and Time.local Functions
-These two functions can be used to format date in a standard format as follows −
+```
 
+## Time.utc, Time.gm and Time.local Functions
+These two functions can be used to format date in a standard format as follows −
+```
 # July 8, 2008
 Time.local(2008, 7, 8)  
 # July 8, 2008, 09:10am, local time
@@ -64,33 +70,40 @@ Time.local(2008, 7, 8, 9, 10)
 Time.utc(2008, 7, 8, 9, 10)  
 # July 8, 2008, 09:10:11 GMT (same as UTC)
 Time.gm(2008, 7, 8, 9, 10, 11)  
+```
 Following is the example to get all the components in an array in the following format −
-
+```
 [sec,min,hour,day,month,year,wday,yday,isdst,zone]
-Try the following −
+```
 
-Live Demo
+**Example**
+
+```
 #!/usr/bin/ruby -w
 
 time = Time.new
 values = time.to_a
 p values
+```
 This will generate the following result −
-
+```
 [26, 10, 12, 2, 6, 2008, 1, 154, false, "MST"]
+```
 This array could be passed to Time.utc or Time.local functions to get different format of dates as follows −
 
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 time = Time.new
 values = time.to_a
 puts Time.utc(*values)
+```
 This will generate the following result −
-
+```
 Mon Jun 02 12:15:36 UTC 2008
+```
 Following is the way to get time represented internally as seconds since the (platform-dependent) epoch −
-
+```
 # Returns number of seconds since epoch
 time = Time.now.to_i  
 
@@ -99,9 +112,11 @@ Time.at(time)
 
 # Returns second since epoch which includes microseconds
 time = Time.now.to_f
-Timezones and Daylight Savings Time
-You can use a Time object to get all the information related to Timezones and daylight savings as follows −
+```
 
+## Timezones and Daylight Savings Time
+You can use a Time object to get all the information related to Timezones and daylight savings as follows −
+```
 time = Time.new
 
 # Here is the interpretation
@@ -114,10 +129,11 @@ time.localtime  # Convert to local timezone.
 time.gmtime     # Convert back to UTC.
 time.getlocal   # Return a new Time object in local zone
 time.getutc     # Return a new Time object in UTC
-Formatting Times and Dates
+```
+## Formatting Times and Dates
 There are various ways to format date and time. Here is one example showing a few −
 
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 time = Time.new
@@ -125,130 +141,109 @@ puts time.to_s
 puts time.ctime
 puts time.localtime
 puts time.strftime("%Y-%m-%d %H:%M:%S")
+```
 This will produce the following result −
-
+```
 Mon Jun 02 12:35:19 -0700 2008
 Mon Jun  2 12:35:19 2008
 Mon Jun 02 12:35:19 -0700 2008
 2008-06-02 12:35:19
-Time Formatting Directives
+```
+
+## Time Formatting Directives
 These directives in the following table are used with the method Time.strftime.
 
-Sr.No.	Directive & Description
-1
-%a
+**%a**
 
 The abbreviated weekday name (Sun).
 
-2
-%A
+**%A**
 
 The full weekday name (Sunday).
 
-3
-%b
+**%b**
 
 The abbreviated month name (Jan).
 
-4
-%B
+**%B**
 
 The full month name (January).
 
-5
-%c
+**%c**
 
 The preferred local date and time representation.
 
-6
-%d
+**%d**
 
 Day of the month (01 to 31).
 
-7
-%H
+**%H**
 
 Hour of the day, 24-hour clock (00 to 23).
 
-8
-%I
+**%I**
 
 Hour of the day, 12-hour clock (01 to 12).
 
-9
-%j
+**%j**
 
 Day of the year (001 to 366).
 
-10
-%m
+**%m**
 
 Month of the year (01 to 12).
 
-11
-%M
+**%M**
 
 Minute of the hour (00 to 59).
 
-12
-%p
+**%p**
 
 Meridian indicator (AM or PM).
 
-13
-%S
+**%S**
 
 Second of the minute (00 to 60).
 
-14
-%U
+**%U**
 
 Week number of the current year, starting with the first Sunday as the first day of the first week (00 to 53).
 
-15
-%W
+**%W**
 
 Week number of the current year, starting with the first Monday as the first day of the first week (00 to 53).
 
-16
-%w
+**%w**
 
 Day of the week (Sunday is 0, 0 to 6).
 
-17
-%x
+**%x**
 
 Preferred representation for the date alone, no time.
 
-18
-%X
+**%X**
 
 Preferred representation for the time alone, no date.
 
-19
-%y
+**%y**
 
 Year without a century (00 to 99).
 
-20
-%Y
+**%Y**
 
 Year with century.
 
-21
-%Z
+**%Z**
 
 Time zone name.
 
-22
-%%
+**%%**
 
 Literal % character.
 
-Time Arithmetic
+## Time Arithmetic
 You can perform simple arithmetic with time as follows −
-
-Live Demo
+```
 now = Time.now          # Current time
 puts now
 
@@ -260,12 +255,13 @@ puts future
 
 diff = future - past     # => 10  Time - Time => number of seconds
 puts diff
+```
 This will produce the following result −
-
+```
 Thu Aug 01 20:57:05 -0700 2013
 Thu Aug 01 20:56:55 -0700 2013
 Thu Aug 01 20:57:15 -0700 2013
 20.0
-
+```
 # References
 https://www.tutorialspoint.com/ruby/ruby_date_time.htm

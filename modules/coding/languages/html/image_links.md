@@ -2,10 +2,11 @@
 
 We have seen how to create hypertext link using text and we also learnt how to use images in our webpages. Now, we will learn how to use images to create hyperlinks.
 
-Example
+**Example**
+
 It's simple to use an image as hyperlink. We just need to use an image inside hyperlink at the place of text as shown below −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -21,10 +22,9 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result, where you can click on the images to reach to the home page of Tutorials Point.
+```
+This will produce a page where you can click on the images to reach to the home page of Tutorials Point.
 
-
-This was the simplest way of creating hyperlinks using images. Next we will see how we can create Mouse-Sensitive Image Links.
 
 # References
 https://www.tutorialspoint.com/html/html_image_links.htm

@@ -4,33 +4,34 @@ React component is the building block of a React application. Let us learn how t
 
 A React component represents a small chunk of user interface in a webpage. The primary job of a React component is to render its user interface and update it whenever its internal state is changed. In addition to rendering the UI, it manages the events belongs to its user interface. To summarize, React component provides below functionalities.
 
-Initial rendering of the user interface.
-Management and handling of events.
-Updating the user interface whenever the internal state is changed.
+- Initial rendering of the user interface.
+- Management and handling of events.
+- Updating the user interface whenever the internal state is changed.
+
 React component accomplish these feature using three concepts −
 
-Properties − Enables the component to receive input.
-
-Events − Enable the component to manage DOM events and end-user interaction.
-
-State − Enable the component to stay stateful. Stateful component updates its UI with respect to its state.
+- Properties − Enables the component to receive input.
+- Events − Enable the component to manage DOM events and end-user interaction.
+- State − Enable the component to stay stateful. Stateful component updates its UI with respect to its state.
 
 Let us learn all the concept one-by-one in the upcoming chapters.
 
-Creating a React component
+## Creating a React component
 React library has two component types. The types are categorized based on the way it is being created.
 
-Function component − Uses plain JavaScript function.
-ES6 class component − Uses ES6 class.
+- Function component − Uses plain JavaScript function.
+- ES6 class component − Uses ES6 class.
+
 The core difference between function and class component are −
 
-Function components are very minimal in nature. Its only requirement is to return a React element.
-
+- Function components are very minimal in nature. Its only requirement is to return a React element.
+```
 function Hello() {
    return '<div>Hello</div>'
 }
+```
 The same functionality can be done using ES6 class component with little extra coding.
-
+```
 class ExpenseEntryItem extends React.Component {         
    render() {
       return (
@@ -38,37 +39,41 @@ class ExpenseEntryItem extends React.Component {
       );
    }
 }
-Class components supports state management out of the box whereas function components does not support state management. But, React provides a hook, useState() for the function components to maintain its state.
+```
+- Class components supports state management out of the box whereas function components does not support state management. But, React provides a hook, useState() for the function components to maintain its state.
 
-Class component have a life cycle and access to each life cycle events through dedicated callback apis. Function component does not have life cycle. Again, React provides a hook, useEffect() for the function component to access different stages of the component.
+- Class component have a life cycle and access to each life cycle events through dedicated callback apis. Function component does not have life cycle. Again, React provides a hook, useEffect() for the function component to access different stages of the component.
 
-Creating a class component
+## Creating a class component
 Let us create a new React component (in our expense-manager app), ExpenseEntryItem to showcase an expense entry item. Expense entry item consists of name, amount, date and category. The object representation of the expense entry item is −
-
+```
 {
    'name': 'Mango juice',
    'amount': 30.00,
    'spend_date': '2020-10-10'
    'category': 'Food',
 }
+```
 Open expense-manager application in your favorite editor.
 
 Next, create a file, ExpenseEntryItem.css under src/components folder to style our component.
 
 Next, create a file, ExpenseEntryItem.js under src/components folder by extending React.Component.
-
+```
 import React from 'react';
 import './ExpenseEntryItem.css';
 class ExpenseEntryItem extends React.Component {
 }
+```
 Next, create a method render inside the ExpenseEntryItem class.
-
+```
 class ExpenseEntryItem extends React.Component {
    render() {
    }
 }
+```
 Next, create the user interface using JSX and return it from render method.
-
+```
 class ExpenseEntryItem extends React.Component {
    render() {
       return (
@@ -81,8 +86,9 @@ class ExpenseEntryItem extends React.Component {
       );
    }
 }
+```
 Next, specify the component as default export class.
-
+```
 import React from 'react';
 import './ExpenseEntryItem.css';
 
@@ -99,8 +105,10 @@ class ExpenseEntryItem extends React.Component {
    }
 }
 export default ExpenseEntryItem;
-Now, we successfully created our first React component. Let us use our newly created component in index.js.
+```
 
+Now, we successfully created our first React component. Let us use our newly created component in index.js.
+```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExpenseEntryItem from './components/ExpenseEntryItem'
@@ -111,9 +119,10 @@ ReactDOM.render(
    </React.StrictMode>,
    document.getElementById('root')
 );
-Example
+```
+**Example**
 The same functionality can be done in a webpage using CDN as shown below −
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -145,21 +154,25 @@ The same functionality can be done in a webpage using CDN as shown below −
       </script>
    </body>
 </html>
+```
 Next, serve the application using npm command.
-
+```
 npm start
-Output
+```
+**Output**
 Next, open the browser and enter http://localhost:3000 in the address bar and press enter.
-
+```
 Item: Mango Juice
 Amount: 30.00
 Spend Date: 2020-10-10
 Category: Food
-Creating a function component
+```
+
+## Creating a function component
 React component can also be created using plain JavaScript function but with limited features. Function based React component does not support state management and other advanced features. It can be used to quickly create a simple component.
 
 The above ExpenseEntryItem can be rewritten in function as specified below −
-
+```
 function ExpenseEntryItem() {
    return (
       <div>
@@ -170,6 +183,7 @@ function ExpenseEntryItem() {
       </div>
    );
 }
+```
 Here, we just included the render functionality and it is enough to create a simple React component.
 
 # References

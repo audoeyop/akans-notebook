@@ -10,49 +10,46 @@ Before C++ 11, there is no built-in support for multithreaded applications. Inst
 
 This tutorial assumes that you are working on Linux OS and we are going to write multi-threaded C++ program using POSIX. POSIX Threads, or Pthreads provides API which are available on many Unix-like POSIX systems such as FreeBSD, NetBSD, GNU/Linux, Mac OS X and Solaris.
 
-Creating Threads
+## Creating Threads
 The following routine is used to create a POSIX thread −
-
+```
 #include <pthread.h>
+```
 pthread_create (thread, attr, start_routine, arg)
 Here, pthread_create creates a new thread and makes it executable. This routine can be called any number of times from anywhere within your code. Here is the description of the parameters −
 
-Sr.No	Parameter & Description
-1
-thread
+**thread**
 
 An opaque, unique identifier for the new thread returned by the subroutine.
 
-2
-attr
+**attr**
 
 An opaque attribute object that may be used to set thread attributes. You can specify a thread attributes object, or NULL for the default values.
 
-3
-start_routine
+**start_routine**
 
 The C++ routine that the thread will execute once it is created.
 
-4
-arg
+**arg**
 
 A single argument that may be passed to start_routine. It must be passed by reference as a pointer cast of type void. NULL may be used if no argument is to be passed.
 
 The maximum number of threads that may be created by a process is implementation dependent. Once created, threads are peers, and may create other threads. There is no implied hierarchy or dependency between threads.
 
-Terminating Threads
+## Terminating Threads
 There is following routine which we use to terminate a POSIX thread −
-
+```
 #include <pthread.h>
 pthread_exit (status)
+```
 Here pthread_exit is used to explicitly exit a thread. Typically, the pthread_exit() routine is called after a thread has completed its work and is no longer required to exist.
 
 If main() finishes before the threads it has created, and exits with pthread_exit(), the other threads will continue to execute. Otherwise, they will be automatically terminated when main() finishes.
 
-Example
+**Example**
 
 This simple example code creates 5 threads with the pthread_create() routine. Each thread prints a "Hello World!" message, and then terminates with a call to pthread_exit().
-
+```
 #include <iostream>
 #include <cstdlib>
 #include <pthread.h>
@@ -84,11 +81,13 @@ int main () {
    }
    pthread_exit(NULL);
 }
+```
 Compile the following program using -lpthread library as follows −
-
+```
 $gcc test.cpp -lpthread
+```
 Now, execute your program which gives the following output −
-
+```
 main() : creating thread, 0
 main() : creating thread, 1
 main() : creating thread, 2
@@ -100,8 +99,9 @@ Hello World! Thread ID, 2
 Hello World! Thread ID, 3
 Hello World! Thread ID, 4
 Passing Arguments to Threads
+```
 This example shows how to pass multiple arguments via a structure. You can pass any data type in a thread callback because it points to void as explained in the following example −
-
+```
 #include <iostream>
 #include <cstdlib>
 #include <pthread.h>
@@ -144,8 +144,9 @@ int main () {
    }
    pthread_exit(NULL);
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 main() : creating thread, 0
 main() : creating thread, 1
 main() : creating thread, 2
@@ -156,15 +157,18 @@ Thread ID : 2 Message : This is message
 Thread ID : 0 Message : This is message
 Thread ID : 1 Message : This is message
 Thread ID : 4 Message : This is message
-Joining and Detaching Threads
-There are following two routines which we can use to join or detach threads −
+```
 
+## Joining and Detaching Threads
+There are following two routines which we can use to join or detach threads −
+```
 pthread_join (threadid, status)
 pthread_detach (threadid)
+```
 The pthread_join() subroutine blocks the calling thread until the specified 'threadid' thread terminates. When a thread is created, one of its attributes defines whether it is joinable or detached. Only threads that are created as joinable can be joined. If a thread is created as detached, it can never be joined.
 
 This example demonstrates how to wait for thread completions by using the Pthread join routine.
-
+```
 #include <iostream>
 #include <cstdlib>
 #include <pthread.h>
@@ -221,8 +225,9 @@ int main () {
    cout << "Main: program exiting." << endl;
    pthread_exit(NULL);
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 main() : creating thread, 0
 main() : creating thread, 1
 main() : creating thread, 2
@@ -244,6 +249,7 @@ Main: completed thread id :2  exiting with status :0
 Main: completed thread id :3  exiting with status :0
 Main: completed thread id :4  exiting with status :0
 Main: program exiting.
+```
 
 # References
 https://www.tutorialspoint.com/cplusplus/cpp_multithreading.htm

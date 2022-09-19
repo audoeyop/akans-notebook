@@ -2,20 +2,21 @@
 
 Ranges occur everywhere: January to December, 0 to 9, lines 50 through 67, and so on. Ruby supports ranges and allows us to use ranges in a variety of ways −
 
-Ranges as Sequences
-Ranges as Conditions
-Ranges as Intervals
-Ranges as Sequences
+- Ranges as Sequences
+- Ranges as Conditions
+- Ranges as Intervals
+- Ranges as Sequences
+
 The first and perhaps the most natural use of ranges is to express a sequence. Sequences have a start point, an end point, and a way to produce successive values in the sequence.
 
 Ruby creates these sequences using the ''..'' and ''...'' range operators. The two-dot form creates an inclusive range, while the three-dot form creates a range that excludes the specified high value.
-
+```
 (1..5)        #==> 1, 2, 3, 4, 5
 (1...5)       #==> 1, 2, 3, 4
 ('a'..'d')    #==> 'a', 'b', 'c', 'd'
+```
 The sequence 1..100 is held as a Range object containing references to two Fixnum objects. If you need to, you can convert a range to a list using the to_a method. Try the following example −
-
-Live Demo
+```
 #!/usr/bin/ruby
 
 $, =", "   # Array value separator
@@ -24,13 +25,14 @@ range2 = ('bar'..'bat').to_a
 
 puts "#{range1}"
 puts "#{range2}"
+```
 This will produce the following result −
-
+```
 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 ["bar", "bas", "bat"]
+```
 Ranges implement methods that let you iterate over them and test their contents in a variety of ways −
-
-Live Demo
+```
 #!/usr/bin/ruby
 
 # Assume a range
@@ -49,8 +51,9 @@ puts "Rejected values are #{ret}"
 digits.each do |digit|
    puts "In Loop #{digit}"
 end
+```
 This will produce the following result −
-
+```
 true
 Min value is 0
 Max value is 9
@@ -65,15 +68,17 @@ In Loop 6
 In Loop 7
 In Loop 8
 In Loop 9
-Ranges as Conditions
-Ranges may also be used as conditional expressions. For example, the following code fragment prints sets of lines from the standard input, where the first line in each set contains the word start and the last line the word ends −
+```
 
+## Ranges as Conditions
+Ranges may also be used as conditional expressions. For example, the following code fragment prints sets of lines from the standard input, where the first line in each set contains the word start and the last line the word ends −
+```
 while gets
    print if /start/../end/
 end
+```
 Ranges can be used in case statements −
-
-Live Demo
+```
 #!/usr/bin/ruby
 
 score = 70
@@ -87,13 +92,15 @@ result = case score
 end
 
 puts result
+```
 This will produce the following result −
-
+```
 Pass with Merit
-Ranges as Intervals
-A final use of the versatile range is as an interval test: seeing if some value falls within the interval represented by the range. This is done using ===, the case equality operator.
+```
 
-Live Demo
+## Ranges as Intervals
+A final use of the versatile range is as an interval test: seeing if some value falls within the interval represented by the range. This is done using ===, the case equality operator.
+```
 #!/usr/bin/ruby
 
 if ((1..10) === 5)
@@ -107,10 +114,11 @@ end
 if (('a'..'j') === 'z')
    puts "z lies in ('a'..'j')"
 end
+```
 This will produce the following result −
-
+```
 5 lies in (1..10)
 c lies in ('a'..'j')
-
+```
 # References
 https://www.tutorialspoint.com/ruby/ruby_ranges.htm

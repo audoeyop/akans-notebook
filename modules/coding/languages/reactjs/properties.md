@@ -7,12 +7,13 @@ Open our expense-manager application in your favorite editor.
 Open ExpenseEntryItem file in the src/components folder.
 
 Introduce construction function with argument props.
-
+```
 constructor(props) {
    super(props);
 }
+```
 Next, change the render method and populate the value from props.
-
+```
 render() {
    return (
       <div>
@@ -24,6 +25,7 @@ render() {
       </div>
    );
 }
+```
 Here,
 
 name represents the item’s name of type String
@@ -35,7 +37,7 @@ spendDate represents the item’s Spend Date of type date
 category represents the item’s category of type String
 
 Now, we have successfully updated the component using properties.
-
+```
 import React from 'react'
 import './ExpenseEntryItem.css';
 import styles from './ExpenseEntryItem.module.css'
@@ -57,8 +59,9 @@ class ExpenseEntryItem extends React.Component {
    }
 }
 export default ExpenseEntryItem;
+```
 Now, we can use the component by passing all the properties through attributes in the index.js.
-
+```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExpenseEntryItem from './components/ExpenseEntryItem'
@@ -78,14 +81,16 @@ ReactDOM.render(
    </React.StrictMode>,
    document.getElementById('root')
 );
+```
 Next, serve the application using npm command.
-
+```
 npm start
+```
 Next, open the browser and enter http://localhost:3000 in the address bar and press enter.
 
-Grape Modules
+## Grape Modules
 The complete code to do it using CDN in a webpage is as follows −
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -129,7 +134,9 @@ The complete code to do it using CDN in a webpage is as follows −
       </script>
    </body>
 </html>
-Objects as properties
+```
+
+## Objects as properties
 Let us learn how to use JavaScript object as attributes in this chapter.
 
 Open our expense-manager application in your favorite editor.
@@ -137,7 +144,7 @@ Open our expense-manager application in your favorite editor.
 Next, open ExpenseEntryItem.js file.
 
 Next, change the render() method and access the input object item through this.props.item property.
-
+```
 render() {
    return (
       <div>
@@ -149,8 +156,9 @@ render() {
       </div>
    );
 }
+```
 Next, open index.js and represent the expense entry item in JavaScript object.
-
+```
 const item = {
    id: 1,
    name : "Grape Juice",
@@ -158,11 +166,13 @@ const item = {
    spendDate: new Date("2020-10-10"),
    category: "Food"
 }
+```
 Next, pass the object to the component using curly brace ({}) syntax in the component attributes.
-
+```
 <ExpenseEntryItem item={item} />
+```
 The complete code of index.js is as follows −
-
+```
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ExpenseEntryItem from './components/ExpenseEntryItem'
@@ -180,14 +190,15 @@ ReactDOM.render(
    </React.StrictMode>,
    document.getElementById('root')
 );
+```
 Next, serve the application using npm command.
-
+```
 npm start
+```
 Next, open the browser and enter http://localhost:3000 in the address bar and press enter.
 
-Grape Modules
 The complete code to do it using CDN in a webpage is as follows −
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -236,6 +247,7 @@ The complete code to do it using CDN in a webpage is as follows −
       </script>
    </body>
 </html>
+```
 
 # References
 https://www.tutorialspoint.com/reactjs/reactjs_create_component_using_properties.htm

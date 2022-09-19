@@ -9,7 +9,7 @@ The ipcRenderer module is used to communicate asynchronously from a renderer pro
 We will create a main process and a renderer process that will send each other messages using the above modules.
 
 Create a new file called main_process.js with the following contents −
-
+```
 const {app, BrowserWindow} = require('electron')
 const url = require('url')
 const path = require('path')
@@ -43,8 +43,9 @@ ipcMain.on('synchronous-message', (event, arg) => {
 })
 
 app.on('ready', createWindow)
+```
 Now create a new index.html file and add the following code in it.
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -69,11 +70,13 @@ Now create a new index.html file and add the following code in it.
       </script>
    </body>
 </html>
+```
 Run the app using the following command −
-
+```
 $ electron ./main_process.js
+```
 The above command will generate the following output −
-
+```
 // On your app console
 Sync Pong
 Async Pong
@@ -81,7 +84,8 @@ Async Pong
 // On your terminal where you ran the app
 Sync Ping
 Async Ping
-It is recommended not to perform computation of heavy/ blocking tasks on the renderer process. Always use IPC to delegate these tasks to the main process. This helps in maintaining the pace of your application.
+```
+It is recommended not to perform computation of heavy blocking tasks on the renderer process. Always use IPC to delegate these tasks to the main process. This helps in maintaining the pace of your application.
 
 # References
 https://www.tutorialspoint.com/electron/electron_inter_process_communication.htm

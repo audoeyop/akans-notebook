@@ -11,7 +11,7 @@ Encapsulation is an Object Oriented Programming concept that binds together the 
 Data encapsulation is a mechanism of bundling the data, and the functions that use them and data abstraction is a mechanism of exposing only the interfaces and hiding the implementation details from the user.
 
 C++ supports the properties of encapsulation and data hiding through the creation of user-defined types, called classes. We already have studied that a class can contain private, protected and public members. By default, all items defined in a class are private. For example -
-
+```
 class Box {
    public:
       double getVolume(void) {
@@ -23,7 +23,7 @@ class Box {
       double breadth;     // Breadth of a box
       double height;      // Height of a box
 };
-
+```
 The variables length, breadth, and height are private. This means that they can be accessed only by other members of the Box class, and not by any other part of your program. This is one way encapsulation is achieved.
 
 To make parts of a class public (i.e., accessible to other parts of your program), you must declare them after the public keyword. All variables or functions defined after the public specifier are accessible by all other functions in your program.
@@ -35,14 +35,48 @@ Data Encapsulation Example
 
 Any C++ program where you implement a class with public and private members is an example of data encapsulation and data abstraction. Consider the following example -
 
-[Live Demo](http://tpcg.io/lZz6R0)
+```
+#include <iostream>
+using namespace std;
 
-#include  <iostream>  using  namespace std;  class  Adder  {  public:  // constructor  Adder(int i =  0)  { total = i;  }  // interface to outside world  void addNum(int number)  { total += number;  }  // interface to outside world  int getTotal()  {  return total;  };  private:  // hidden data from outside world  int total;  };  int main()  {  Adder a; a.addNum(10); a.addNum(20); a.addNum(30); cout <<  "Total "  << a.getTotal()  <<endl;  return  0;  }
+class Adder {
+   public:
+      // constructor
+      Adder(int i = 0) {
+         total = i;
+      }
+
+      // interface to outside world
+      void addNum(int number) {
+         total += number;
+      }
+
+      // interface to outside world
+      int getTotal() {
+         return total;
+      };
+
+   private:
+      // hidden data from outside world
+      int total;
+};
+
+int main() {
+   Adder a;
+
+   a.addNum(10);
+   a.addNum(20);
+   a.addNum(30);
+
+   cout << "Total " << a.getTotal() <<endl;
+   return 0;
+}
+```
 
 When the above code is compiled and executed, it produces the following result -
-
+```
 Total 60
-
+```
 Above class adds numbers together, and returns the sum. The public members addNum and getTotal are the interfaces to the outside world and a user needs to know them to use the class. The private member total is something that is hidden from the outside world, but is needed for the class to operate properly.
 
 Designing Strategy

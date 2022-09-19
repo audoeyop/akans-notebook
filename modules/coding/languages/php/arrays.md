@@ -4,23 +4,24 @@ An array is a data structure that stores one or more similar type of values in a
 
 There are three different kind of arrays and each array value is accessed using an ID c which is called array index.
 
-Numeric array − An array with a numeric index. Values are stored and accessed in linear fashion.
+- Numeric array − An array with a numeric index. Values are stored and accessed in linear fashion.
 
-Associative array − An array with strings as index. This stores element values in association with key values rather than in a strict linear index order.
+- Associative array − An array with strings as index. This stores element values in association with key values rather than in a strict linear index order.
 
-Multidimensional array − An array containing one or more arrays and values are accessed using multiple indices
+- Multidimensional array − An array containing one or more arrays and values are accessed using multiple indices
 
 NOTE − Built-in array functions is given in function reference PHP Array Functions
 
-Numeric Array
+## Numeric Array
 These arrays can store numbers, strings and any object but their index will be represented by numbers. By default array index starts from zero.
 
-Example
+**Example**
+
 Following is the example showing how to create and access numeric arrays.
 
 Here we have used array() function to create array. This function is explained in function reference.
 
-Live Demo
+```
 <html>
    <body>
 
@@ -46,8 +47,9 @@ Live Demo
 
    </body>
 </html>
+```
 This will produce the following result −
-
+```
 Value is 1
 Value is 2
 Value is 3
@@ -58,15 +60,18 @@ Value is two
 Value is three
 Value is four
 Value is five
-Associative Arrays
+```
+
+## Associative Arrays
 The associative arrays are very similar to numeric arrays in term of functionality but they are different in terms of their index. Associative array will have their index as string so that you can establish a strong association between key and values.
 
 To store the salaries of employees in an array, a numerically indexed array would not be the best choice. Instead, we could use the employees names as the keys in our associative array, and the value would be their respective salary.
 
 NOTE − Don't keep associative array inside double quote while printing otherwise it would not return any value.
 
-Example
-Live Demo
+**Example**
+
+```
 <html>
    <body>
 
@@ -90,23 +95,27 @@ Live Demo
 
    </body>
 </html>
+```
 This will produce the following result −
-
+```
 Salary of mohammad is 2000
 Salary of qadir is 1000
 Salary of zara is 500
 Salary of mohammad is high
 Salary of qadir is medium
 Salary of zara is low
-Multidimensional Arrays
+```
+
+## Multidimensional Arrays
 A multi-dimensional array each element in the main array can also be an array. And each element in the sub-array can be an array, and so on. Values in the multi-dimensional array are accessed using multiple index.
 
-Example
+**Example**
+
 In this example we create a two dimensional array to store marks of three students in three subjects −
 
 This example is an associative array, you can create numeric array in the same fashion.
 
-Live Demo
+```
 <html>
    <body>
 
@@ -144,11 +153,12 @@ Live Demo
 
    </body>
 </html>
+```
 This will produce the following result −
-
+```
 Marks for mohammad in physics : 35
 Marks for qadir in maths : 32
 Marks for zara in chemistry : 39
-
+```
 # References
 https://www.tutorialspoint.com/php/php_arrays.htm

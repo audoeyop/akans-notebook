@@ -2,7 +2,8 @@
 
 We have learnt that a typical HTML document will have following structure −
 
-Document declaration tag
+**Document declaration tag**
+```
 <html>
 
    <head>
@@ -14,12 +15,13 @@ Document declaration tag
    </body>
 
 </html>
-This chapter will give a little more detail about header part which is represented by HTML <head> tag. The <head> tag is a container of various important tags like <title>, <meta>, <link>, <base>, <style>, <script>, and <noscript> tags.
+```
+This chapter will give a little more detail about header part which is represented by HTML \<head> tag. The \<head> tag is a container of various important tags like \<title>, \<meta>, \<link>, \<base>, \<style>, \<script>, and \<noscript> tags.
 
-The HTML <title> Tag
-The HTML <title> tag is used for specifying the title of the HTML document. Following is an example to give a title to an HTML document −
+## The HTML \<title> Tag
+The HTML \<title> tag is used for specifying the title of the HTML document. Following is an example to give a title to an HTML document −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -32,15 +34,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-The HTML <meta> Tag
-The HTML <meta> tag is used to provide metadata about the HTML document which includes information about page expiry, page author, list of keywords, page description etc.
+## The HTML \<meta> Tag
+The HTML \<meta> tag is used to provide metadata about the HTML document which includes information about page expiry, page author, list of keywords, page description etc.
 
-Following are few of the important usages of <meta> tag inside an HTML document −
+Following are few of the important usages of \<meta> tag inside an HTML document −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -75,15 +77,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-The HTML <base> Tag
-The HTML <base> tag is used for specifying the base URL for all relative URLs in a page, which means all the other URLs will be concatenated into base URL while locating for the given item.
+## The HTML \<base> Tag
+The HTML \<base> tag is used for specifying the base URL for all relative URLs in a page, which means all the other URLs will be concatenated into base URL while locating for the given item.
 
 For example, all the given pages and images will be searched after prefixing the given URLs with base URL http://www.tutorialspoint.com/ directory −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -98,15 +100,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 But if you change base URL to something else, for example, if base URL is http://www.tutorialspoint.com/home then image and other given links will become like http://www.tutorialspoint.com/home/images/logo.png and http://www.tutorialspoint.com/html/index.htm
 
-The HTML <link> Tag
-The HTML <link> tag is used to specify relationships between the current document and external resource. Following is an example to link an external style sheet file available in css sub-directory within web root −
+## The HTML \<link> Tag
+The HTML \<link> tag is used to specify relationships between the current document and external resource. Following is an example to link an external style sheet file available in css sub-directory within web root −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -121,13 +123,13 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-The HTML <style> Tag
-The HTML <style> tag is used to specify style sheet for the current HTML document. Following is an example to define few style sheet rules inside <style> tag −
+The HTML \<style> Tag
+The HTML \<style> tag is used to specify style sheet for the current HTML document. Following is an example to define few style sheet rules inside \<style> tag −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -148,15 +150,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Note − To learn about how Cascading Style Sheet works, kindly check a separate tutorial available at css
 
-The HTML <script> Tag
-The HTML <script> tag is used to include either external script file or to define internal script for the HTML document. Following is an example where we are using JavaScript to define a simple JavaScript function −
+## The HTML \<script> Tag
+The HTML \<script> tag is used to include either external script file or to define internal script for the HTML document. Following is an example where we are using JavaScript to define a simple JavaScript function −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -176,8 +178,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result, where you can try to click on the given button −
-
+```
 
 Note − To learn about how JavaScript works, kindly check a separate tutorial available at javascript
 

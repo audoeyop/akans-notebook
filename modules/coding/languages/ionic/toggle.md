@@ -2,13 +2,13 @@
 
 Sometimes there are two options available for the users. The most efficient way to handle this situation is through toggle forms. Ionic gives us classes for toggle elements that are animated and easy to implement.
 
-Using Toggle
+## Using Toggle
 Toggle can be implemented using two Ionic classes. First, we need to create a label for the same reason we explained in the previous chapter and assign a toggle class to it.
 
 Inside our label will be created . You will notice two more ionic classes used in the following example. The track class will add background styling to our checkbox and color animation when the toggle is tapped. The handle class is used to add a circle button to it.
 
 The following example shows two toggle forms. The first one is checked, the second one is not.
-
+```
 <label class = "toggle">
    <input type = "checkbox" />
    <div class = "track">
@@ -24,12 +24,12 @@ The following example shows two toggle forms. The first one is checked, the seco
       <div class = "handle"></div>
    </div>
 </label>
-The above code will produce the following screen −
+```
 
-Ionic Toggle
-Multiple Toggles
+## Ionic Toggle
+### Multiple Toggles
 Most of the time when you want to add more than one element of the same kind in Ionic, the best way is to use list items. The class that is used for multiple toggles is the item-toggle. The next example shows how to create a list for toggles. The first one and the second one are checked.
-
+```
 <ul class = "list">
    <li class = "item item-toggle">
       Toggle 1
@@ -71,12 +71,12 @@ Most of the time when you want to add more than one element of the same kind in 
       </label>
    </li>
 </ul>
-The above code will produce the following screen −
+```
 
-Ionic Toggle List
-Styling Toggle
+## Ionic Toggle List
+### Styling Toggle
 All the Ionic color classes can be applied to the toggle element. The Prefix will be the toggle. We will apply this to the label element. The following example shows all the colors that are applied.
-
+```
 <ul class = "list">
    <li class = "item item-toggle">
       Toggle Light
@@ -168,9 +168,7 @@ All the Ionic color classes can be applied to the toggle element. The Prefix wil
       </label>
    </li>
 </ul>
-The above code will produce the following screen −
-
-Ionic Toggle Color
+```
 
 # References
 https://www.tutorialspoint.com/ionic/ionic_toggle.htm

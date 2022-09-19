@@ -2,42 +2,44 @@
 
 There are three types of errors in programming: (a) Syntax Errors, (b) Runtime Errors, and (c) Logical Errors.
 
-Syntax Errors
+## Syntax Errors
 Syntax errors, also called parsing errors, occur at compile time in traditional programming languages and at interpret time in JavaScript.
 
 For example, the following line causes a syntax error because it is missing a closing parenthesis.
-
+```
 <script type = "text/javascript">
    <!--
       window.print(;
    //-->
 </script>
+```
 When a syntax error occurs in JavaScript, only the code contained within the same thread as the syntax error is affected and the rest of the code in other threads gets executed assuming nothing in them depends on the code containing the error.
 
-Runtime Errors
+## Runtime Errors
 Runtime errors, also called exceptions, occur during execution (after compilation/interpretation).
 
 For example, the following line causes a runtime error because here the syntax is correct, but at runtime, it is trying to call a method that does not exist.
-
+```
 <script type = "text/javascript">
    <!--
       window.printme();
    //-->
 </script>
+```
 Exceptions also affect the thread in which they occur, allowing other JavaScript threads to continue normal execution.
 
-Logical Errors
+## Logical Errors
 Logic errors can be the most difficult type of errors to track down. These errors are not the result of a syntax or runtime error. Instead, they occur when you make a mistake in the logic that drives your script and you do not get the result you expected.
 
 You cannot catch those errors, because it depends on your business requirement what type of logic you want to put in your program.
 
-The try...catch...finally Statement
+## The try...catch...finally Statement
 The latest versions of JavaScript added exception handling capabilities. JavaScript implements the try...catch...finally construct as well as the throw operator to handle exceptions.
 
 You can catch programmer-generated and runtime exceptions, but you cannot catch JavaScript syntax errors.
 
 Here is the try...catch...finally block syntax −
-
+```
 <script type = "text/javascript">
    <!--
       try {
@@ -56,12 +58,14 @@ Here is the try...catch...finally block syntax −
       }]
    //-->
 </script>
+```
 The try block must be followed by either exactly one catch block or one finally block (or one of both). When an exception occurs in the try block, the exception is placed in e and the catch block is executed. The optional finally block executes unconditionally after try/catch.
 
-Examples
+**Examples**
+
 Here is an example where we are trying to call a non-existing function which in turn is raising an exception. Let us see how it behaves without try...catch−
 
-Live Demo
+```
 <html>
    <head>      
       <script type = "text/javascript">
@@ -82,11 +86,11 @@ Live Demo
       </form>      
    </body>
 </html>
-Output
+```
 
 Now let us try to catch this exception using try...catch and display a user-friendly message. You can also suppress this message, if you want to hide this error from a user.
 
-Live Demo
+```
 <html>
    <head>
 
@@ -114,11 +118,12 @@ Live Demo
 
    </body>
 </html>
+```
 Output
 
 You can use finally block which will always execute unconditionally after the try/catch. Here is an example.
 
-Live Demo
+```
 <html>
    <head>
 
@@ -150,15 +155,15 @@ Live Demo
 
    </body>
 </html>
-Output
+```
 
-The throw Statement
+## The throw Statement
 You can use throw statement to raise your built-in exceptions or your customized exceptions. Later these exceptions can be captured and you can take an appropriate action.
 
 Example
 The following example demonstrates how to use a throw statement.
 
-Live Demo
+```
 <html>
    <head>
 
@@ -192,14 +197,14 @@ Live Demo
 
    </body>
 </html>
-Output
+```
 
 You can raise an exception in one function using a string, integer, Boolean, or an object and then you can capture that exception either in the same function as we did above, or in another function using a try...catch block.
 
-The onerror() Method
+## The onerror() Method
 The onerror event handler was the first feature to facilitate error handling in JavaScript. The error event is fired on the window object whenever an exception occurs on the page.
 
-Live Demo
+```
 <html>
    <head>
 
@@ -221,20 +226,19 @@ Live Demo
 
    </body>
 </html>
-Output
+```
 
 The onerror event handler provides three pieces of information to identify the exact nature of the error −
 
-Error message − The same message that the browser would display for the given error
+- Error message − The same message that the browser would display for the given error
 
-URL − The file in which the error occurred
+- URL − The file in which the error occurred
 
-Line number− The line number in the given URL that caused the error
+- Line number− The line number in the given URL that caused the error
 
 Here is the example to show how to extract this information.
 
-Example
-Live Demo
+```
 <html>
    <head>
 
@@ -258,13 +262,14 @@ Live Demo
 
    </body>
 </html>
-Output
+```
 
 You can display extracted information in whatever way you think it is better.
 
 You can use an onerror method, as shown below, to display an error message in case there is any problem in loading an image.
-
+```
 <img src="myimage.gif" onerror="alert('An error occurred loading the image.')"
+```
 
 # References
 https://www.tutorialspoint.com/javascript/javascript_error_handling.htm

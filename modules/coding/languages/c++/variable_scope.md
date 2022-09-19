@@ -15,9 +15,25 @@ Local Variables
 
 Variables that are declared inside a function or block are local variables. They can be used only by statements that are inside that function or block of code. Local variables are not known to functions outside their own. Following is the example using local variables -
 
-[Live Demo](http://tpcg.io/QIjnPh)
+```
+#include <iostream>
+using namespace std;
 
-#include  <iostream>  using  namespace std;  int main ()  {  // Local variable declaration:  int a, b;  int c;  // actual initialization a =  10; b =  20; c = a + b; cout << c;  return  0;  }
+int main () {
+   // Local variable declaration:
+   int a, b;
+   int c;
+
+   // actual initialization
+   a = 10;
+   b = 20;
+   c = a + b;
+
+   cout << c;
+
+   return 0;
+}
+```
 
 Global Variables
 ----------------
@@ -26,20 +42,50 @@ Global variables are defined outside of all the functions, usually on top of the
 
 A global variable can be accessed by any function. That is, a global variable is available for use throughout your entire program after its declaration. Following is the example using global and local variables -
 
-[Live Demo](http://tpcg.io/dRHHpD)
+```
+#include <iostream>
+using namespace std;
 
-#include  <iostream>  using  namespace std;  // Global variable declaration:  int g;  int main ()  {  // Local variable declaration:  int a, b;  // actual initialization a =  10; b =  20; g = a + b; cout << g;  return  0;  }
+// Global variable declaration:
+int g;
 
+int main () {
+   // Local variable declaration:
+   int a, b;
+
+   // actual initialization
+   a = 10;
+   b = 20;
+   g = a + b;
+
+   cout << g;
+
+   return 0;
+}
+```
 A program can have same name for local and global variables but value of local variable inside a function will take preference. For example -
 
-[Live Demo](http://tpcg.io/dt7MP9)
+```
+#include <iostream>
+using namespace std;
 
-#include  <iostream>  using  namespace std;  // Global variable declaration:  int g =  20;  int main ()  {  // Local variable declaration:  int g =  10; cout << g;  return  0;  }
+// Global variable declaration:
+int g = 20;
+
+int main () {
+   // Local variable declaration:
+   int g = 10;
+
+   cout << g;
+
+   return 0;
+}
+```
 
 When the above code is compiled and executed, it produces the following result -
-
+```
 10
-
+```
 Initializing Local and Global Variables
 ---------------------------------------
 

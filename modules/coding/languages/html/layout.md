@@ -4,13 +4,14 @@ A webpage layout is very important to give better look to your website. It takes
 
 Now-a-days, all modern websites are using CSS and JavaScript based framework to come up with responsive and dynamic websites but you can create a good layout using simple HTML tables or division tags in combination with other formatting tags. This chapter will give you few examples on how to create a simple but working layout for your webpage using pure HTML and its attributes.
 
-HTML Layout - Using Tables
-The simplest and most popular way of creating layouts is using HTML <table> tag. These tables are arranged in columns and rows, so you can utilize these rows and columns in whatever way you like.
+## HTML Layout - Using Tables
+The simplest and most popular way of creating layouts is using HTML \<table> tag. These tables are arranged in columns and rows, so you can utilize these rows and columns in whatever way you like.
 
-Example
+**Example**
+
 For example, the following HTML layout example is achieved using a table with 3 rows and 2 columns but the header and footer column spans both columns using the colspan attribute −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -50,16 +51,17 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Multiple Columns Layout - Using Tables
+## Multiple Columns Layout - Using Tables
 You can design your webpage to put your web content in multiple pages. You can keep your content in middle column and you can use left column to use menu and right column can be used to put advertisement or some other stuff. This layout will be very similar to what we have at our website tutorialspoint.com.
 
-Example
+**Example**
+
 Here is an example to create three column layout −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -94,20 +96,20 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
-
-HTML Layouts - Using DIV, SPAN
-The <div> element is a block level element used for grouping HTML elements. While the <div> tag is a block-level element, the HTML <span> element is used for grouping elements at an inline level.
+## HTML Layouts - Using DIV, SPAN
+The \<div> element is a block level element used for grouping HTML elements. While the \<div> tag is a block-level element, the HTML \<span> element is used for grouping elements at an inline level.
 
 Although we can achieve pretty nice layouts with HTML tables, but tables weren't really designed as a layout tool. Tables are more suited to presenting tabular data.
 
 Note − This example makes use of Cascading Style Sheet (CSS), so before understanding this example you need to have a better understanding on how CSS works.
 
-Example
-Here we will try to achieve same result using <div> tag along with CSS, whatever you have achieved using <table> tag in previous example.
+**Example**
 
-Live Demo
+Here we will try to achieve same result using \<div> tag along with CSS, whatever you have achieved using \<table> tag in previous example.
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -150,7 +152,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 You can create better layout using DIV, SPAN along with CSS. For more information on CSS, please refer to CSS Tutorial.

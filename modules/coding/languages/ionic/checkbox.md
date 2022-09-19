@@ -2,9 +2,9 @@
 
 Ionic checkbox is almost the same as toggle. These two are styled differently but are used for the same purposes.
 
-Adding Checkbox
+## Adding Checkbox
 When creating a checkbox form, you need to add the checkbox class name to both label and the input elements. The following example shows two simple checkboxes, one is checked and the other is not.
-
+```
 <label class = "checkbox">
    <input type = "checkbox">
 </label>
@@ -12,12 +12,13 @@ When creating a checkbox form, you need to add the checkbox class name to both l
 <label class = "checkbox">
    <input type = "checkbox">
 </label>
+```
 The above code will produce the following screen −
 
-Ionic checkbox
+## Ionic checkbox
 Multiple Checkboxes
 As we already showed, the list will be used for multiple elements. Now we will use the item-checkbox class for each list item.
-
+```
 <ul class = "list">
    <li class = "item item-checkbox">
       Checkbox 1
@@ -47,12 +48,10 @@ As we already showed, the list will be used for multiple elements. Now we will u
       </label>
    </li>
 </ul>
-The above code will produce the following screen −
+```
 
-Ionic checkbox List
-Styling Checkbox
 When you want to style a checkbox, you need to apply any Ionic color class with the checkbox prefix. Check the following example to see how it looks like. We will use the list of checkboxes for this example.
-
+```
 <ul class = "list">
    <li class = "item item-checkbox checkbox-light">
       Checkbox 1
@@ -117,9 +116,7 @@ When you want to style a checkbox, you need to apply any Ionic color class with 
       </label>
    </li>
 </ul>
-The above code will produce the following screen −
-
-Ionic checkbox Color
+```
 
 # References
 https://www.tutorialspoint.com/ionic/ionic_checkbox.htm

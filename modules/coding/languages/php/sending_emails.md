@@ -5,17 +5,18 @@ PHP must be configured correctly in the php.ini file with the details of how you
 Windows users should ensure that two directives are supplied. The first is called SMTP that defines your email server address. The second is called sendmail_from which defines your own email address.
 
 The configuration for Windows should look something like this −
-
+```
 [mail function]
 ; For Win32 only.
 SMTP = smtp.secureserver.net
 
 ; For win32 only
 sendmail_from = webmaster@tutorialspoint.com
+```
 Linux users simply need to let PHP know the location of their sendmail application. The path and any desired switches should be specified to the sendmail_path directive.
 
 The configuration for Linux should look something like this −
-
+```
 [mail function]
 ; For Win32 only.
 SMTP =
@@ -26,36 +27,32 @@ sendmail_from =
 ; For Unix only
 sendmail_path = /usr/sbin/sendmail -t -i
 Now you are ready to go −
+```
 
-Sending plain text email
+## Sending plain text email
 PHP makes use of mail() function to send an email. This function requires three mandatory arguments that specify the recipient's email address, the subject of the the message and the actual message additionally there are other two optional parameters.
-
+```
 mail( to, subject, message, headers, parameters );
+```
 Here is the description for each parameters.
 
-Sr.No	Parameter & Description
-1
-to
+**to**
 
 Required. Specifies the receiver / receivers of the email
 
-2
-subject
+**subject**
 
 Required. Specifies the subject of the email. This parameter cannot contain any newline characters
 
-3
-message
+**message**
 
 Required. Defines the message to be sent. Each line should be separated with a LF (\n). Lines should not exceed 70 characters
 
-4
-headers
+**headers**
 
 Optional. Specifies additional headers, like From, Cc, and Bcc. The additional headers should be separated with a CRLF (\r\n)
 
-5
-parameters
+**parameters**
 
 Optional. Specifies an additional parameter to the send mail program
 
@@ -63,14 +60,15 @@ As soon as the mail function is called PHP will attempt to send the email then i
 
 Multiple recipients can be specified as the first argument to the mail() function in a comma separated list.
 
-Sending HTML email
+## Sending HTML email
 When you send a text message using PHP then all the content will be treated as simple text. Even if you will include HTML tags in a text message, it will be displayed as simple text and HTML tags will not be formatted according to HTML syntax. But PHP provides option to send an HTML message as actual HTML message.
 
 While sending an email message you can specify a Mime version, content type and character set to send an HTML email.
 
-Example
-Following example will send an HTML email message to xyz@somedomain.com copying it to afgh@somedomain.com. You can code this program in such a way that it should receive all content from the user and then it should send an email.
+**Example**
 
+Following example will send an HTML email message to xyz@somedomain.com copying it to afgh@somedomain.com. You can code this program in such a way that it should receive all content from the user and then it should send an email.
+```
 <html>
 
    <head>
@@ -102,11 +100,13 @@ Following example will send an HTML email message to xyz@somedomain.com copying 
 
    </body>
 </html>
-Sending attachments with email
+```
+
+## Sending attachments with email
 To send an email with mixed content requires to set Content-type header to multipart/mixed. Then text and attachment sections can be specified within boundaries.
 
 A boundary is started with two hyphens followed by a unique number which can not appear in the message part of the email. A PHP function md5() is used to create a 32 digit hexadecimal number to create unique number. A final boundary denoting the email's final section must also end with two hyphens.
-
+```
 <?php
    // request variables // important
    $from = $_REQUEST["from"];
@@ -255,6 +255,7 @@ A boundary is started with two hyphens followed by a unique number which can not
 
    </body>
 </html>
+```
 
 # References
 https://www.tutorialspoint.com/php/php_sending_emails.htm

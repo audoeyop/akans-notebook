@@ -2,16 +2,16 @@
 
 Images are very important to beautify as well as to depict many complex concepts in simple way on your web page. This tutorial will take you through simple steps to use images in your web pages.
 
-Insert Image
-You can insert any image in your web page by using <img> tag. Following is the simple syntax to use this tag.
+## Insert Image
+You can insert any image in your web page by using \<img> tag. Following is the simple syntax to use this tag.
 
-<img src = "Image URL" ... attributes-list/>
-The <img> tag is an empty tag, which means that, it can contain only list of attributes and it has no closing tag.
+\<img src = "Image URL" ... attributes-list/>
+The \<img> tag is an empty tag, which means that, it can contain only list of attributes and it has no closing tag.
 
 Example
 To try following example, let's keep our HTML file test.htm and image file test.png in the same directory −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -25,20 +25,19 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
-
+```
 
 You can use PNG, JPEG or GIF image file based on your comfort but make sure you specify correct image file name in src attribute. Image name is always case sensitive.
 
 The alt attribute is a mandatory attribute which specifies an alternate text for an image, if the image cannot be displayed.
 
-Set Image Location
+## Set Image Location
 Usually we keep all the images in a separate directory. So let's keep HTML file test.htm in our home directory and create a subdirectory images inside the home directory where we will keep our image test.png.
 
 Example
 Assuming our image location is "image/test.png", try the following example −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -52,14 +51,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Set Image Width/Height
 You can set image width and height based on your requirement using width and height attributes. You can specify width and height of the image in terms of either pixels or percentage of its actual size.
 
 Example
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -73,14 +72,14 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Set Image Border
 By default, image will have a border around it, you can specify border thickness in terms of pixels using border attribute. A thickness of 0 means, no border around the picture.
 
 Example
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -94,14 +93,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Set Image Alignment
 By default, image will align at the left side of the page, but you can use align attribute to set it in the center or right.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -115,7 +115,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/html/html_images.htm

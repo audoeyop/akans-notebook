@@ -1,31 +1,34 @@
+# Python Sending Email
+
 Simple Mail Transfer Protocol (SMTP) is a protocol, which handles sending e-mail and routing e-mail between mail servers.
 
 Python provides smtplib module, which defines an SMTP client session object that can be used to send mail to any Internet machine with an SMTP or ESMTP listener daemon.
 
 Here is a simple syntax to create one SMTP object, which can later be used to send an e-mail −
-
+```
 import smtplib
 
 smtpObj = smtplib.SMTP( [host [, port [, local_hostname]]] )
+```
 Here is the detail of the parameters −
 
-host − This is the host running your SMTP server. You can specify IP address of the host or a domain name like tutorialspoint.com. This is optional argument.
+- **host** − This is the host running your SMTP server. You can specify IP address of the host or a domain name like tutorialspoint.com. This is optional argument.
 
-port − If you are providing host argument, then you need to specify a port, where SMTP server is listening. Usually this port would be 25.
+- **port** − If you are providing host argument, then you need to specify a port, where SMTP server is listening. Usually this port would be 25.
 
-local_hostname − If your SMTP server is running on your local machine, then you can specify just localhost as of this option.
+- **local_hostname** − If your SMTP server is running on your local machine, then you can specify just localhost as of this option.
 
 An SMTP object has an instance method called sendmail, which is typically used to do the work of mailing a message. It takes three parameters −
 
-The sender − A string with the address of the sender.
+- **The sender** − A string with the address of the sender.
 
-The receivers − A list of strings, one for each recipient.
+- **The receivers** − A list of strings, one for each recipient.
 
-The message − A message as a string formatted as specified in the various RFCs.
+- **The message** − A message as a string formatted as specified in the various RFCs.
 
-Example
+**Example**
 Here is a simple way to send one e-mail using Python script. Try it once −
-
+```
 #!/usr/bin/python
 
 import smtplib
@@ -46,21 +49,23 @@ try:
    print "Successfully sent email"
 except SMTPException:
    print "Error: unable to send email"
+```
 Here, you have placed a basic e-mail in message, using a triple quote, taking care to format the headers correctly. An e-mail requires a From, To, and Subject header, separated from the body of the e-mail with a blank line.
 
 To send the mail you use smtpObj to connect to the SMTP server on the local machine and then use the sendmail method along with the message, the from address, and the destination address as parameters (even though the from and to addresses are within the e-mail itself, these aren't always used to route mail).
 
 If you are not running an SMTP server on your local machine, you can use smtplib client to communicate with a remote SMTP server. Unless you are using a webmail service (such as Hotmail or Yahoo! Mail), your e-mail provider must have provided you with outgoing mail server details that you can supply them, as follows −
-
+```
 smtplib.SMTP('mail.your-domain.com', 25)
-Sending an HTML e-mail using Python
+```
+## Sending an HTML e-mail using Python
 When you send a text message using Python, then all the content are treated as simple text. Even if you include HTML tags in a text message, it is displayed as simple text and HTML tags will not be formatted according to HTML syntax. But Python provides option to send an HTML message as actual HTML message.
 
 While sending an e-mail message, you can specify a Mime version, content type and character set to send an HTML e-mail.
 
-Example
+**Example**
 Following is the example to send HTML content as an e-mail. Try it once −
-
+```
 #!/usr/bin/python
 
 import smtplib
@@ -83,7 +88,9 @@ try:
    print "Successfully sent email"
 except SMTPException:
    print "Error: unable to send email"
-Sending Attachments as an E-mail
+```
+
+## Sending Attachments as an E-mail
 To send an e-mail with mixed content requires to set Content-type header to multipart/mixed. Then, text and attachment sections can be specified within boundaries.
 
 A boundary is started with two hyphens followed by a unique number, which cannot appear in the message part of the e-mail. A final boundary denoting the e-mail's final section must also end with two hyphens.
@@ -91,8 +98,8 @@ A boundary is started with two hyphens followed by a unique number, which cannot
 Attached files should be encoded with the pack("m") function to have base64 encoding before transmission.
 
 Example
-Following is the example, which sends a file /tmp/test.txt as an attachment. Try it once −
-
+Following is the example, which sends a file `/tmp/test.txt` as an attachment. Try it once −
+```
 #!/usr/bin/python
 
 import smtplib
@@ -146,6 +153,7 @@ try:
    print "Successfully sent email"
 except Exception:
    print "Error: unable to send email"
-   
+```
+
 # References
 https://www.tutorialspoint.com/python/python_sending_email.htm

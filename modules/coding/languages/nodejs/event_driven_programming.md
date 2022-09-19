@@ -8,24 +8,29 @@ In an event-driven application, there is generally a main loop that listens for 
 
 ## Event Loop
 Although events look quite similar to callbacks, the difference lies in the fact that callback functions are called when an asynchronous function returns its result, whereas event handling works on the observer pattern. The functions that listen to events act as Observers. Whenever an event gets fired, its listener function starts executing. Node.js has multiple in-built events available through events module and EventEmitter class which are used to bind events and event-listeners as follows −
-
+```
 // Import events module
 var events = require('events');
 
 // Create an eventEmitter object
 var eventEmitter = new events.EventEmitter();
+```
 Following is the syntax to bind an event handler with an event −
-
+```
 // Bind event and event  handler as follows
 eventEmitter.on('eventName', eventHandler);
+```
 We can fire an event programmatically as follows −
-
+```
 // Fire an event
 eventEmitter.emit('eventName');
-Example
+```
+
+**Example**
+
 Create a js file named main.js with the following code −
 
-Live Demo
+```
 // Import events module
 var events = require('events');
 
@@ -52,21 +57,25 @@ eventEmitter.on('data_received', function() {
 eventEmitter.emit('connection');
 
 console.log("Program Ended.");
+```
 Now let's try to run the above program and check its output −
-
+```
 $ node main.js
+```
 IT should produce the following result −
-
+```
 connection successful.
 data received successfully.
 Program Ended.
-How Node Applications Work?
+```
+
+## How Node Applications Work?
 In Node Application, any async function accepts a callback as the last parameter and a callback function accepts an error as the first parameter. Let's revisit the previous example again. Create a text file named input.txt with the following content.
 
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
 Create a js file named main.js having the following code −
-
+```
 var fs = require("fs");
 
 fs.readFile('input.txt', function (err, data) {
@@ -77,11 +86,13 @@ fs.readFile('input.txt', function (err, data) {
    console.log(data.toString());
 });
 console.log("Program Ended");
+```
 Here fs.readFile() is a async function whose purpose is to read a file. If an error occurs during the read operation, then the err object will contain the corresponding error, else data will contain the contents of the file. readFile passes err and data to the callback function after the read operation is complete, which finally prints the content.
-
+```
 Program Ended
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
+```
 
 # References
 https://www.tutorialspoint.com/nodejs/nodejs_event_loop.htm

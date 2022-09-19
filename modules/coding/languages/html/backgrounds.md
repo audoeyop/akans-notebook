@@ -2,20 +2,21 @@
 
 By default, your webpage background is white in color. You may not like it, but no worries. HTML provides you following two good ways to decorate your webpage background.
 
-HTML Background with Colors
+## HTML Background with Colors
 HTML Background with Images
 Now let's see both the approaches one by one using appropriate examples.
 
-Html Background with Colors
+### Html Background with Colors
 The bgcolor attribute is used to control the background of an HTML element, specifically page body and table backgrounds.
 
 Note − The bgcolor attribute deprecated in HTML5. Do not use this attribute.
 
 Following is the syntax to use bgcolor attribute with any HTML tag.
-
+```
 <tagname bgcolor = "color_value"...>
+```
 This color_value can be given in any of the following formats −
-
+```
 <!-- Format 1 - Use color name -->
 <table bgcolor = "lime" >
 
@@ -24,10 +25,11 @@ This color_value can be given in any of the following formats −
 
 <!-- Format 3 - Use color value in RGB terms -->
 <table bgcolor = "rgb(0,0,120)" >
-Example
+```
+
 Here are the examples to set background of an HTML tag −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -65,10 +67,9 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
-
-Html Background with Images
+## Html Background with Images
 The background attribute can also be used to control the background of an HTML element, specifically page body and table backgrounds. You can specify an image to set background of your HTML page or table.
 
 Note − The background attribute deprecated in HTML5. Do not use this attribute.
@@ -76,14 +77,14 @@ Note − The background attribute deprecated in HTML5. Do not use this attribute
 Following is the syntax to use background attribute with any HTML tag.
 
 Note − The background attribute is deprecated and it is recommended to use Style Sheet for background setting.
-
+```
 <tagname background = "Image URL"...>
+```
 The most frequently used image formats are JPEG, GIF and PNG images.
 
-Example
+**Example**
 Here are the examples to set background images of a table.
-
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -101,18 +102,16 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
-
-Patterned & Transparent Backgrounds
+## Patterned & Transparent Backgrounds
 You might have seen many pattern or transparent backgrounds on various websites. This simply can be achieved by using patterned image or transparent image in the background.
 
 It is suggested that while creating patterns or transparent GIF or PNG images, use the smallest dimensions possible even as small as 1x1 to avoid slow loading.
 
-Example
 Here are the examples to set background pattern of a table −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -141,7 +140,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/html/html_backgrounds.htm

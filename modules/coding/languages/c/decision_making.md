@@ -20,10 +20,12 @@ C programming language provides the following types of decision making statement
 | 4 |	**switch statement** <br/> A switch statement allows a variable to be tested for equality against a list of values.
 | 5 |	**nested switch statements**<br/> You can use one switch statement inside another switch statement(s).
 
-## The ? : Operator
+## The ? : Ternary Operator
 We have covered conditional operator ? : in the previous chapter which can be used to replace if...else statements. It has the following general form −
 
-## Exp1 ? Exp2 : Exp3;
+```
+Exp1 ? Exp2 : Exp3;
+```
 Where `Exp1`, `Exp2`, and `Exp3` are expressions. Notice the use and placement of the colon.
 
 The value of a ? expression is determined like this −

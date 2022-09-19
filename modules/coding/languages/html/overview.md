@@ -10,10 +10,10 @@ Originally, HTML was developed with the intent of defining the structure of docu
 
 Now, HTML is being widely used to format web pages with the help of different tags available in HTML language.
 
-Basic HTML Document
+## Basic HTML Document
 In its simplest form, following is an example of an HTML document −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -27,40 +27,48 @@ Live Demo
    </body>
 
 </html>
-HTML Tags
-As told earlier, HTML is a markup language and makes use of various tags to format the content. These tags are enclosed within angle braces <Tag Name>. Except few tags, most of the tags have their corresponding closing tags. For example, <html> has its closing tag </html> and <body> tag has its closing tag </body> tag etc.
+```
+
+## HTML Tags
+As told earlier, HTML is a markup language and makes use of various tags to format the content. These tags are enclosed within angle braces \<Tag Name>. Except few tags, most of the tags have their corresponding closing tags. For example, \<html> has its closing tag \</html> and \<body> tag has its closing tag \</body> tag etc.
 
 Above example of HTML document uses the following tags −
 
-Sr.No	Tag & Description
-1	<!DOCTYPE...>
+**\<!DOCTYPE...>**
+
 This tag defines the document type and HTML version.
 
-2	<html>
-This tag encloses the complete HTML document and mainly comprises of document header which is represented by <head>...</head> and document body which is represented by <body>...</body> tags.
+**\<html>**
 
-3	<head>
-This tag represents the document's header which can keep other HTML tags like <title>, <link> etc.
+This tag encloses the complete HTML document and mainly comprises of document header which is represented by \<head>...\</head> and document body which is represented by \<body>...\</body> tags.
 
-4	<title>
-The <title> tag is used inside the <head> tag to mention the document title.
+**\<head>**
 
-5	<body>
-This tag represents the document's body which keeps other HTML tags like <h1>, <div>, <p> etc.
+This tag represents the document's header which can keep other HTML tags like \<title>, \<link> etc.
 
-6	<h1>
+**\<title>**
+
+The \<title> tag is used inside the \<head> tag to mention the document title.
+
+**\<body>**
+
+This tag represents the document's body which keeps other HTML tags like \<h1>, \<div>, \<p> etc.
+
+**\<h1>**
+
 This tag represents the heading.
 
-7	<p>
+**\<p>**
+
 This tag represents a paragraph.
 
 To learn HTML, you will need to study various tags and understand how they behave, while formatting a textual document. Learning HTML is simple as users have to learn the usage of different tags in order to format the text or images to make a beautiful webpage.
 
 World Wide Web Consortium (W3C) recommends to use lowercase tags starting from HTML 4.
 
-HTML Document Structure
+## HTML Document Structure
 A typical HTML document will have the following structure −
-
+```
 <html>
 
    <head>
@@ -72,13 +80,16 @@ A typical HTML document will have the following structure −
    </body>
 
 </html>
+```
+
 We will study all the header and body tags in subsequent chapters, but for now let's see what is document declaration tag.
 
-The <!DOCTYPE> Declaration
-The <!DOCTYPE> declaration tag is used by the web browser to understand the version of the HTML used in the document. Current version of HTML is 5 and it makes use of the following declaration −
-
+## The \<!DOCTYPE> Declaration
+The \<!DOCTYPE> declaration tag is used by the web browser to understand the version of the HTML used in the document. Current version of HTML is 5 and it makes use of the following declaration −
+```
 <!DOCTYPE html>
-There are many other declaration types which can be used in HTML document depending on what version of HTML is being used. We will see more details on this while discussing <!DOCTYPE...> tag along with other HTML tags.
+```
+There are many other declaration types which can be used in HTML document depending on what version of HTML is being used. We will see more details on this while discussing \<!DOCTYPE...> tag along with other HTML tags.
 
 # References
 https://www.tutorialspoint.com/html/html_overview.htm

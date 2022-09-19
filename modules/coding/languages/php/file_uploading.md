@@ -6,26 +6,25 @@ Information in the phpinfo.php page describes the temporary directory that is us
 
 The process of uploading a file follows these steps −
 
-The user opens the page containing a HTML form featuring a text files, a browse button and a submit button.
+- The user opens the page containing a HTML form featuring a text files, a browse button and a submit button.
 
-The user clicks the browse button and selects a file to upload from the local PC.
+- The user clicks the browse button and selects a file to upload from the local PC.
 
-The full path to the selected file appears in the text filed then the user clicks the submit button.
+- The full path to the selected file appears in the text filed then the user clicks the submit button.
 
-The selected file is sent to the temporary directory on the server.
+- The selected file is sent to the temporary directory on the server.
 
-The PHP script that was specified as the form handler in the form's action attribute checks that the file has arrived and then copies the file into an intended directory.
+- The PHP script that was specified as the form handler in the form's action attribute checks that the file has arrived and then copies the file into an intended directory.
 
-The PHP script confirms the success to the user.
+- The PHP script confirms the success to the user.
 
 As usual when writing files it is necessary for both temporary and final locations to have permissions set that enable file writing. If either is set to be read-only then process will fail.
 
 An uploaded file could be a text file or image file or any document.
 
-Creating an upload form
+## Creating an upload form
 The following HTM code below creates an uploader form. This form is having method attribute set to post and enctype attribute is set to multipart/form-data
-
-Live Demo
+```
 <?php
    if(isset($_FILES['image'])){
       $errors= array();
@@ -63,26 +62,24 @@ Live Demo
 
    </body>
 </html>
-It will produce the following result −
+```
 
-Upload Form
-Creating an upload script
+## Creating an upload script
 There is one global PHP variable called $_FILES. This variable is an associate double dimension array and keeps all the information related to uploaded file. So if the value assigned to the input's name attribute in uploading form was file, then PHP would create following five variables −
 
-$_FILES['file']['tmp_name'] − the uploaded file in the temporary directory on the web server.
+**$_FILES['file']['tmp_name']** − the uploaded file in the temporary directory on the web server.
 
-$_FILES['file']['name'] − the actual name of the uploaded file.
+**$_FILES['file']['name']** − the actual name of the uploaded file.
 
-$_FILES['file']['size'] − the size in bytes of the uploaded file.
+**$_FILES['file']['size']** − the size in bytes of the uploaded file.
 
-$_FILES['file']['type'] − the MIME type of the uploaded file.
+**$_FILES['file']['type']** − the MIME type of the uploaded file.
 
-$_FILES['file']['error'] − the error code associated with this file upload.
+**$_FILES['file']['error']** − the error code associated with this file upload.
 
 Example
 Below example should allow upload images and gives back result as uploaded file information.
-
-Live Demo
+```
 <?php
    if(isset($_FILES['image'])){
       $errors= array();
@@ -127,7 +124,7 @@ Live Demo
 
    </body>
 </html>
-It will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/php/php_file_uploading.htm

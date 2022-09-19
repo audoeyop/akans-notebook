@@ -6,31 +6,26 @@ Ruby also has libraries that provide higher-level access to specific application
 
 This chapter gives you an understanding on most famous concept in Networking − Socket Programming.
 
-What are Sockets?
+## What are Sockets?
 Sockets are the endpoints of a bidirectional communications channel. Sockets may communicate within a process, between processes on the same machine, or between processes on different continents.
 
 Sockets may be implemented over a number of different channel types: Unix domain sockets, TCP, UDP, and so on. The socket provides specific classes for handling the common transports as well as a generic interface for handling the rest.
 
 Sockets have their own vocabulary −
 
-Sr.No.	Term & Description
-1
-domain
+**domain**
 
 The family of protocols that will be used as the transport mechanism. These values are constants such as PF_INET, PF_UNIX, PF_X25, and so on.
 
-2
-type
+**type**
 
 The type of communications between the two endpoints, typically SOCK_STREAM for connection-oriented protocols and SOCK_DGRAM for connectionless protocols.
 
-3
-protocol
+**protocol**
 
 Typically zero, this may be used to identify a variant of a protocol within a domain and type.
 
-4
-hostname
+**hostname**
 
 The identifier of a network interface −
 
@@ -42,12 +37,11 @@ A zero-length string, which specifies INADDR_ANY, or
 
 An Integer, interpreted as a binary address in host byte order.
 
-5
-port
+**port**
 
 Each server listens for clients calling on one or more ports. A port may be a Fixnum port number, a string containing a port number, or the name of a service.
 
-A Simple Client
+## A Simple Client
 Here we will write a very simple client program, which will open a connection to a given port and given host. Ruby class TCPSocket provides open function to open such a socket.
 
 The TCPSocket.open(hosname, port ) opens a TCP connection to hostname on the port.
@@ -56,6 +50,7 @@ Once you have a socket open, you can read from it like any IO object. When done,
 
 The following code is a very simple client that connects to a given host and port, reads any available data from the socket, and then exits −
 
+```
 require 'socket'        # Sockets are in standard library
 
 hostname = 'localhost'
@@ -67,13 +62,16 @@ while line = s.gets     # Read lines from the socket
    puts line.chop       # And print with platform line terminator
 end
 s.close                 # Close the socket when done
-A Simple Server
+```
+
+## A Simple Server
 To write Internet servers, we use the TCPServer class. A TCPServer object is a factory for TCPSocket objects.
 
 Now call TCPServer.open(hostname, port function to specify a port for your service and create a TCPServer object.
 
 Next, call the accept method of the returned TCPServer object. This method waits until a client connects to the port you specified, and then returns a TCPSocket object that represents the connection to that client.
 
+```
 require 'socket'                 # Get sockets from stdlib
 
 server = TCPServer.open(2000)    # Socket to listen on port 2000
@@ -83,13 +81,15 @@ loop {                           # Servers run forever
    client.puts "Closing the connection. Bye!"
    client.close                  # Disconnect from the client
 }
+```
 Now, run this server in background and then run the above client to see the result.
 
-Multi-Client TCP Servers
+## Multi-Client TCP Servers
 Most servers on the Internet are designed to deal with large numbers of clients at any one time.
 
 Ruby's Thread class makes it easy to create a multithreaded server.one that accepts requests and immediately creates a new thread of execution to process the connection while allowing the main program to await more connections −
 
+```
 require 'socket'                 # Get sockets from stdlib
 
 server = TCPServer.open(2000)    # Socket to listen on port 2000
@@ -100,13 +100,14 @@ loop {                           # Servers run forever
    client.close                  # Disconnect from the client
    end
 }
+```
 In this example, you have a permanent loop, and when server.accept responds, a new thread is created and started immediately to handle the connection that has just been accepted, using the connection object passed into the thread. However, the main program immediately loops back and awaits new connections.
 
 Using Ruby threads in this way means the code is portable and will run in the same way on Linux, OS X, and Windows.
 
-A Tiny Web Browser
+## A Tiny Web Browser
 We can use the socket library to implement any Internet protocol. Here, for example, is a code to fetch the content of a web page −
-
+```
 require 'socket'
 
 host = 'www.tutorialspoint.com'     # The web server
@@ -122,8 +123,9 @@ response = socket.read              # Read complete response
 # Split response at first blank line into headers and body
 headers,body = response.split("\r\n\r\n", 2)
 print body                          # And display it
+```
 To implement the similar web client, you can use a pre-built library like Net::HTTP for working with HTTP. Here is the code that does the equivalent of the previous code −
-
+```
 require 'net/http'                  # The library we need
 host = 'www.tutorialspoint.com'     # The web server
 path = '/index.htm'                 # The file we want
@@ -135,7 +137,7 @@ if headers.code == "200"            # Check the status code
 else                                
    puts "#{headers.code} #{headers.message}"
 end
-Please check similar libraries to work with FTP, SMTP, POP, and IMAP protocols.
+```
 
 # References
 https://www.tutorialspoint.com/ruby/ruby_socket_programming.htm

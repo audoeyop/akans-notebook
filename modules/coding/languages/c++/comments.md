@@ -5,15 +5,16 @@ Program comments are explanatory statements that you can include in the C++ code
 C++ supports single-line and multi-line comments. All characters available inside any comment are ignored by C++ compiler.
 
 C++ comments start with /* and end with */. For example −
-
+```
 /* This is a comment */
 
 /* C++ comments can also
    * span multiple lines
 */
+```
 A comment can also start with //, extending to the end of the line. For example −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -22,16 +23,18 @@ main() {
 
    return 0;
 }
+```
 When the above code is compiled, it will ignore // prints Hello World and final executable will produce the following result −
-
+```
 Hello World
-Within a /* and */ comment, // characters have no special meaning. Within a // comment, /* and */ have no special meaning. Thus, you can "nest" one kind of comment within the other kind. For example −
-
+```
+Within a /* and \*/ comment, // characters have no special meaning. Within a // comment, /* and */ have no special meaning. Thus, you can "nest" one kind of comment within the other kind. For example −
+```
 /* Comment out printing of Hello World:
 
 cout << "Hello World"; // prints Hello World
 
 */
-
+```
 # References
 https://www.tutorialspoint.com/cplusplus/cpp_comments.htm

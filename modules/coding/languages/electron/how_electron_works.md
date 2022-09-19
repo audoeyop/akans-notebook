@@ -8,7 +8,7 @@ Just starting the main process does not give the users of your application any a
 
 The main process can access the native GUI through modules available directly in Electron. The desktop application can access all Node modules like the file system module for handling files, request to make HTTP calls, etc.
 
-Difference between Main and Renderer processes
+## Difference between Main and Renderer processes
 The main process creates web pages by creating the BrowserWindow instances. Each BrowserWindow instance runs the web page in its own renderer process. When a BrowserWindow instance is destroyed, the corresponding renderer process is also terminated.
 
 The main process manages all web pages and their corresponding renderer processes. Each renderer process is isolated and only cares about the web page running in it.

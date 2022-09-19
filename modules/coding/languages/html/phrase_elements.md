@@ -1,12 +1,13 @@
 # HTML Phrase Elements
 
-The phrase tags have been desicolgned for specific purposes, though they are displayed in a similar way as other basic tags like <b>, <i>, <pre>, and <tt>, you have seen in previous chapter. This chapter will take you through all the important phrase tags, so let's start seeing them one by one.
+The phrase tags have been desicolgned for specific purposes, though they are displayed in a similar way as other basic tags like \<b>, \<i>, \<pre>, and \<tt>, you have seen in previous chapter. This chapter will take you through all the important phrase tags, so let's start seeing them one by one.
 
-Emphasized Text
-Anything that appears within <em>...</em> element is displayed as emphasized text.
+## Emphasized Text
+Anything that appears within \<em>...\</em> element is displayed as emphasized text.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -19,14 +20,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Marked Text
-Anything that appears with-in <mark>...</mark> element, is displayed as marked with yellow ink.
+## Marked Text
+Anything that appears with-in \<mark>...\</mark> element, is displayed as marked with yellow ink.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -39,14 +41,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Strong Text
-Anything that appears within <strong>...</strong> element is displayed as important text.
+## Strong Text
+Anything that appears within \<strong>...\</strong> element is displayed as important text.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -59,14 +62,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Text Abbreviation
-You can abbreviate a text by putting it inside opening <abbr> and closing </abbr> tags. If present, the title attribute must contain this full description and nothing else.
+## Text Abbreviation
+You can abbreviate a text by putting it inside opening \<abbr> and closing \</abbr> tags. If present, the title attribute must contain this full description and nothing else.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -79,16 +83,17 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Acronym Element
-The <acronym> element allows you to indicate that the text between <acronym> and </acronym> tags is an acronym.
+## Acronym Element
+The \<acronym> element allows you to indicate that the text between \<acronym> and \</acronym> tags is an acronym.
 
-At present, the major browsers do not change the appearance of the content of the <acronym> element.
+At present, the major browsers do not change the appearance of the content of the \<acronym> element.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -101,14 +106,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Text Direction
-The <bdo>...</bdo> element stands for Bi-Directional Override and it is used to override the current text direction.
+## Text Direction
+The \<bdo>...\</bdo> element stands for Bi-Directional Override and it is used to override the current text direction.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -122,16 +128,17 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Special Terms
-The <dfn>...</dfn> element (or HTML Definition Element) allows you to specify that you are introducing a special term. It's usage is similar to italic words in the midst of a paragraph.
+## Special Terms
+The \<dfn>...\</dfn> element (or HTML Definition Element) allows you to specify that you are introducing a special term. It's usage is similar to italic words in the midst of a paragraph.
 
-Typically, you would use the <dfn> element the first time you introduce a key term. Most recent browsers render the content of a <dfn> element in an italic font.
+Typically, you would use the \<dfn> element the first time you introduce a key term. Most recent browsers render the content of a \<dfn> element in an italic font.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -144,16 +151,17 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Quoting Text
-When you want to quote a passage from another source, you should put it in between <blockquote>...</blockquote> tags.
+## Quoting Text
+When you want to quote a passage from another source, you should put it in between \<blockquote>...\</blockquote> tags.
 
-Text inside a <blockquote> element is usually indented from the left and right edges of the surrounding text, and sometimes uses an italicized font.
+Text inside a \<blockquote> element is usually indented from the left and right edges of the surrounding text, and sometimes uses an italicized font.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -169,14 +177,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Short Quotations
-The <q>...</q> element is used when you want to add a double quote within a sentence.
+## Short Quotations
+The \<q>...\</q> element is used when you want to add a double quote within a sentence.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -189,16 +198,17 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Text Citations
-If you are quoting a text, you can indicate the source placing it between an opening <cite> tag and closing </cite> tag
+## Text Citations
+If you are quoting a text, you can indicate the source placing it between an opening \<cite> tag and closing \</cite> tag
 
-As you would expect in a print publication, the content of the <cite> element is rendered in italicized text by default.
+As you would expect in a print publication, the content of the \<cite> element is rendered in italicized text by default.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -211,14 +221,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Computer Code
-Any programming code to appear on a Web page should be placed inside <code>...</code> tags. Usually the content of the <code> element is presented in a monospaced font, just like the code in most programming books.
+## Computer Code
+Any programming code to appear on a Web page should be placed inside \<code>...\</code> tags. Usually the content of the \<code> element is presented in a monospaced font, just like the code in most programming books.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -231,14 +242,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Keyboard Text
+## Keyboard Text
 When you are talking about computers, if you want to tell a reader to enter some text, you can use the <kbd>...</kbd> element to indicate what should be typed in, as in this example.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -251,14 +263,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Programming Variables
+## Programming Variables
 This element is usually used in conjunction with the <pre> and <code> elements to indicate that the content of that element is a variable.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -271,14 +284,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Program Output
+## Program Output
 The <samp>...</samp> element indicates sample output from a program, and script etc. Again, it is mainly used when documenting programming or coding concepts.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -291,14 +305,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Address Text
+## Address Text
 The <address>...</address> element is used to contain any address.
 
-Example
-Live Demo
+**Example**
+
+```
 <!DOCTYPE html>
 <html>
 
@@ -311,7 +326,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/html/html_phrase_elements.htm

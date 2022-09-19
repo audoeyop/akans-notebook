@@ -2,17 +2,18 @@
 
 There are two ways the browser client can send information to the web server.
 
-The GET Method
+## The GET Method
 The POST Method
 Before the browser sends the information, it encodes it using a scheme called URL encoding. In this scheme, name/value pairs are joined with equal signs and different pairs are separated by the ampersand.
-
+```
 name1=value1&name2=value2&name3=value3
+```
 Spaces are removed and replaced with the + character and any other nonalphanumeric characters are replaced with a hexadecimal values. After the information is encoded it is sent to the server.
 
-The GET Method
 The GET method sends the encoded user information appended to the page request. The page and the encoded information are separated by the ? character.
-
+```
 http://www.test.com/index.htm?name1=value1&name2=value2
+```
 The GET method produces a long string that appears in your server logs, in the browser's Location: box.
 
 The GET method is restricted to send upto 1024 characters only.
@@ -26,7 +27,7 @@ The data sent by GET method can be accessed using QUERY_STRING environment varia
 The PHP provides $_GET associative array to access all the sent information using GET method.
 
 Try out following example by putting the source code in test.php script.
-
+```
 <?php
    if( $_GET["name"] || $_GET["age"] ) {
       echo "Welcome ". $_GET['name']. "<br />";
@@ -46,9 +47,9 @@ Try out following example by putting the source code in test.php script.
 
    </body>
 </html>
-It will produce the following result −
+```
 
-Forms
+## Forms
 The POST Method
 The POST method transfers information via HTTP headers. The information is encoded as described in case of GET method and put into a header called QUERY_STRING.
 
@@ -61,7 +62,7 @@ The data sent by POST method goes through HTTP header so security depends on HTT
 The PHP provides $_POST associative array to access all the sent information using POST method.
 
 Try out following example by putting the source code in test.php script.
-
+```
 <?php
    if( $_POST["name"] || $_POST["age"] ) {
       if (preg_match("/[^A-Za-z'-]/",$_POST['name'] )) {
@@ -84,16 +85,16 @@ Try out following example by putting the source code in test.php script.
 
    </body>
 </html>
-It will produce the following result −
+```
 
-Forms
-The $_REQUEST variable
+## Forms
+
+## The $_REQUEST variable
 The PHP $_REQUEST variable contains the contents of both $_GET, $_POST, and $_COOKIE. We will discuss $_COOKIE variable when we will explain about cookies.
 
 The PHP $_REQUEST variable can be used to get the result from form data sent with both the GET and POST methods.
 
-Try out following example by putting the source code in test.php script.
-
+```
 <?php
    if( $_REQUEST["name"] || $_REQUEST["age"] ) {
       echo "Welcome ". $_REQUEST['name']. "<br />";
@@ -112,9 +113,8 @@ Try out following example by putting the source code in test.php script.
 
    </body>
 </html>
+```
 Here $_PHP_SELF variable contains the name of self script in which it is being called.
-
-It will produce the following result −
 
 # References
 https://www.tutorialspoint.com/php/php_get_post.htm

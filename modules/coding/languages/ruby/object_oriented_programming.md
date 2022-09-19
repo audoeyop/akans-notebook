@@ -4,42 +4,48 @@ Ruby is a pure object-oriented language and everything appears to Ruby as an obj
 
 A class is used to specify the form of an object and it combines data representation and methods for manipulating that data into one neat package. The data and methods within a class are called members of the class.
 
-Ruby Class Definition
+## Ruby Class Definition
 When you define a class, you define a blueprint for a data type. This doesn't actually define any data, but it does define what the class name means, that is, what an object of the class will consist of and what operations can be performed on such an object.
 
 A class definition starts with the keyword class followed by the class name and is delimited with an end. For example, we defined the Box class using the keyword class as follows −
-
+```
 class Box
    code
 end
+```
 The name must begin with a capital letter and by convention names that contain more than one word are run together with each word capitalized and no separating characters (CamelCase).
 
-Define Ruby Objects
+## Define Ruby Objects
 A class provides the blueprints for objects, so basically an object is created from a class. We declare objects of a class using new keyword. Following statements declare two objects of class Box −
-
+```
 box1 = Box.new
 box2 = Box.new
-The initialize Method
-The initialize method is a standard Ruby class method and works almost same way as constructor works in other object oriented programming languages. The initialize method is useful when you want to initialize some class variables at the time of object creation. This method may take a list of parameters and like any other ruby method it would be preceded by def keyword as shown below −
+```
 
+## The initialize Method
+The initialize method is a standard Ruby class method and works almost same way as constructor works in other object oriented programming languages. The initialize method is useful when you want to initialize some class variables at the time of object creation. This method may take a list of parameters and like any other ruby method it would be preceded by def keyword as shown below −
+```
 class Box
    def initialize(w,h)
       @width, @height = w, h
    end
 end
-The instance Variables
-The instance variables are kind of class attributes and they become properties of objects once objects are created using the class. Every object's attributes are assigned individually and share no value with other objects. They are accessed using the @ operator within the class but to access them outside of the class we use public methods, which are called accessor methods. If we take the above defined class Box then @width and @height are instance variables for the class Box.
+```
 
+## The instance Variables
+The instance variables are kind of class attributes and they become properties of objects once objects are created using the class. Every object's attributes are assigned individually and share no value with other objects. They are accessed using the @ operator within the class but to access them outside of the class we use public methods, which are called accessor methods. If we take the above defined class Box then @width and @height are instance variables for the class Box.
+```
 class Box
    def initialize(w,h)
       # assign instance variables
       @width, @height = w, h
    end
 end
-The accessor & setter Methods
-To make the variables available from outside the class, they must be defined within accessor methods, these accessor methods are also known as a getter methods. Following example shows the usage of accessor methods −
+```
 
-Live Demo
+## The accessor & setter Methods
+To make the variables available from outside the class, they must be defined within accessor methods, these accessor methods are also known as a getter methods. Following example shows the usage of accessor methods −
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -68,13 +74,14 @@ y = box.printHeight()
 
 puts "Width of the box is : #{x}"
 puts "Height of the box is : #{y}"
+```
 When the above code is executed, it produces the following result −
-
+```
 Width of the box is : 10
 Height of the box is : 20
+```
 Similar to accessor methods, which are used to access the value of the variables, Ruby provides a way to set the values of those variables from outside of the class using setter methods, which are defined as below −
-
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -114,14 +121,16 @@ y = box.getHeight()
 
 puts "Width of the box is : #{x}"
 puts "Height of the box is : #{y}"
+```
 When the above code is executed, it produces the following result −
-
+```
 Width of the box is : 30
 Height of the box is : 50
-The instance Methods
-The instance methods are also defined in the same way as we define any other method using def keyword and they can be used using a class instance only as shown below. Their functionality is not limited to access the instance variables, but also they can do a lot more as per your requirement.
+```
 
-Live Demo
+## The instance Methods
+The instance methods are also defined in the same way as we define any other method using def keyword and they can be used using a class instance only as shown below. Their functionality is not limited to access the instance variables, but also they can do a lot more as per your requirement.
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -142,14 +151,18 @@ box = Box.new(10, 20)
 # call instance methods
 a = box.getArea()
 puts "Area of the box is : #{a}"
+```
 When the above code is executed, it produces the following result −
-
+```
 Area of the box is : 200
-The class Methods and Variables
+```
+
+## The class Methods and Variables
 The class variables is a variable, which is shared between all instances of a class. In other words, there is one instance of the variable and it is accessed by object instances. Class variables are prefixed with two @ characters (@@). A class variable must be initialized within the class definition as shown below.
 
-A class method is defined using def self.methodname(), which ends with end delimiter and would be called using the class name as classname.methodname as shown in the following example −
+A class method is defined using def `self.methodname()`, which ends with end delimiter and would be called using the class name as classname.methodname as shown in the following example −
 
+```
 #!/usr/bin/ruby -w
 
 class Box
@@ -173,13 +186,16 @@ box2 = Box.new(30, 100)
 
 # call class method to print box count
 Box.printCount()
+```
 When the above code is executed, it produces the following result −
-
+```
 Box count is : 2
-The to_s Method
+```
+
+## The to_s Method
 Any class you define should have a to_s instance method to return a string representation of the object. Following is a simple example to represent a Box object in terms of width and height −
 
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 class Box
@@ -198,21 +214,23 @@ box = Box.new(10, 20)
 
 # to_s method will be called in reference of string automatically.
 puts "String representation of box is : #{box}"
+```
 When the above code is executed, it produces the following result −
-
+```
 String representation of box is : (w:10,h:20)
-Access Control
+```
+
+## Access Control
 Ruby gives you three levels of protection at instance methods level, which may be public, private, or protected. Ruby does not apply any access control over instance and class variables.
 
-Public Methods − Public methods can be called by anyone. Methods are public by default except for initialize, which is always private.
+- **Public Methods** − Public methods can be called by anyone. Methods are public by default except for initialize, which is always private.
 
-Private Methods − Private methods cannot be accessed, or even viewed from outside the class. Only the class methods can access private members.
+- **Private Methods** − Private methods cannot be accessed, or even viewed from outside the class. Only the class methods can access private members.
 
-Protected Methods − A protected method can be invoked only by objects of the defining class and its subclasses. Access is kept within the family.
+- **Protected Methods** − A protected method can be invoked only by objects of the defining class and its subclasses. Access is kept within the family.
 
 Following is a simple example to show the syntax of all the three access modifiers −
-
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -255,12 +273,15 @@ puts "Area of the box is : #{a}"
 
 # try to call protected or methods
 box.printArea()
+```
 When the above code is executed, it produces the following result. Here, first method is called successfully but second method gave a problem.
-
+```
 Area of the box is : 200
 test.rb:42: protected method `printArea' called for #
 <Box:0xb7f11280 @height = 20, @width = 10> (NoMethodError)
-Class Inheritance
+```
+
+## Class Inheritance
 One of the most important concepts in object-oriented programming is that of inheritance. Inheritance allows us to define a class in terms of another class, which makes it easier to create and maintain an application.
 
 Inheritance also provides an opportunity to reuse the code functionality and fast implementation time but unfortunately Ruby does not support multiple levels of inheritances but Ruby supports mixins. A mixin is like a specialized implementation of multiple inheritance in which only the interface portion is inherited.
@@ -268,8 +289,7 @@ Inheritance also provides an opportunity to reuse the code functionality and fas
 When creating a class, instead of writing completely new data members and member functions, the programmer can designate that the new class should inherit the members of an existing class. This existing class is called the base class or superclass, and the new class is referred to as the derived class or sub-class.
 
 Ruby also supports the concept of subclassing, i.e., inheritance and following example explains the concept. The syntax for extending a class is simple. Just add a < character and the name of the superclass to your class statement. For example, following define a class BigBox as a subclass of Box −
-
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -299,13 +319,15 @@ box = BigBox.new(10, 20)
 
 # print the area
 box.printArea()
+```
 When the above code is executed, it produces the following result −
-
+```
 Big box area is : 200
-Methods Overriding
-Though you can add new functionality in a derived class, but sometimes you would like to change the behavior of already defined method in a parent class. You can do so simply by keeping the method name same and overriding the functionality of the method as shown below in the example −
+```
 
-Live Demo
+## Methods Overriding
+Though you can add new functionality in a derived class, but sometimes you would like to change the behavior of already defined method in a parent class. You can do so simply by keeping the method name same and overriding the functionality of the method as shown below in the example −
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -335,9 +357,11 @@ box = BigBox.new(10, 20)
 
 # print the area using overriden method.
 box.getArea()
-Operator Overloading
-We'd like the + operator to perform vector addition of two Box objects using +, the * operator to multiply a Box width and height by a scalar, and the unary - operator to do negate the width and height of the Box. Here is a version of the Box class with mathematical operators defined −
+```
 
+## Operator Overloading
+We'd like the + operator to perform vector addition of two Box objects using +, the * operator to multiply a Box width and height by a scalar, and the unary - operator to do negate the width and height of the Box. Here is a version of the Box class with mathematical operators defined −
+```
 class Box
    def initialize(w,h)     # Initialize the width and height
       @width,@height = w, h
@@ -355,12 +379,13 @@ class Box
       Box.new(@width*scalar, @height*scalar)
    end
 end
-Freezing Objects
+```
+
+## Freezing Objects
 Sometimes, we want to prevent an object from being changed. The freeze method in Object allows us to do this, effectively turning an object into a constant. Any object can be frozen by invoking Object.freeze. A frozen object may not be modified: you can't change its instance variables.
 
 You can check if a given object is already frozen or not using Object.frozen? method, which returns true in case the object is frozen otherwise a false value is return. Following example clears the concept −
-
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -408,17 +433,19 @@ y = box.getHeight()
 
 puts "Width of the box is : #{x}"
 puts "Height of the box is : #{y}"
+```
 When the above code is executed, it produces the following result −
-
+```
 Box object is frozen object
 test.rb:20:in `setWidth=': can't modify frozen object (TypeError)
    from test.rb:39
-Class Constants
+```
+
+## Class Constants
 You can define a constant inside a class by assigning a direct numeric or string value to a variable, which is defined without using either @ or @@. By convention, we keep constant names in upper case.
 
 Once a constant is defined, you cannot change its value but you can access a constant directly inside a class much like a variable but if you want to access a constant outside of the class then you would have to use classname::constant as shown in the below example.
-
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -443,17 +470,19 @@ a = box.getArea()
 puts "Area of the box is : #{a}"
 puts Box::BOX_COMPANY
 puts "Box weight is: #{Box::BOXWEIGHT}"
+```
 When the above code is executed, it produces the following result −
-
+```
 Area of the box is : 200
 TATA Inc
 Box weight is: 10
+```
 Class constants are inherited and can be overridden like instance methods.
 
-Create Object Using Allocate
+## Create Object Using Allocate
 There may be a situation when you want to create an object without calling its constructor initialize i.e. using new method, in such case you can call allocate, which will create an uninitialized object for you as in the following example −
 
-Live Demo
+```
 #!/usr/bin/ruby -w
 
 # define a class
@@ -484,16 +513,19 @@ puts "Area of the box is : #{a}"
 # call instance method using box2
 a = box2.getArea()
 puts "Area of the box is : #{a}"
+```
 When the above code is executed, it produces the following result −
-
+```
 Area of the box is : 200
 test.rb:14: warning: instance variable @width not initialized
 test.rb:14: warning: instance variable @height not initialized
 test.rb:14:in `getArea': undefined method `*'
    for nil:NilClass (NoMethodError) from test.rb:29
-Class Information
-If class definitions are executable code, this implies that they execute in the context of some object: self must reference something. Let's find out what it is.
+```
 
+## Class Information
+If class definitions are executable code, this implies that they execute in the context of some object: self must reference something. Let's find out what it is.
+```
 #!/usr/bin/ruby -w
 
 class Box
@@ -501,10 +533,12 @@ class Box
    puts "Type of self = #{self.type}"
    puts "Name of self = #{self.name}"
 end
+```
 When the above code is executed, it produces the following result −
-
+```
 Type of self = Class
 Name of self = Box
+```
 This means that a class definition is executed with that class as the current object. This means that methods in the metaclass and its superclasses will be available during the execution of the method definition.
 
 # References

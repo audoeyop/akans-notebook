@@ -1,16 +1,16 @@
 # HTML Fonts
 
-Fonts play a very important role in making a website more user friendly and increasing content readability. Font face and color depends entirely on the computer and browser that is being used to view your page but you can use HTML <font> tag to add style, size, and color to the text on your website. You can use a <basefont> tag to set all of your text to the same size, face, and color.
+Fonts play a very important role in making a website more user friendly and increasing content readability. Font face and color depends entirely on the computer and browser that is being used to view your page but you can use HTML \<font> tag to add style, size, and color to the text on your website. You can use a \<basefont> tag to set all of your text to the same size, face, and color.
 
-The font tag is having three attributes called size, color, and face to customize your fonts. To change any of the font attributes at any time within your webpage, simply use the <font> tag. The text that follows will remain changed until you close with the </font> tag. You can change one or all of the font attributes within one <font> tag.
+The font tag is having three attributes called size, color, and face to customize your fonts. To change any of the font attributes at any time within your webpage, simply use the \<font> tag. The text that follows will remain changed until you close with the \</font> tag. You can change one or all of the font attributes within one \<font> tag.
 
 Note −The font and basefont tags are deprecated and it is supposed to be removed in a future version of HTML. So they should not be used rather, it's suggested to use CSS styles to manipulate your fonts. But still for learning purpose, this chapter will explain font and basefont tags in detail.
 
-Set Font Size
+## Set Font Size
 You can set content font size using size attribute. The range of accepted values is from 1(smallest) to 7(largest). The default size of a font is 3.
 
-Example
-Live Demo
+**Example**
+```
 <!DOCTYPE html>
 <html>
 
@@ -29,14 +29,13 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
+## Relative Font Size
+You can specify how many sizes larger or how many sizes smaller than the preset font size should be. You can specify it like \<font size = "+n"> or \<font size = "−n">
 
-Relative Font Size
-You can specify how many sizes larger or how many sizes smaller than the preset font size should be. You can specify it like <font size = "+n"> or <font size = "−n">
-
-Example
-Live Demo
+**Example**
+```
 <!DOCTYPE html>
 <html>
 
@@ -53,14 +52,13 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
-
-Setting Font Face
+## Setting Font Face
 You can set font face using face attribute but be aware that if the user viewing the page doesn't have the font installed, they will not be able to see it. Instead user will see the default font face applicable to the user's computer.
 
-Example
-Live Demo
+**Example**
+```
 <!DOCTYPE html>
 <html>
 
@@ -77,25 +75,21 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
-
-Specify alternate font faces
+## Specify alternate font faces
 A visitor will only be able to see your font if they have that font installed on their computer. So, it is possible to specify two or more font face alternatives by listing the font face names, separated by a comma.
-
+```
 <font face = "arial,helvetica">
 <font face = "Lucida Calligraphy,Comic Sans MS,Lucida Console">
+```
 When your page is loaded, their browser will display the first font face available. If none of the given fonts are installed, then it will display the default font face Times New Roman.
 
-Note − Check a complete list of HTML Standard Fonts.
-
-Setting Font Color
+## Setting Font Color
 You can set any font color you like using color attribute. You can specify the color that you want by either the color name or hexadecimal code for that color.
 
-Note − You can check a complete list of HTML Color Name with Codes.
-
-Example
-Live Demo
+**Example**
+```
 <!DOCTYPE html>
 <html>
 
@@ -109,16 +103,15 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
+## The <basefont> Element
+The `<basefont>` element is supposed to set a default font size, color, and typeface for any parts of the document that are not otherwise contained within a <font> tag. You can use the <font> elements to override the `<basefont>` settings.
 
-The <basefont> Element
-The <basefont> element is supposed to set a default font size, color, and typeface for any parts of the document that are not otherwise contained within a <font> tag. You can use the <font> elements to override the <basefont> settings.
+The `<basefont>` tag also takes color, size and face attributes and it will support relative font setting by giving size a value of +1 for a size larger or −2 for two sizes smaller.
 
-The <basefont> tag also takes color, size and face attributes and it will support relative font setting by giving size a value of +1 for a size larger or −2 for two sizes smaller.
-
-Example
-Live Demo
+**Example**
+```
 <!DOCTYPE html>
 <html>
 
@@ -143,7 +136,7 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 # References
 https://www.tutorialspoint.com/html/html_fonts.htm

@@ -6,68 +6,65 @@ A form will take input from the site visitor and then will post it to a back-end
 
 There are various form elements available like text fields, textarea fields, drop-down menus, radio buttons, checkboxes, etc.
 
-The HTML <form> tag is used to create an HTML form and it has following syntax −
-
+The HTML \<form> tag is used to create an HTML form and it has following syntax −
+```
 <form action = "Script URL" method = "GET|POST">
    form elements like input, textarea etc.
 </form>
-Form Attributes
+```
+## Form Attributes
 Apart from common attributes, following is a list of the most frequently used form attributes −
 
-Sr.No	Attribute & Description
-1
-action
+**action**
 
 Backend script ready to process your passed data.
 
-2
-method
+**method**
 
 Method to be used to upload data. The most frequently used are GET and POST methods.
 
-3
-target
+**target**
 
-Specify the target window or frame where the result of the script will be displayed. It takes values like _blank, _self, _parent etc.
+Specify the target window or frame where the result of the script will be displayed. It takes values like `_blank`, `_self`, `_parent` etc.
 
-4
-enctype
+**enctype**
 
 You can use the enctype attribute to specify how the browser encodes the data before it sends it to the server. Possible values are −
 
-application/x-www-form-urlencoded − This is the standard method most forms use in simple scenarios.
+- **application/x-www-form-urlencoded** − This is the standard method most forms use in simple scenarios.
 
-mutlipart/form-data − This is used when you want to upload binary data in the form of files like image, word file etc.
+- **mutlipart/form-data** − This is used when you want to upload binary data in the form of files like image, word file etc.
 
 Note − You can refer to Perl & CGI for a detail on how form data upload works.
 
-HTML Form Controls
+## HTML Form Controls
 There are different types of form controls that you can use to collect data using HTML form −
 
-Text Input Controls
-Checkboxes Controls
-Radio Box Controls
-Select Box Controls
-File Select boxes
-Hidden Controls
-Clickable Buttons
-Submit and Reset Button
-Text Input Controls
+- Text Input Controls
+- Checkboxes Controls
+- Radio Box Controls
+- Select Box Controls
+- File Select boxes
+- Hidden Controls
+- Clickable Buttons
+- Submit and Reset Button
+- Text Input Controls
+
 There are three types of text input used on forms −
 
-Single-line text input controls − This control is used for items that require only one line of user input, such as search boxes or names. They are created using HTML <input> tag.
+- **Single-line text input controls** − This control is used for items that require only one line of user input, such as search boxes or names. They are created using HTML \<input> tag.
 
-Password input controls − This is also a single-line text input but it masks the character as soon as a user enters it. They are also created using HTMl <input> tag.
+- **Password input controls** − This is also a single-line text input but it masks the character as soon as a user enters it. They are also created using HTMl \<input> tag.
 
-Multi-line text input controls − This is used when the user is required to give details that may be longer than a single sentence. Multi-line input controls are created using HTML <textarea> tag.
+- **Multi-line text input controls** − This is used when the user is required to give details that may be longer than a single sentence. Multi-line input controls are created using HTML \<textarea> tag.
 
-Single-line text input controls
-This control is used for items that require only one line of user input, such as search boxes or names. They are created using HTML <input> tag.
+## Single-line text input controls
+This control is used for items that require only one line of user input, such as search boxes or names. They are created using HTML \<input> tag.
 
-Example
+**Example**
 Here is a basic example of a single-line text input used to take first name and last name −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -84,45 +81,40 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Attributes
-Following is the list of attributes for <input> tag for creating text field.
+## Attributes
+Following is the list of attributes for \<input> tag for creating text field.
 
-Sr.No	Attribute & Description
-1
-type
+**type**
 
 Indicates the type of input control and for text input control it will be set to text.
 
-2
-name
+**name**
 
 Used to give a name to the control which is sent to the server to be recognized and get the value.
 
-3
-value
+**value**
 
 This can be used to provide an initial value inside the control.
 
-4
-size
+**size**
 
 Allows to specify the width of the text-input control in terms of characters.
 
-5
-maxlength
+**maxlength**
 
 Allows to specify the maximum number of characters a user can enter into the text box.
 
-Password input controls
-This is also a single-line text input but it masks the character as soon as a user enters it. They are also created using HTML <input>tag but type attribute is set to password.
+## Password input controls
+This is also a single-line text input but it masks the character as soon as a user enters it. They are also created using HTML \<input>tag but type attribute is set to password.
 
-Example
+**Example**
+
 Here is a basic example of a single-line password input used to take user password −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -139,45 +131,40 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Attributes
-Following is the list of attributes for <input> tag for creating password field.
+## Attributes
+Following is the list of attributes for \<input> tag for creating password field.
 
-Sr.No	Attribute & Description
-1
-type
+**type**
 
 Indicates the type of input control and for password input control it will be set to password.
 
-2
-name
+**name**
 
 Used to give a name to the control which is sent to the server to be recognized and get the value.
 
-3
-value
+**value**
 
 This can be used to provide an initial value inside the control.
 
-4
-size
+**size**
 
 Allows to specify the width of the text-input control in terms of characters.
 
-5
-maxlength
+**maxlength**
 
 Allows to specify the maximum number of characters a user can enter into the text box.
 
-Multiple-Line Text Input Controls
-This is used when the user is required to give details that may be longer than a single sentence. Multi-line input controls are created using HTML <textarea> tag.
+## Multiple-Line Text Input Controls
+This is used when the user is required to give details that may be longer than a single sentence. Multi-line input controls are created using HTML \<textarea> tag.
 
-Example
+**Example**
+
 Here is a basic example of a multi-line text input used to take item description −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -195,35 +182,33 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Attributes
-Following is the list of attributes for <textarea> tag.
+## Attributes
+Following is the list of attributes for \<textarea> tag.
 
-Sr.No	Attribute & Description
-1
-name
+**name**
 
 Used to give a name to the control which is sent to the server to be recognized and get the value.
 
-2
-rows
+**rows**
 
 Indicates the number of rows of text area box.
 
-3
-cols
+**cols**
 
 Indicates the number of columns of text area box
 
-Checkbox Control
-Checkboxes are used when more than one option is required to be selected. They are also created using HTML <input> tag but type attribute is set to checkbox..
+## Checkbox Control
 
-Example
+Checkboxes are used when more than one option is required to be selected. They are also created using HTML \<input> tag but type attribute is set to checkbox..
+
+**Example**
+
 Here is an example HTML code for a form with two checkboxes −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -239,40 +224,36 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Attributes
-Following is the list of attributes for <checkbox> tag.
+Following is the list of attributes for \<checkbox> tag.
 
-Sr.No	Attribute & Description
-1
-type
+**type**
 
 Indicates the type of input control and for checkbox input control it will be set to checkbox..
 
-2
-name
+**name**
 
 Used to give a name to the control which is sent to the server to be recognized and get the value.
 
-3
-value
+**value**
 
 The value that will be used if the checkbox is selected.
 
-4
-checked
+**checked**
 
 Set to checked if you want to select it by default.
 
-Radio Button Control
-Radio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML <input> tag but type attribute is set to radio.
+## Radio Button Control
+Radio buttons are used when out of many options, just one option is required to be selected. They are also created using HTML \<input> tag but type attribute is set to radio.
 
-Example
+**Example**
+
 Here is example HTML code for a form with two radio buttons −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -288,40 +269,36 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Attributes
+## Attributes
 Following is the list of attributes for radio button.
 
-Sr.No	Attribute & Description
-1
-type
+**type**
 
 Indicates the type of input control and for checkbox input control it will be set to radio.
 
-2
-name
+**name**
 
 Used to give a name to the control which is sent to the server to be recognized and get the value.
 
-3
-value
+**value**
 
 The value that will be used if the radio box is selected.
 
-4
-checked
+**checked**
 
 Set to checked if you want to select it by default.
 
-Select Box Control
+## Select Box Control
 A select box, also called drop down box which provides option to list down various options in the form of drop down list, from where a user can select one or more options.
 
-Example
+**Example**
+
 Here is example HTML code for a form with one drop down box
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -339,53 +316,46 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
-Attributes
-Following is the list of important attributes of <select> tag −
+## Attributes
+Following is the list of important attributes of \<select> tag −
 
-Sr.No	Attribute & Description
-1
-name
+**name**
 
 Used to give a name to the control which is sent to the server to be recognized and get the value.
 
-2
-size
+**size**
 
 This can be used to present a scrolling list box.
 
-3
-multiple
+**multiple**
 
 If set to "multiple" then allows a user to select multiple items from the menu.
 
 Following is the list of important attributes of <option> tag −
 
-Sr.No	Attribute & Description
-1
-value
+**value**
 
 The value that will be used if an option in the select box box is selected.
 
-2
-selected
+**selected**
 
 Specifies that this option should be the initially selected value when the page loads.
 
-3
-label
+**label**
 
 An alternative way of labeling options
 
-File Upload Box
-If you want to allow a user to upload a file to your web site, you will need to use a file upload box, also known as a file select box. This is also created using the <input> element but type attribute is set to file.
+## File Upload Box
+If you want to allow a user to upload a file to your web site, you will need to use a file upload box, also known as a file select box. This is also created using the \<input> element but type attribute is set to file.
 
-Example
+**Example**
+
 Here is example HTML code for a form with one file upload box −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -400,51 +370,44 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Attributes
 Following is the list of important attributes of file upload box −
 
-Sr.No	Attribute & Description
-1
-name
+**name**
 
 Used to give a name to the control which is sent to the server to be recognized and get the value.
 
-2
-accept
+**accept**
 
 Specifies the types of files that the server accepts.
 
-Button Controls
-There are various ways in HTML to create clickable buttons. You can also create a clickable button using <input>tag by setting its type attribute to button. The type attribute can take the following values −
+## Button Controls
+There are various ways in HTML to create clickable buttons. You can also create a clickable button using \<input>tag by setting its type attribute to button. The type attribute can take the following values −
 
-Sr.No	Type & Description
-1
-submit
+**submit**
 
 This creates a button that automatically submits a form.
 
-2
-reset
+**reset**
 
 This creates a button that automatically resets form controls to their initial values.
 
-3
-button
+**button**
 
 This creates a button that is used to trigger a client-side script when the user clicks that button.
 
-4
-image
+**image**
 
 This creates a clickable button but we can use an image as background of the button.
 
-Example
+**Example**
+
 Here is example HTML code for a form with three types of buttons −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -462,16 +425,17 @@ Live Demo
    </body>
 
 </html>
-This will produce the following result −
+```
 
 
 Hidden Form Controls
 Hidden form controls are used to hide data inside the page which later on can be pushed to the server. This control hides inside the code and does not appear on the actual page. For example, following hidden form is being used to keep current page number. When a user will click next page then the value of hidden control will be sent to the web server and there it will decide which page will be displayed next based on the passed current page.
 
-Example
+**Example**
+
 Here is example HTML code to show the usage of hidden control −
 
-Live Demo
+```
 <!DOCTYPE html>
 <html>
 
@@ -489,6 +453,7 @@ Live Demo
    </body>
 
 </html>
+```
 
 # References
 https://www.tutorialspoint.com/html/html_forms.htm

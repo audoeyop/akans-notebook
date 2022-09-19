@@ -5,7 +5,7 @@ The desktop apps come with two types of menus – the application menu(on the to
 We will be using two modules – the Menu and the MenuItem modules. Note that the Menu and the MenuItem modules are only available in the main process. For using these modules in the renderer process, you need the remote module. We will come across this when we create a context menu.
 
 Now, let us create a new main.js file for the main process −
-
+```
 const {app, BrowserWindow, Menu, MenuItem} = require('electron')
 const url = require('url')
 const path = require('path')
@@ -101,16 +101,18 @@ const template = [
 const menu = Menu.buildFromTemplate(template)
 Menu.setApplicationMenu(menu)
 app.on('ready', createWindow)
+```
 We are building a menu from a template here. This means that we provide the menu as a JSON to the function and it will take care of the rest. Now we have to set this menu as the Application menu.
 
 Now create an empty HTML file called index.html and run this application using −
-
+```
 $ electron ./main.js
+```
 On the normal position of application menus, you will see a menu based on the above template.
 
 Application Menus
 We created this menu from the main process. Let us now create a context menu for our app. We will do this in our HTML file −
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -150,9 +152,9 @@ We created this menu from the main process. Let us now create a context menu for
       </script>
    </body>
 </html>
+```
 We imported the Menu and MenuItem modules using the remote module; then, we created a menu and appended our menuitems to it one by one. Further, we prevented the default action of right-click in chromium and replaced it with our menu.
 
-Context Menu
 The creation of menus in Electron is a very simple task. Now you can attach your event handlers to these items and handle the events according to your needs.
 
 # References

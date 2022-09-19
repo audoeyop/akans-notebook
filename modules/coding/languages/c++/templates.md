@@ -8,17 +8,17 @@ There is a single definition of each container, such as vector, but we can defin
 
 You can use templates to define functions as well as classes, let us see how they work −
 
-Function Template
+## Function Template
 The general form of a template function definition is shown here −
-
+```
 template <class type> ret-type func-name(parameter list) {
    // body of function
 }
+```
 Here, type is a placeholder name for a data type used by the function. This name can be used within the function definition.
 
 The following is the example of a function template that returns the maximum of two values −
-
-Live Demo
+```
 #include <iostream>
 #include <string>
 
@@ -44,24 +44,28 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 Max(i, j): 39
 Max(f1, f2): 20.7
 Max(s1, s2): World
-Class Template
-Just as we can define function templates, we can also define class templates. The general form of a generic class declaration is shown here −
+```
 
+## Class Template
+Just as we can define function templates, we can also define class templates. The general form of a generic class declaration is shown here −
+```
 template <class type> class class-name {
    .
    .
    .
 }
+```
 Here, type is the placeholder type name, which will be specified when a class is instantiated. You can define more than one generic data type by using a comma-separated list.
 
 Following is the example to define class Stack<> and implement generic methods to push and pop the elements from the stack −
 
-Live Demo
+```
 #include <iostream>
 #include <vector>
 #include <cstdlib>
@@ -130,11 +134,12 @@ int main() {
       return -1;
    }
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 7
 hello
 Exception: Stack<>::pop(): empty stack
-
+```
 # References
 https://www.tutorialspoint.com/cplusplus/cpp_templates.htm

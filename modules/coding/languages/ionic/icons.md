@@ -2,28 +2,28 @@
 
 There are more than 700 premium icons provided by Ionic. There are also different sets of icons provided for Android and IOS. You can find almost anything you need but you are not bound to use them, if you do not want to. You can use your own custom icons or any other icon set instead. You can check all the Ionic icons here.
 
-How to use Icons?
+## How to use Icons?
 If you want to use Ionic icons find the icon you need on the page (https://ionicons.com/). When you are adding Ionic elements, you always add the main class first and then you add the subclass you want. The main class for all icons is icon. The Subclass is the name of the icon you want. We will add six icons in our example that is given below −
-
+```
 <i class = "icon icon ion-happy-outline"></i>
 <i class = "icon icon ion-star"></i>
 <i class = "icon icon ion-compass"></i>
 <i class = "icon icon ion-planet"></i>
 <i class = "icon icon ion-ios-analytics"></i>
 <i class = "icon icon ion-ios-eye"></i>
+```
 The above code will produce the following screen −
 
-Ionic Icons
+## Ionic Icons
 The size of these icons can be changed with the font-size property in your Ionic CSS file.
-
+```
 .icon {
    font-size: 50px;
 }
-Once the icon size is setup, the same code will produce the following screenshot as the output −
+```
 
-Ionic Icons
-Default Icons
-Code	Result
+## Code	Result
+```
 <i class="icon ion-ionic"></i>
 <i class="icon ion-arrow-up-a"></i>
 <i class="icon ion-arrow-right-a"></i>
@@ -276,8 +276,10 @@ Code	Result
 <i class="icon ion-load-b"></i>
 <i class="icon ion-load-c"></i>
 <i class="icon ion-load-d"></i>
-iOS Style Icons
+```
+## iOS Style Icons
 Code	Result
+```
 <i class="icon ion-ios-ionic-outline"></i>
 <i class="icon ion-ios-arrow-back"></i>
 <i class="icon ion-ios-arrow-forward"></i>
@@ -545,8 +547,10 @@ Code	Result
 <i class="icon ion-ios-moon-outline"></i>
 <i class="icon ion-ios-cloudy-night"></i>
 <i class="icon ion-ios-cloudy-night-outline"></i>
-Android Style Icons
+```
+## Android Style Icons
 Code	Result
+```
 <i class="icon ion-android-arrow-up"></i>
 <i class="icon ion-android-arrow-forward"></i>
 <i class="icon ion-android-arrow-down"></i>
@@ -675,8 +679,10 @@ Code	Result
 <i class="icon ion-android-sunny"></i>
 <i class="icon ion-android-alert"></i>
 <i class="icon ion-android-warning"></i>
-Social Icons
+```
+## Social Icons
 Code	Result
+```
 <i class="icon ion-social-twitter"></i>
 <i class="icon ion-social-twitter-outline"></i>
 <i class="icon ion-social-facebook"></i>
@@ -760,6 +766,6 @@ Code	Result
 <i class="icon ion-social-yen-outline"></i>
 <i class="icon ion-social-euro"></i>
 <i class="icon ion-social-euro-outline"></i>
-
+```
 # References
 https://www.tutorialspoint.com/ionic/ionic_icons.htm

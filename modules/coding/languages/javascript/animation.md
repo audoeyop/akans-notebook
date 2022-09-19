@@ -2,12 +2,11 @@
 
 You can use JavaScript to create a complex animation having, but not limited to, the following elements −
 
-Fireworks
-Fade Effect
-Roll-in or Roll-out
-Page-in or Page-out
-Object movements
-You might be interested in existing JavaScript based animation library: Script.Aculo.us.
+- Fireworks
+- Fade Effect
+- Roll-in or Roll-out
+- Page-in or Page-out
+- Object movements
 
 This tutorial provides a basic understanding of how to use JavaScript to create an animation.
 
@@ -15,36 +14,39 @@ JavaScript can be used to move a number of DOM elements (<img />, <div> or any o
 
 JavaScript provides the following two functions to be frequently used in animation programs.
 
-setTimeout( function, duration) − This function calls function after duration milliseconds from now.
+- **setTimeout( function, duration)** − This function calls function after duration milliseconds from now.
 
-setInterval(function, duration) − This function calls function after every duration milliseconds.
+- **setInterval(function, duration)** − This function calls function after every duration milliseconds.
 
-clearTimeout(setTimeout_variable) − This function calls clears any timer set by the setTimeout() functions.
+- **clearTimeout(setTimeout_variable)** − This function calls clears any timer set by the setTimeout() functions.
+
+- **clearInterval(setInterval_variable)** − This function calls clears any timer set by the setInterval() functions.
+
 
 JavaScript can also set a number of attributes of a DOM object including its position on the screen. You can set top and left attribute of an object to position it anywhere on the screen. Here is its syntax.
-
+```
 // Set distance from left edge of the screen.
 object.style.left = distance in pixels or points;
-
+```
 or
-
+```
 // Set distance from top edge of the screen.
 object.style.top = distance in pixels or points;
-Manual Animation
+```
+
+## Manual Animation
 So let's implement one simple animation using DOM object properties and JavaScript functions as follows. The following list contains different DOM methods.
 
-We are using the JavaScript function getElementById() to get a DOM object and then assigning it to a global variable imgObj.
+- We are using the JavaScript function getElementById() to get a DOM object and then assigning it to a global variable imgObj.
 
-We have defined an initialization function init() to initialize imgObj where we have set its position and left attributes.
+- We have defined an initialization function init() to initialize imgObj where we have set its position and left attributes.
 
-We are calling initialization function at the time of window load.
+- We are calling initialization function at the time of window load.
 
 Finally, we are calling moveRight() function to increase the left distance by 10 pixels. You could also set it to a negative value to move it to the left side.
 
-Example
-Try the following example.
-
-Live Demo
+**Example**
+```
 <html>   
    <head>
       <title>JavaScript Animation</title>      
@@ -74,9 +76,9 @@ Live Demo
       </form>      
    </body>
 </html>
-Output
+```
 
-Automated Animation
+## Automated Animation
 In the above example, we saw how an image moves to right with every click. We can automate this process by using the JavaScript function setTimeout() as follows −
 
 Here we have added more methods. So let's see what is new here −
@@ -85,10 +87,8 @@ The moveRight() function is calling setTimeout() function to set the position of
 
 We have added a new function stop() to clear the timer set by setTimeout() function and to set the object at its initial position.
 
-Example
-Try the following example code.
-
-Live Demo
+**Example**
+```
 <html>   
    <head>
       <title>JavaScript Animation</title>      
@@ -125,7 +125,9 @@ Live Demo
       </form>      
    </body>
 </html>
-Rollover with a Mouse Event
+```
+
+## Rollover with a Mouse Event
 Here is a simple example showing image rollover with a mouse event.
 
 Let's see what we are using in the following example −
@@ -146,7 +148,7 @@ When the mouse moves over the image, the HTTP image changes from the first image
 
 When the mouse is moved away from the link, the initial image html.gif will reappear on the screen.
 
-Live Demo
+```
 <html>
 
    <head>
@@ -173,6 +175,7 @@ Live Demo
       </a>
    </body>
 </html>
+```
 
 # References
 https://www.tutorialspoint.com/javascript/javascript_animation.htm

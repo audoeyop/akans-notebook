@@ -4,31 +4,35 @@ C/C++ arrays allow you to define variables that combine several data items of th
 
 Structures are used to represent a record, suppose you want to keep track of your books in a library. You might want to track the following attributes about each book −
 
-Title
-Author
-Subject
-Book ID
-Defining a Structure
-To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member, for your program. The format of the struct statement is this −
+- Title
+- Author
+- Subject
+- Book ID
 
+## Defining a Structure
+To define a structure, you must use the struct statement. The struct statement defines a new data type, with more than one member, for your program. The format of the struct statement is this −
+```
 struct [structure tag] {
    member definition;
    member definition;
    ...
    member definition;
 } [one or more structure variables];  
+```
 The structure tag is optional and each member definition is a normal variable definition, such as int i; or float f; or any other valid variable definition. At the end of the structure's definition, before the final semicolon, you can specify one or more structure variables but it is optional. Here is the way you would declare the Book structure −
-
+```
 struct Books {
    char  title[50];
    char  author[50];
    char  subject[100];
    int   book_id;
 } book;  
-Accessing Structure Members
+```
+
+## Accessing Structure Members
 To access any member of a structure, we use the member access operator (.). The member access operator is coded as a period between the structure variable name and the structure member that we wish to access. You would use struct keyword to define variables of structure type. Following is the example to explain usage of structure −
 
-Live Demo
+```
 #include <iostream>
 #include <cstring>
 
@@ -71,8 +75,9 @@ int main() {
 
    return 0;
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 Book 1 title : Learn C++ Programming
 Book 1 author : Chand Miyan
 Book 1 subject : C++ Programming
@@ -81,10 +86,12 @@ Book 2 title : Telecom Billing
 Book 2 author : Yakit Singha
 Book 2 subject : Telecom
 Book 2 id : 6495700
-Structures as Function Arguments
+```
+
+## Structures as Function Arguments
 You can pass a structure as a function argument in very similar way as you pass any other variable or pointer. You would access structure variables in the similar way as you have accessed in the above example −
 
-Live Demo
+```
 #include <iostream>
 #include <cstring>
 
@@ -128,8 +135,9 @@ void printBook( struct Books book ) {
    cout << "Book subject : " << book.subject <<endl;
    cout << "Book id : " << book.book_id <<endl;
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 Book title : Learn C++ Programming
 Book author : Chand Miyan
 Book subject : C++ Programming
@@ -138,19 +146,24 @@ Book title : Telecom Billing
 Book author : Yakit Singha
 Book subject : Telecom
 Book id : 6495700
-Pointers to Structures
+```
+
+## Pointers to Structures
 You can define pointers to structures in very similar way as you define pointer to any other variable as follows −
-
+```
 struct Books *struct_pointer;
+```
 Now, you can store the address of a structure variable in the above defined pointer variable. To find the address of a structure variable, place the & operator before the structure's name as follows −
-
+```
 struct_pointer = &Book1;
+```
 To access the members of a structure using a pointer to that structure, you must use the -> operator as follows −
-
+```
 struct_pointer->title;
+```
 Let us re-write above example using structure pointer, hope this will be easy for you to understand the concept −
 
-Live Demo
+```
 #include <iostream>
 #include <cstring>
 
@@ -195,8 +208,9 @@ void printBook( struct Books *book ) {
    cout << "Book subject : " << book->subject <<endl;
    cout << "Book id : " << book->book_id <<endl;
 }
+```
 When the above code is compiled and executed, it produces the following result −
-
+```
 Book title : Learn C++ Programming
 Book author : Chand Miyan
 Book subject : C++ Programming
@@ -205,23 +219,28 @@ Book title : Telecom Billing
 Book author : Yakit Singha
 Book subject : Telecom
 Book id : 6495700
-The typedef Keyword
-There is an easier way to define structs or you could "alias" types you create. For example −
+```
 
+## The typedef Keyword
+There is an easier way to define structs or you could "alias" types you create. For example −
+```
 typedef struct {
    char  title[50];
    char  author[50];
    char  subject[100];
    int   book_id;
 } Books;
+```
 Now, you can use Books directly to define variables of Books type without using struct keyword. Following is the example −
-
+```
 Books Book1, Book2;
+```
 You can use typedef keyword for non-structs as well as follows −
 
 typedef long int *pint32;
-
+```
 pint32 x, y, z;
+```
 x, y and z are all pointers to long ints.
 
 # References

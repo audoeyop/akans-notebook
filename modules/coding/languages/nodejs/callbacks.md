@@ -4,33 +4,39 @@ Callback is an asynchronous equivalent for a function. A callback function is ca
 
 For example, a function to read a file may start reading file and return the control to the execution environment immediately so that the next instruction can be executed. Once file I/O is complete, it will call the callback function while passing the callback function, the content of the file as a parameter. So there is no blocking or wait for File I/O. This makes Node.js highly scalable, as it can process a high number of requests without waiting for any function to return results.
 
-Blocking Code Example
+## Blocking Code Example
 Create a text file named input.txt with the following content −
-
+```
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
-Create a js file named main.js with the following code −
+```
 
+Create a js file named main.js with the following code −
+```
 var fs = require("fs");
 var data = fs.readFileSync('input.txt');
 
 console.log(data.toString());
 console.log("Program Ended");
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
 Program Ended
-Non-Blocking Code Example
+```
+
+## Non-Blocking Code Example
 Create a text file named input.txt with the following content.
 
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
 Update main.js to have the following code −
-
+```
 var fs = require("fs");
 
 fs.readFile('input.txt', function (err, data) {
@@ -39,12 +45,15 @@ fs.readFile('input.txt', function (err, data) {
 });
 
 console.log("Program Ended");
+```
 Now run the main.js to see the result −
-
+```
 $ node main.js
+```
 Verify the Output.
-
+```
 Program Ended
+```
 Tutorials Point is giving self learning content
 to teach the world in simple and easy way!!!!!
 These two examples explain the concept of blocking and non-blocking calls.

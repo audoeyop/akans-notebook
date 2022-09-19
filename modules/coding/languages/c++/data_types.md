@@ -10,6 +10,7 @@ Primitive Built-in Types
 C++ offers the programmer a rich assortment of built-in as well as user defined data types. Following table lists down seven basic C++ data types -
 
 | Type | Keyword |
+|---|---
 | Boolean | bool |
 | Character | char |
 | Integer | int |
@@ -28,6 +29,7 @@ Several of the basic types can be modified using one or more of these type modif
 The following table shows the variable type, how much memory it takes to store the value in memory, and what is maximum and minimum value which can be stored in such type of variables.
 
 | Type | Typical Bit Width | Typical Range |
+|---|---|---|
 | char | 1byte | -127 to 127 or 0 to 255 |
 | unsigned char | 1byte | 0 to 255 |
 | signed char | 1byte | -127 to 127 |
@@ -53,12 +55,27 @@ Following is the example, which will produce correct size of various data types 
 
 [Live Demo](http://tpcg.io/iKNn78)
 
-#include  <iostream>  using  namespace std;  int main()  { cout <<  "Size of char : "  <<  sizeof(char)  << endl; cout <<  "Size of int : "  <<  sizeof(int)  << endl; cout <<  "Size of short int : "  <<  sizeof(short  int)  << endl; cout <<  "Size of long int : "  <<  sizeof(long  int)  << endl; cout <<  "Size of float : "  <<  sizeof(float)  << endl; cout <<  "Size of double : "  <<  sizeof(double)  << endl; cout <<  "Size of wchar_t : "  <<  sizeof(wchar_t)  << endl;  return  0;  }
+```
+#include <iostream>
+using namespace std;
+
+int main() {
+   cout << "Size of char : " << sizeof(char) << endl;
+   cout << "Size of int : " << sizeof(int) << endl;
+   cout << "Size of short int : " << sizeof(short int) << endl;
+   cout << "Size of long int : " << sizeof(long int) << endl;
+   cout << "Size of float : " << sizeof(float) << endl;
+   cout << "Size of double : " << sizeof(double) << endl;
+   cout << "Size of wchar_t : " << sizeof(wchar_t) << endl;
+
+   return 0;
+}
+```
 
 This example uses endl, which inserts a new-line character after every line and << operator is being used to pass multiple values out to the screen. We are also using sizeof() operator to get size of various data types.
 
 When the above code is compiled and executed, it produces the following result which can vary from machine to machine -
-
+```
 Size of char : 1
 Size of int : 4
 Size of short int : 2
@@ -66,8 +83,9 @@ Size of long int : 4
 Size of float : 4
 Size of double : 8
 Size of wchar_t : 4
+```
 
-typedef Declarations
+## typedef Declarations
 --------------------
 
 You can create a new name for an existing type using typedef. Following is the simple syntax to define a new type using typedef -
@@ -75,9 +93,9 @@ You can create a new name for an existing type using typedef. Following is the 
 typedef type newname;
 
 For example, the following tells the compiler that feet is another name for int -
-
+```
 typedef int feet;
-
+```
 Now, the following declaration is perfectly legal and creates an integer variable called distance -
 
 feet distance;
@@ -94,14 +112,14 @@ enum enum-name { list of names } var-list;
 Here, the enum-name is the enumeration's type name. The list of names is comma separated.
 
 For example, the following code defines an enumeration of colors called colors and the variable c of type color. Finally, c is assigned the value "blue".
-
+```
 enum color { red, green, blue } c;
 c = blue;
-
+```
 By default, the value of the first name is 0, the second name has the value 1, and the third has the value 2, and so on. But you can give a name, a specific value by adding an initializer. For example, in the following enumeration, green will have the value 5.
-
+```
 enum color { red, green = 5, blue };
-
+```
 Here, blue will have a value of 6 because each name will be one greater than the one that precedes it.
 
 # References

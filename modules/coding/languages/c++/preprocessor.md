@@ -10,10 +10,11 @@ There are number of preprocessor directives supported by C++ like #include, #def
 
 The #define Preprocessor
 The #define preprocessor directive creates symbolic constants. The symbolic constant is called a macro and the general form of the directive is −
-
+```
 #define macro-name replacement-text
+```
 When this line appears in a file, all subsequent occurrences of macro in that file will be replaced by replacement-text before the program is compiled. For example −
-
+```
 #include <iostream>
 using namespace std;
 
@@ -24,19 +25,23 @@ int main () {
 
    return 0;
 }
+```
 Now, let us do the preprocessing of this code to see the result assuming we have the source code file. So let us compile it with -E option and redirect the result to test.p. Now, if you check test.p, it will have lots of information and at the bottom, you will find the value replaced as follows −
-
+```
 $gcc -E test.cpp > test.p
-
+```
+```
 ...
 int main () {
    cout << "Value of PI :" << 3.14159 << endl;
    return 0;
 }
-Function-Like Macros
+```
+
+## Function-Like Macros
 You can use #define to define a macro which will take argument as follows −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -52,30 +57,36 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 The minimum is 30
-Conditional Compilation
+```
+
+## Conditional Compilation
 There are several directives, which can be used to compile selective portions of your program's source code. This process is called conditional compilation.
 
 The conditional preprocessor construct is much like the ‘if’ selection structure. Consider the following preprocessor code −
-
+```
 #ifndef NULL
    #define NULL 0
 #endif
+```
 You can compile a program for debugging purpose. You can also turn on or off the debugging using a single macro as follows −
-
+```
 #ifdef DEBUG
    cerr <<"Variable x = " << x << endl;
 #endif
+```
 This causes the cerr statement to be compiled in the program if the symbolic constant DEBUG has been defined before directive #ifdef DEBUG. You can use #if 0 statment to comment out a portion of the program as follows −
-
+```
 #if 0
    code prevented from compiling
 #endif
+```
 Let us try the following example −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 #define DEBUG
@@ -105,17 +116,19 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 The minimum is 30
 Trace: Inside main function
 Trace: Coming out of main function
-The # and ## Operators
+```
+## The # and ## Operators
 The # and ## preprocessor operators are available in C++ and ANSI/ISO C. The # operator causes a replacement-text token to be converted to a string surrounded by quotes.
 
 Consider the following macro definition −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -127,21 +140,26 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 HELLO C++
+```
 Let us see how it worked. It is simple to understand that the C++ preprocessor turns the line −
-
+```
 cout << MKSTR(HELLO C++) << endl;
+```
 Above line will be turned into the following line −
-
+```
 cout << "HELLO C++" << endl;
+```
 The ## operator is used to concatenate two tokens. Here is an example −
-
+```
 #define CONCAT( x, y )  x ## y
+```
 When CONCAT appears in the program, its arguments are concatenated and used to replace the macro. For example, CONCAT(HELLO, C++) is replaced by "HELLO C++" in the program as follows.
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -152,42 +170,46 @@ int main() {
    cout << concat(x, y);
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 100
+```
 Let us see how it worked. It is simple to understand that the C++ preprocessor transforms −
-
+```
 cout << concat(x, y);
+```
 Above line will be transformed into the following line −
-
+```
 cout << xy;
-Predefined C++ Macros
+```
+
+## Predefined C++ Macros
 C++ provides a number of predefined macros mentioned below −
 
-Sr.No	Macro & Description
-1
+```
 __LINE__
-
+```
 This contains the current line number of the program when it is being compiled.
 
-2
+```
 __FILE__
-
+```
 This contains the current file name of the program when it is being compiled.
 
-3
+```
 __DATE__
-
+```
 This contains a string of the form month/day/year that is the date of the translation of the source file into object code.
 
-4
+```
 __TIME__
-
+```
 This contains a string of the form hour:minute:second that is the time at which the program was compiled.
 
 Let us see an example for all the above macros −
 
-Live Demo
+```
 #include <iostream>
 using namespace std;
 
@@ -199,12 +221,14 @@ int main () {
 
    return 0;
 }
+```
 If we compile and run above code, this would produce the following result −
-
+```
 Value of __LINE__ : 6
 Value of __FILE__ : test.cpp
 Value of __DATE__ : Feb 28 2011
 Value of __TIME__ : 18:52:48
+```
 
 # References
 https://www.tutorialspoint.com/cplusplus/cpp_preprocessor.htm

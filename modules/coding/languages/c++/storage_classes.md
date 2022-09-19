@@ -12,23 +12,23 @@ The auto Storage Class
 ----------------------
 
 The auto storage class is the default storage class for all local variables.
-
+```
 {
    int mount;
    auto int month;
 }
-
+```
 The example above defines two variables with the same storage class, auto can only be used within functions, i.e., local variables.
 
 The register Storage Class
 --------------------------
 
 The register storage class is used to define local variables that should be stored in a register instead of RAM. This means that the variable has a maximum size equal to the register size (usually one word) and can't have the unary '&' operator applied to it (as it does not have a memory location).
-
+```
 {
    register int  miles;
 }
-
+```
 The register should only be used for variables that require quick access such as counters. It should also be noted that defining 'register' does not mean that the variable will be stored in a register. It means that it MIGHT be stored in a register depending on hardware and implementation restrictions.
 
 The static Storage Class
@@ -40,12 +40,32 @@ The static modifier may also be applied to global variables. When this is done, 
 
 In C++, when static is used on a class data member, it causes only one copy of that member to be shared by all objects of its class.
 
-[Live Demo](http://tpcg.io/20HjiV)
+```
+#include <iostream>
 
-#include  <iostream>  // Function declaration  void func(void);  static  int count =  10;  /* Global variable */ main()  {  while(count--)  { func();  }  return  0;  }  // Function definition  void func(  void  )  {  static  int i =  5;  // local static variable i++; std::cout <<  "i is "  << i ; std::cout <<  " and count is "  << count << std::endl;  }
+// Function declaration
+void func(void);
 
+static int count = 10; /* Global variable */
+
+main() {
+   while(count--) {
+      func();
+   }
+
+   return 0;
+}
+
+// Function definition
+void func( void ) {
+   static int i = 5; // local static variable
+   i++;
+   std::cout << "i is " << i ;
+   std::cout << " and count is " << count << std::endl;
+}
+```
 When the above code is compiled and executed, it produces the following result -
-
+```
 i is 6 and count is 9
 i is 7 and count is 8
 i is 8 and count is 7
@@ -56,6 +76,7 @@ i is 12 and count is 3
 i is 13 and count is 2
 i is 14 and count is 1
 i is 15 and count is 0
+```
 
 The extern Storage Class
 ------------------------
@@ -68,10 +89,18 @@ The extern modifier is most commonly used when there are two or more files shari
 
 ### First File: main.cpp
 
-#include  <iostream>  int count ;  extern  void write_extern(); main()  { count =  5; write_extern();  }
+```
+#include <iostream>
+int count ;
+extern void write_extern();
 
+main() {
+   count = 5;
+   write_extern();
+}
+```
 ### Second File: support.cpp
-
+```
 #include <iostream>
 
 extern int count;
@@ -79,16 +108,16 @@ extern int count;
 void write_extern(void) {
    std::cout << "Count is " << count << std::endl;
 }
-
+```
 Here, *extern* keyword is being used to declare count in another file. Now compile these two files as follows -
-
+```
 $g++ main.cpp support.cpp -o write
-
+```
 This will produce write executable program, try to execute write and check the result as follows -
-
+```
 $./write
 5
-
+```
 The mutable Storage Class
 -------------------------
 

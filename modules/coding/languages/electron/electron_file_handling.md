@@ -5,7 +5,7 @@ File handling is a very important part of building a desktop application. Almost
 We will create a form in our app that will take as input, a Name and an Email address. This form will be saved to a file and a list will be created that will show this as output.
 
 Set up your main process using the following code in the main.js file −
-
+```
 const {app, BrowserWindow} = require('electron')
 const url = require('url')
 const path = require('path')
@@ -22,8 +22,9 @@ function createWindow() {
 }
 
 app.on('ready', createWindow)
+```
 Now open the index.html file and enter the following code in it −
-
+```
 <!DOCTYPE html>
 <html>
    <head>
@@ -73,12 +74,13 @@ Now open the index.html file and enter the following code in it −
       </div>
    </body>
 </html>
+```
 Now we need to handle the addition event. We will do this in our view.js file.
 
 We will create a function loadAndDisplayContacts() that will initially load contacts from the file. After creating the loadAndDisplayContacts() function, we will create a click handler on our add to list button. This will add the entry to both the file and the table.
 
 In your view.js file, enter the following code −
-
+```
 let $ = require('jquery')
 let fs = require('fs')
 let filename = 'contacts'
@@ -123,15 +125,11 @@ function loadAndDisplayContacts() {
 }
 
 loadAndDisplayContacts()
+```
 Now run the application, using the following command −
-
+```
 $ electron ./main.js
-Once you add some contacts to it, the application will look like −
-
-File
-For more fs module API calls, please refer to Node File System tutorial.
-
-Now we can handle files using Electron. We will look at how to call the save and open dialog boxes(native) for files in the dialogs chapter.
+```
 
 # References
 https://www.tutorialspoint.com/electron/electron_file_handling.htm
