@@ -9,7 +9,7 @@
 
 <p align="center">
   My name is Akan Udoeyop.
-  <br/><br/>I started this notebook to keep track of the many software engineering related topics and concepts that I came across throughout my career. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers.
+  <br/><br/>I started this notebook to keep track of the many software engineering related topics and concepts that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers.
 
 </p>
 
