@@ -74,3 +74,7 @@ Here, we will discuss the Working steps of Bootstrap Protocol as follows.
 - The client installs the BOOTP network protocol using TCP / IP Intervention on its computer system to ensure compatibility with all network protocols when connected to this network.
 
 - The BOOTP network administrator then sends a message that contains a valid unicast address. This unicast address is then forwarded to the BOOTP client by the master server.
+
+# Static Routing
+
+Static routing is a form of routing that occurs when a router uses a manually-configured routing entry, rather than information from dynamic routing traffic.[1] In many cases, static routes are manually configured by a network administrator by adding in entries into a routing table.

@@ -1,171 +1,189 @@
 
 # Akan's Notebook
 
-<p align="center">
+  This notebook was initially created to keep track of the many software engineering related topics, concepts, code, and tools that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers.
 
-  <img src="assets/akan.png" alt="drawing" height="250"/>
 
-</p>
-
-<p align="center">
-  My name is Akan Udoeyop.
-  <br/><br/>I started this notebook to keep track of the many software engineering related topics and concepts that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers.
-
-</p>
-
-Website: [akaninyene.com](http://akaninyene.com)<br/>
-Resume: [Akan's Resume](https://akaninyene.com/#/resume)<br/>
-IG: [@akantheengineer](https://www.instagram.com/akantheengineer)
+- Author: **Akan Udoeyop**
+- Website: [akaninyene.com](http://akaninyene.com)<br/>
+- Resume: [Akan's Resume](https://akaninyene.com/#/resume)<br/>
 
 -----
 
-## Coding
+## Coding Tutorials
 
-The following tutorials and references teach how to code and the fundamental concepts associated with the following languages and frameworks.
+The following tutorials and references teach the fundamentals  of coding for languages and frameworks below.
 
-**Languages**
-
-[C](modules/coding/languages/c) &nbsp;|&nbsp;
-[C++](modules/coding/languages/c++) &nbsp;|&nbsp;
-[C#](modules/coding/languages/c#) &nbsp;|&nbsp;
-[ES6](modules/coding/languages/es6) &nbsp;|&nbsp;
-[Java](modules/coding/languages/java) &nbsp;|&nbsp;
-[Javascript](modules/coding/languages/javascript) &nbsp;|&nbsp;
-[Node.Js](modules/coding/languages/nodejs) &nbsp;|&nbsp;
-[PHP](modules/coding/languages/php) &nbsp;|&nbsp;
-[Python](modules/coding/languages/python) &nbsp;|&nbsp;
-[Ruby](modules/coding/languages/ruby)
+|**Languages**| |
+|---| ---
+[C](modules/coding/languages/c)| C Coding Tutorial
+[C++](modules/coding/languages/c++)| C++ Coding Tutorial
+[C#](modules/coding/languages/c-sharp)| C# Coding Tutorial
+[ES6](modules/coding/languages/es6)| ES6 Coding Tutorial
+[Java](modules/coding/languages/java)| Java  Coding Tutorial
+[Javascript](modules/coding/languages/javascript)| Javascript  Coding Tutorial
+[Node.Js](modules/coding/languages/nodejs)| Node.js  Coding Tutorial
+[PHP](modules/coding/languages/php)| PHP  Coding Tutorial
+[Python](modules/coding/languages/python)| Python  Coding Tutorial
+[Ruby](modules/coding/languages/ruby)| Ruby  Coding Tutorial
 
 
 **Javascript Frameworks**
 
-[AngularJS](modules/coding/languages/angularjs) &nbsp;|&nbsp;
-[jQuery](modules/coding/languages/jquery) &nbsp;|&nbsp;
-[ReactJS](modules/coding/languages/reactjs)
+|**Framework**| |
+|---| ---
+[AngularJS](modules/coding/languages/angularjs) | AngularJS Coding Tutorial
+[jQuery](modules/coding/languages/jquery) | jQuery Coding Tutorial
+[ReactJS](modules/coding/languages/reactjs) | ReactJS Coding Tutorial
 
 **Web Development**
 
-[HTML](modules/coding/languages/html) &nbsp;|&nbsp;
-[CSS](modules/coding/languages/css)
+|**Language**| |
+|---| ---
+[HTML](modules/coding/languages/html) | AngularJS Coding Tutorial
+[CSS](modules/coding/languages/css) | CSS Coding Tutorial
 
 **Web-Based MVC Frameworks**
 
-[Express (Node.js)](modules/coding/web-application/express) &nbsp;|&nbsp;
-[Rails (Ruby)](modules/coding/web-application/rails) &nbsp;|&nbsp;
-[Spring (Java)](modules/coding/web-application/spring) &nbsp;|&nbsp;
-[Django (Python)](modules/coding/web-application/django) &nbsp;|&nbsp;
-[Laravel (PHP)](modules/coding/web-application/laravel)
+|**Framework**| |
+|---| ---
+[Express (Node.js)](modules/coding/web-application/express) | Express Coding Tutorial
+[Rails (Ruby)](modules/coding/web-application/rails) | Rails Coding Tutorial
+[Spring (Java)](modules/coding/web-application/spring) | Spring Coding Tutorial
+[Django (Python)](modules/coding/web-application/django) | Django Coding Tutorial
+[Laravel (PHP)](modules/coding/web-application/laravel) | Laravel Coding Tutorial
 
 **Databases**
 
-[MondoDB](modules/databases/mongodb.md) &nbsp;|&nbsp;
-[MySQL](modules/databases/mysql.md) &nbsp;|&nbsp;
-[PostgreSQL](modules/databases/postgres.md) &nbsp;|&nbsp;
-[Sqlite](modules/databases/sqlite.md)
+|**Framework**| |
+|---| ---
+[MondoDB](modules/databases/mongodb.md) | MondoDB Datbase Cheatsheet
+[MySQL](modules/databases/mysql.md) | MySQL Datbase Cheatsheet
+[PostgreSQL](modules/databases/postgres.md) | PostgreSQL Datbase Cheatsheet
+[SQLite](modules/databases/sqlite.md) | SQLite Datbase Cheatsheet
 
 **Cross-Platform Mobile App Development**
 
-[Ionic](modules/coding/languages/ionic)
+|**Framework**| |
+|---| ---
+[Ionic](modules/coding/languages/ionic) | Ionic Coding Tutorial
 
 **Cross-Platform Desktop App Development**
 
-[Electron](modules/coding/languages/electron)
-
-**Security**
-
-[Code Security](modules/security/code)
-
-**Performance**
-
-[Multi-Threading](modules/performance)
+|**Framework**| |
+|---| ---
+[Electron](modules/coding/languages/electron) | Electron Coding Tutorial
 
 # Software Development Life Cycle
 
-**Version Control**
+|**Version Control Software**| |
+|---| ---
+[GIT](modules/version-control/git.md) | Git Cheatsheet
+[SVN](modules/version-control/svn.md) | Svn Cheatsheet
+[GIT vs SVN Reference](modules/version-control/git-svn.md) | Git vs. Svn Comparison
 
-[GIT](modules/version-control/git.md) &nbsp;|&nbsp;
-[SVN](modules/version-control/svn.md) &nbsp;|&nbsp;
-[GIT vs SVN Reference](modules/version-control/svn.md)
 
-**Continuous Integration**
+|**Continuous Integration Framework**| |
+|---| ---
+[Jenkins](modules/continuous-integration/jenkins.md) | Jenkins Introduction
+[Gitlab CI](modules/continuous-integration/gitlab-ci.md) | Gitlab CI Overview
+[Github Actions](modules/continuous-integration/github-actions.md) | Github Actions Overview
 
-[Jenkins](modules/continuous-integration/jenkins.md) &nbsp;|&nbsp;
-[Gitlab CI](modules/continuous-integration/gitlab-ci.md)
+|**Coding Style/Syntax/Format Standardization**|Language|
+|---| ---
+[Vera](modules/coding/coding_standards/c-c++/vera.md) | C/C++
+[Format](modules/coding/coding_standards/c#/format.md) | C#
+[fmt-maven-plugin](modules/coding/coding_standards/java/fmt-maven-plugin.md) | Java
+[StandardJS](modules/coding/coding_standards/nodejs/standardjs.md) | Node.Js
+[Pylint](modules/coding/coding_standards/python/pylint.md) | Python
+[Robocop](modules/coding/coding_standards/ruby/robocop.md) | Ruby
 
-**Coding Style/Syntax/Format Standardization**
 
-[Vera (C/C++)](modules/coding/coding_standards/c-c++/vera.md) &nbsp;|&nbsp;
-[Format (C#)](modules/coding/coding_standards/c#/format.md) &nbsp;|&nbsp;
-[fmt-maven-plugin (Java)](modules/coding/coding_standards/java/fmt-maven-plugin.md) &nbsp;|&nbsp;
-[StandardJS (Node.Js)](modules/coding/coding_standards/nodejs/standardjs.md) &nbsp;|&nbsp;
-[Pylint (Python)](modules/coding/coding_standards/python/pylint.md) &nbsp;|&nbsp;
-[Robocop (Ruby)](modules/coding/coding_standards/ruby/robocop.md)
 
-**Secure Code**
-
-[Fortify](modules/coding/coding_standards/security/fortify.md) &nbsp;|&nbsp;
-[Snyk](modules/coding/coding_standards/security/snyk.md) &nbsp;|&nbsp;
+|**Security Static Code Scanner**|
+|---|
+[Fortify](modules/coding/coding_standards/security/fortify.md)
+[Snyk](modules/coding/coding_standards/security/snyk.md)
 [Sonarqube](modules/coding/coding_standards/security/sonarqube.md)
 
 ## Command Line Interface (CLI)
 
-[LSOF](modules/cli/lsof.md) &nbsp;|&nbsp;
-[Network Interfaces/Routing](modules/cli/nmap.md) &nbsp;|&nbsp;
-[NMAP](modules/cli/nmap.md) &nbsp;|&nbsp;
-[Openssl](modules/cli/openssl.md) &nbsp;|&nbsp;
-[Packet Capturing/Filtering](modules/cli/packet_capture_filtering.md) &nbsp;|&nbsp;
-[Scapy](modules/cli/scapy.md) &nbsp;|&nbsp;
-[Search Files](modules/cli/search_files.md) &nbsp;|&nbsp;
-[SSH](modules/cli/ssh.md) &nbsp;|&nbsp;
-[Telnet](modules/cli/telnet.md) &nbsp;|&nbsp;
-[Unix Network Commands](modules/cli/unix_network_commands.md) &nbsp;|&nbsp;
-[Unix CLI Cheatsheet](modules/cli/unix_cli_cheatsheet.md) &nbsp;|&nbsp;
+|**CLI Software**|
+|---|
+[LSOF](modules/cli/lsof.md)
+[Network Interfaces/Routing](modules/cli/network_interfaces_routing.md)
+[Packet Capturing/Filtering](modules/cli/packet_capture_filtering.md)
+[Search Files](modules/cli/search_files.md)
+[SSH](modules/cli/ssh.md)
+[Telnet](modules/cli/telnet.md)
+[Unix Network Commands](modules/cli/unix_network_commands.md)
+[Ntop](modules/cli/ntop.md)
+[Unix CLI Cheatsheet](modules/cli/unix_cli_cheatsheet.md)
 [DOS](modules/cli/dos_cheatcheet.md)
+[Editors](modules/cli/editors.md)
 
-## Security
-
-[Code Security](modules/security/code) &nbsp;|&nbsp;
-[Network Security](modules/security/network) &nbsp;|&nbsp;
-[Operating System Security](modules/security/operating-system) &nbsp;|&nbsp;
-[Web Application Security](modules/security/code)
-
-## Software & Operating System Fundementals
-
-[Software/OS Fundementals](modules/fundementals)
+|**Security CLI Software**|
+|---|
+[Metasploit](modules/cli/security/metasploit.md)
+[NMAP](modules/cli/security/nmap.md)
+[Openssl](modules/cli/security/openssl.md)
+[Packet Capturing/Filtering](modules/cli/security/packet_capture_filtering.md)
+[Scapy](modules/cli/security/scapy.md)
+[TCPdump](modules/cli/security/tcpdump.md)
 
 ## Networking
 
-[Networking](modules/networking)
+|**Topic**|
+|---|
+[Dynamic Host Configuration Protocol (DHCP)](modules/networking/dhcp.md)
+[Domain Name System (DNS)](modules/networking/dns.md)
+[E-Mail Spoofing](modules/networking/email-spoofing.md)
+[Firewalls](modules/networking/firewalls.md)
+[Hash Functions](modules/networking/hash_functions.md)
+[The Hypertext Transfer Protocol (HTTP)](modules/networking/http.md)
+[Internet Control Message Protocol (ICMP)](modules/networking/icmp.md)
+[Internet Protocol (IP)](modules/networking/ip.md)
+[LAN vs WAN vs NAT](modules/networking/lan_wan_nat.md)
+[Mac Address Spoofing](modules/networking/mac_spoofing.md)
+[The OSI Model](modules/networking/osi.md)
+[Proxies](modules/networking/proxies.md)
+[Routing Protocols](modules/networking/routing-protocols.md)
+[Socket Programming in C/C++](modules/networking/sockets.md)
+[Subnets](modules/networking/ssl_tls_https.md)
+[TCP/IP Model](modules/networking/tcp_ip_model.md)
+[Time to live (TTL)](modules/networking/ttl.md)
+[Webmin](modules/networking/webmin.md)
+[Wireshark](modules/networking/wireshark.md)
+[Burpsuite vs OWASP Zap Proxy](modules/networking/burpsuite_zap_proxy.md)
 
 ## Encryption
 
-[Encryption](modules/encryption)
+|**Topic**|
+|---|
+[Encryption Overview](modules/encryption/encryption.md)
+[Hashing](modules/encryption/hashing.md)
+[PKI](modules/encryption/pki.md)
+[TLS](modules/encryption/tls.md)
+[SSL vs TLS vs HTTPS](modules/encryption/ssl_tls_https.md)
+[SSH Keys](modules/encryption/ssh_keys.md)
+[SSL Certificates](modules/encryption/ssh_certificates.md)
 
-
-## Packaging / Open Source Software (OSS)
-
-[Open Source Software](modules/open-source-software)
-
-## Performance
-
-[Multi-Threading](modules/performance) &nbsp;|&nbsp;
-[Scaling Web Applications](modules/performance/scaling)
 
 ## Debugging (CLI)
 
-[GDB](modules/debugging/gdb.md) &nbsp;|&nbsp;
-[strace/dtrace](modules/debugging/debugging.md) &nbsp;|&nbsp;
-[File Dumps](modules/debugging/file_dumps.md) &nbsp;|&nbsp;
-[Python Debugging](modules/debugging/python_debugging_utilities.md) &nbsp;|&nbsp;
+|**Topic / Utility**|
+|---|
+[GDB](modules/debugging/gdb.md)
+[strace/dtrace](modules/debugging/debugging.md)
+[File Dumps](modules/debugging/file_dumps.md)
+[Python Debugging](modules/debugging/python_debugging_utilities.md)
 [Ruby Debugger](modules/debugging/ruby_debugger.md)
 
 
 ## Virtual Machines (VMs)
 
-[Docker](modules/virtual-machines/docker) &nbsp;|&nbsp;
-[Virtual Box](modules/virtual-machines/virtual-box.md) &nbsp;|&nbsp;
-[Vmware](modules/virtual-machines/vmware.md) &nbsp;|&nbsp;
-
-## User Interface (UI) / Graphics
-
-TODO
+|**Virtualization Software**|
+|---|
+[Docker](modules/virtual-machines/docker.md)
+[Virtual Box](modules/virtual-machines/virtual-box.md)
+[Vmware](modules/virtual-machines/vmware.md)
