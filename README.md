@@ -1,10 +1,10 @@
 
 # Akan's Notebook
 
-  This notebook was initially created to keep track of the many software engineering related topics, concepts, code, and tools that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers.
+  This notebook was initially created to keep track of the many software engineering related topics, concepts, code, and tools that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers. References have been added for sources referenced in documentation.
 
 
-- Author: **Akan Udoeyop**
+- Author/Curator: **Akan Udoeyop**
 - Website: [akaninyene.com](http://akaninyene.com)<br/>
 - Resume: [Akan's Resume](https://akaninyene.com/#/resume)<br/>
 
@@ -12,7 +12,7 @@
 
 ## Coding Tutorials
 
-The following tutorials and references teach the fundamentals  of coding for languages and frameworks below.
+The following tutorials and references teach the fundamentals  of coding for languages, consepts, and frameworks below.
 
 |**Languages**| |
 |---| ---
@@ -26,6 +26,14 @@ The following tutorials and references teach the fundamentals  of coding for lan
 [PHP](modules/coding/languages/php)| PHP  Coding Tutorial
 [Python](modules/coding/languages/python)| Python  Coding Tutorial
 [Ruby](modules/coding/languages/ruby)| Ruby  Coding Tutorial
+
+**Concepts**
+
+|**Concept**| |
+|---| ---
+[Big O Notation](modules/coding/concepts/big_o_notation.md)| Big O Notation Tutorial
+[Sorting Algorithms](modules/coding/concepts/sorting.md)| Software Sorting Algorithm Tutorial
+[Linked Lists](modules/coding/concepts/linked_lists.md)| Linked Lists Tutorial
 
 
 **Javascript Frameworks**
