@@ -47,6 +47,7 @@ As we can see, it may happen that the hashing technique is used to create an alr
 | 9 | 37 | 37 % 20 = 17 | 17 | 18 |
 
 **Basic Operations**
+
 Following are the basic primary operations of a hash table.
 
 - Search − Searches an element in a hash table.
@@ -56,6 +57,7 @@ Following are the basic primary operations of a hash table.
 - delete − Deletes an element from a hash table.
 
 **DataItem**
+
 Define a data item having some data and key, based on which the search is to be conducted in a hash table.
 ```
 struct DataItem {
@@ -65,6 +67,7 @@ struct DataItem {
 ```
 
 **Hash Method**
+
 Define a hashing method to compute the hash code of the key of the data item.
 ```
 int hashCode(int key){
@@ -98,6 +101,7 @@ struct DataItem *search(int key) {
 ```
 
 **Insert Operation**
+
 Whenever an element is to be inserted, compute the hash code of the key passed and locate the index using that hash code as an index in the array. Use linear probing for empty location, if an element is found at the computed hash code.
 
 ```
@@ -123,6 +127,7 @@ void insert(int key,int data) {
 ```
 
 **Delete Operation**
+
 Whenever an element is to be deleted, compute the hash code of the key passed and locate the index using that hash code as an index in the array. Use linear probing to get the element ahead if an element is not found at the computed hash code. When found, store a dummy item there to keep the performance of the hash table intact.
 
 ```
