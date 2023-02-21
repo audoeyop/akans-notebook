@@ -52,14 +52,6 @@ So, if we have the following function g(n) = n^2 + 5n + 6, then O(n^2) would be 
 ![](assets/0_MPwgKd4lgXACfuNt.png)
 
 
-
--   **O(1) has the least complexity**:- If you can build an algorithm in O(1) to solve an issue, you are generally in the best position, sometimes dubbed "constant time." The complexity in some cases can go above O(1), then evaluate it by obtaining O(1/g(n)). The O(1/n) is more difficult than the O(1/n2). For instance.
--   **O(log(n) is more intricate than O(1) but less intricate than polynomials**:- O(log(n)) is an useful complexity to sort algorithms since difficulty is typically connected to dividing and conquering methods. Because the square root function might be deemed polynomial when the exhibitor is 0,5 O(log(n)) is less difficult than O (file to n).
--   **Polynomial complexity grows with the increasing of the exponent**:- O(n5) is more sophisticated than O(n4, for instance). In fact, we have gone over a lot of polynomials in the preceding sections due to their simplicity.
--   **Exponentials are more complicated than polynomials while the coefficients are more positive than n**:- O(2n) is more complex than O(n99), although actually O(2n) is less difficult than O (1). We usually pick 2 as the basis for exponentials and logarithms since in computer science everything tend to be binary, although exponents may be modified by altering their coefficients. The logarithm base is presumed to be 2 if not specified.
--   **The complexity of factories is bigger than exponentials**:- Look up the gamma function if you are interested in the argument, it is an analytical continuation of a factorial. A quick evidence is, both factorial and exponential multiplications are the same, however for factorials numbers are increased and exponential numbers continue to rise.
--   **Multiplying terms**:- When multiplying, the complexity will be greater than the original, but no more than the equivalence of multiplying something that is more complex. For example, O(n * log(n)) is more complex than O(n) but less complex than O(n²), because O(n²) = O(n * n) and n is more complex than log(n).
-
 Why **big O notation** is Important?
 ------------------------------------
 
