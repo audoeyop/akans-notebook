@@ -122,5 +122,8 @@ function multiplicationTable(n) {
 
 There are two for loops in the `multiplicationTable` function, each itterating over n, which means that the total number of times that the operation will run will be n * n. *O(n^2)* is the runtime complexity. The execution time of the nested loops equals the number of loops that are nested, if we had 3 loops the runtime complexity will be *O(n^3)*. And so forth.
 
+**Logrithmic Examples:**
+Examples of algorithms with O(log(n)) complexity include binary search of a sorted list. Examples of algorithms with O(n log(n)) complexity include Quick Sort and Merge Sort.
+
 # References
 https://www.devopsschool.com/blog/complete-tutorial-on-big-o-big-oh-notation/
