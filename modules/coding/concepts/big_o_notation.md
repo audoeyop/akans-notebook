@@ -61,7 +61,7 @@ It offers you an approximation of how the software will respond in response to b
 
 #### Examples of **Big-O Notation**?
 
-**Example 1:** O(1)
+**Constant Complexity Example:** O(1)
 
 ```
 function sumNumbers(n1, n2) {
@@ -82,7 +82,7 @@ In the first line `function` (`sumNumbers`) contains two input values (n1 and 
 The second function (`printMultiple`) has a for loop, which is typically associated with non linear Big-O complexities. However, since the loop only runs 10 times, the runtime will be O(1) which is a constant Big-O complexity.
 
 
-**Example 2:** O(n)
+**Linear Example:** O(n)
 
 ```
 function loggingNumbers(n) {
@@ -108,7 +108,7 @@ The first `loggingNumbers` method uses an argument, and the log is controlling
 
 In the second `loggingNumbers2` method, with two loops running one after the other (they are not nested). Therefore, one runs at n, another runs at n, so the last run is O (2n). Or is it? Or is it that? Again the equation may be simplified, the constant removed, and merely O(n) may be used as runtime.
 
-**Example 3:** O(n^2)
+**Quadratic Example:** O(n^2)
 
 ```
 function multiplicationTable(n) {
@@ -122,11 +122,14 @@ function multiplicationTable(n) {
 
 There are two for loops in the `multiplicationTable` function, each itterating over n, which means that the total number of times that the operation will run will be n * n. *O(n^2)* is the runtime complexity. The execution time of the nested loops equals the number of loops that are nested, if we had 3 loops the runtime complexity will be *O(n^3)*. And so forth.
 
-**Logrithmic Examples:**
+**Logrithmic Examples:** O(log(n))
 
 Examples of algorithms with O(log(n)) complexity include binary search of a sorted list. Examples of algorithms with O(n log(n)) complexity include Quick Sort and Merge Sort.
 
-**Factorial Example:**
+**Exponential Example:** O(n!)
+An example of an algorithm with O(c^n) complexity is the "traveling salesman" problem solved by using dynamic programming (recursion).
+
+**Factorial Example:** O(n!)
 An example of an algorithm with O(n!) complexity is the "traveling salesman" problem solved by brute force.
 
 
