@@ -87,7 +87,7 @@ arr[2]; // => 3
 ```
 In the first line `function` (`sumNumbers`) contains two input values (n1 and n2), and the number of operations (just one operation is included in the function body) does not change, therefore the run-time does not rely on the input. It always takes place at a steady time -- O (1).
 
-The second function (`printMultiple`) has a for loop, which is typically associated with non linear Big-O complexities. However, since the loop only runs 10 times, the runtime will be O(10) which is a constant Big-O complexity.
+The second function (`printMultiple`) has a for loop, which is typically associated with non linear Big-O complexities. However, since the loop only runs 10 times, the runtime will be O(1) which is a constant Big-O complexity.
 
 
 **Example 2:** O(n)
