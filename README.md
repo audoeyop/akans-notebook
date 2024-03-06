@@ -1,7 +1,7 @@
 
 # Akan's Notebook
 
-I started this notebook in 2014 to keep track of the many software engineering related topics, concepts, code, and tools that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers. References have been added for sources referenced in documentation.
+I started this notebook in 2014 to keep track of the software engineering related topics, concepts, code, and tools that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers. References have been added for sources referenced in documentation.
 
 
 - Author/Curator: **Akan Udoeyop**
@@ -14,8 +14,8 @@ I started this notebook in 2014 to keep track of the many software engineering r
 
 The following tutorials and references teach the fundamentals  of coding for languages, consepts, and frameworks below.
 
-|**Languages**| |
-|---| ---
+|Languages| |
+|---| ---|
 [C](modules/coding/languages/c)| C Coding Tutorial
 [C++](modules/coding/languages/c++)| C++ Coding Tutorial
 [C#](modules/coding/languages/c-sharp)| C# Coding Tutorial
@@ -27,7 +27,9 @@ The following tutorials and references teach the fundamentals  of coding for lan
 [Python](modules/coding/languages/python)| Python  Coding Tutorial
 [Ruby](modules/coding/languages/ruby)| Ruby  Coding Tutorial
 
-**Concepts**
+<hr/>
+
+## Concepts
 
 |**Concept**| |
 |---| ---
@@ -35,8 +37,9 @@ The following tutorials and references teach the fundamentals  of coding for lan
 [Sorting Algorithms](modules/coding/concepts/sorting.md)| Software Sorting Algorithm Tutorial
 [Linked Lists](modules/coding/concepts/linked_lists.md)| Linked Lists Tutorial
 
+<hr/>
 
-**Javascript Frameworks**
+## Javascript Frameworks
 
 |**Framework**| |
 |---| ---
@@ -44,14 +47,18 @@ The following tutorials and references teach the fundamentals  of coding for lan
 [jQuery](modules/coding/languages/jquery) | jQuery Coding Tutorial
 [ReactJS](modules/coding/languages/reactjs) | ReactJS Coding Tutorial
 
-**Web Development**
+<hr/>
+
+## Web Development
 
 |**Language**| |
 |---| ---
 [HTML](modules/coding/languages/html) | AngularJS Coding Tutorial
 [CSS](modules/coding/languages/css) | CSS Coding Tutorial
 
-**Web-Based MVC Frameworks**
+<hr/>
+
+## Web-Based MVC Frameworks
 
 |**Framework**| |
 |---| ---
@@ -61,7 +68,9 @@ The following tutorials and references teach the fundamentals  of coding for lan
 [Django (Python)](modules/coding/web-application/django) | Django Coding Tutorial
 [Laravel (PHP)](modules/coding/web-application/laravel) | Laravel Coding Tutorial
 
-**Databases**
+<hr/>
+
+## Databases
 
 |**Framework**| |
 |---| ---
@@ -70,19 +79,25 @@ The following tutorials and references teach the fundamentals  of coding for lan
 [PostgreSQL](modules/databases/postgres.md) | PostgreSQL Datbase Cheatsheet
 [SQLite](modules/databases/sqlite.md) | SQLite Datbase Cheatsheet
 
-**Cross-Platform Mobile App Development**
+<hr/>
+
+## Cross-Platform Mobile App Development
 
 |**Framework**| |
 |---| ---
 [Ionic](modules/coding/languages/ionic) | Ionic Coding Tutorial
 
-**Cross-Platform Desktop App Development**
+<hr/>
+
+## Cross-Platform Desktop App Development
 
 |**Framework**| |
 |---| ---
 [Electron](modules/coding/languages/electron) | Electron Coding Tutorial
 
-# Software Development Life Cycle
+<hr/>
+
+## Software Development Life Cycle
 
 |**Version Control Software**| |
 |---| ---
@@ -108,11 +123,13 @@ The following tutorials and references teach the fundamentals  of coding for lan
 
 
 
-|**Security Static Code Scanner**|
+|**Code/Security Scanner**|
 |---|
 [Fortify](modules/coding/coding_standards/security/fortify.md)
 [Snyk](modules/coding/coding_standards/security/snyk.md)
 [Sonarqube](modules/coding/coding_standards/security/sonarqube.md)
+[Mend](#)
+[Prisma Cloud](#)
 
 ## Command Line Interface (CLI)
 
