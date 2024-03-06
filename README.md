@@ -1,7 +1,7 @@
 
 # Akan's Notebook
 
-I started this notebook in 2014 to keep track of the software engineering related topics, concepts, code, and tools that I have worked with throughout my career as a software and cyber-security engineer. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers. References have been added for sources referenced in documentation.
+I started this notebook in 2014 to keep track of the software engineering related topics, concepts, code, and tools that I have worked with throughout my career. The notebook has since evolved into a set of tutorials, guides, and documentation that I use to teach up and coming software engineers. References have been added for sources referenced in documentation.
 
 
 - Author/Curator: **Akan Udoeyop**
